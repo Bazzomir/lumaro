@@ -1,0 +1,15 @@
+:root {
+    --purple: #522081;
+}
+
+.navbar {
+    background-color: var(--purple) !important;
+}
+
+.navbar-brand {
+    color: aliceblue !important;
+}
+
+.nav-link {
+    color: aliceblue !important;
+}
