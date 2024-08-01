@@ -2,7 +2,6 @@
     --purple: #522081;
     --white: #fff;
     --black: #010512;
-
 }
 
 body {
@@ -61,4 +60,14 @@ body {
     border-radius: 31px !important;
     width: 302px !important;
     height: 62px;
+}
+
+.services--header {
+    font-weight: 700;
+    font-size: 62px;
+}
+
+.services--paragraph {
+    font-weight: 300;
+    font-size: 22px;
 }
