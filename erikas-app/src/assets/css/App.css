@@ -1,10 +1,13 @@
 :root {
     --purple: #522081;
     --white: #fff;
+    --black: #010512;
+
 }
 
 body {
     font-family: 'Inter';
+    color: var(--black) !important;
 }
 
 .navbar {
@@ -33,5 +36,29 @@ body {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(242, 240, 228)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.first-text {
+    letter-spacing: 6px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.second-text {
+    font-size: 82px;
+    font-weight: 700;
+}
+
+.third-text {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.btn-purple {
+    color: var(--purple) !important;
+    border-color: var(--purple) !important;
+    border-radius: 31px !important;
+    width: 302px !important;
+    height: 62px;
 }
