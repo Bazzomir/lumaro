@@ -1,0 +1,76 @@
+{
+  "services": [
+    {
+      "category": "Consulting",
+      "description": "Agile Transformation & Operational Excellence.",
+      "offerings": [
+        "Agile Integration",
+        "Product Ownership",
+        "Project Management",
+        "User Experience Consulting",
+        "Business Strategy"
+      ],
+      "icon": "/assets/image/icons/consulting.svg"
+    },
+    {
+      "category": "Web Development",
+      "description": "Crafting Cutting-Edge Web Experiences & Digital Solutions.",
+      "offerings": [
+        "Custom Software Development",
+        "Front-end Development",
+        "Back-End Development",
+        "Full Stack Development",
+        "User Experience & User Interface"
+      ],
+      "icon": "/assets/image/icons/development.svg"
+    },
+    {
+      "category": "Quality Assurance",
+      "description": "Ensuring Premier Quality & Flawless Product Delivery.",
+      "offerings": [
+        "Automated Testing",
+        "Manual Testing & Debugging",
+        "Performance & Security",
+        "User Acceptance Testing",
+        "Integration & Delivery"
+      ],
+      "icon": "/assets/image/icons/quality.svg"
+    },
+    {
+      "category": "Mobile",
+      "description": "Build Seamless Mobile & Native Applications.",
+      "offerings": [
+        "iOS App Development",
+        "Android App Development",
+        "Cross-Platform Solutions",
+        "User Experience & User Interface",
+        "Mobile Optimization"
+      ],
+      "icon": "/assets/image/icons/mobile.svg"
+    },
+    {
+      "category": "Creative",
+      "description": "Innovative Design & Strategic Marketing Solutions.",
+      "offerings": [
+        "Branding & Identity Design",
+        "Copywriting & Content Strategy",
+        "Digital Marketing",
+        "WordPress Development",
+        "Animation & Motion Design"
+      ],
+      "icon": "/assets/image/icons/creative.svg"
+    },
+    {
+      "category": "Business Analysis",
+      "description": "Analyzing Business Needs & Crafting Strategic Solutions.",
+      "offerings": [
+        "Market Research & Analysis",
+        "Business Process Modeling",
+        "Data Analysis & Interpretation",
+        "Digital Strategy",
+        "Requirements Planning"
+      ],
+      "icon": "/assets/image/icons/quality.svg"
+    }
+  ]
+}
