@@ -2,11 +2,22 @@
     --purple: #522081;
     --white: #fff;
     --black: #010512;
+    --gray: #E6E1EA;
+
 }
 
 body {
     font-family: 'Inter';
     color: var(--black) !important;
+}
+
+.text-purple {
+    color: var(--purple) !important;
+}
+
+.box-broder-box {
+    display: inline;
+    box-sizing: border-box !important;
 }
 
 .navbar {
@@ -107,4 +118,30 @@ body {
     font-weight: 300;
     line-height: 26px;
     color: var(--black);
+}
+
+
+.about-text {
+    font-size: 5.75rem;
+    font-weight: 700;
+    line-height: 7.188rem;
+    letter-spacing: 0.3;
+    width: 43rem;
+}
+
+.about-image {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-triangle {
+    position: relative;
+    background-color: var(--gray);
+    /* max-height: 774px; */
+    /* max-width: 960px; */
+    /* height: 774px; */
+    /* width: 960px; */
+    width: 48.5vw;
+    height: 77vh;
+    z-index: 1;
 }
