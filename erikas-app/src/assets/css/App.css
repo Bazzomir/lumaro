@@ -127,7 +127,6 @@ body {
 .about {
     box-sizing: border-box;
     overflow: hidden;
-    height: 100vh;
 }
 
 .about-text {
@@ -135,7 +134,6 @@ body {
     font-weight: 700;
     line-height: 7.188rem;
     letter-spacing: 0.3;
-    /* width: 43rem; */
 }
 
 .about-image {
@@ -143,7 +141,8 @@ body {
     position: relative;
     top: 0px;
     right: 10px;
-    height: 79vh;
+    /* height: 79vh; */
+    height: 43.2rem;
     width: auto;
 }
 

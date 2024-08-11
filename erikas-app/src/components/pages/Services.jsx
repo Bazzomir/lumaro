@@ -2,21 +2,26 @@ import React, { useEffect, useState } from 'react';
 import ServicesCard from '../component/ServicesCard';
 
 function importIcons(iconPath) {
-    switch (iconPath) {
-        case '/assets/image/icons/consulting.svg':
-            return require('../../assets/image/icons/consulting.svg').ReactComponent;
-        case '/assets/image/icons/development.svg':
-            return require('../../assets/image/icons/development.svg').ReactComponent;
-        case '/assets/image/icons/quality.svg':
-            return require('../../assets/image/icons/quality.svg').ReactComponent;
-        case '/assets/image/icons/mobile.svg':
-            return require('../../assets/image/icons/mobile.svg').ReactComponent;
-        case '/assets/image/icons/creative.svg':
-            return require('../../assets/image/icons/creative.svg').ReactComponent;
-        case '/assets/image/icons/quality.svg':
-            return require('../../assets/image/icons/quality.svg').ReactComponent;
-        default:
-            return null;
+    try {
+        switch (iconPath) {
+            case '/assets/image/icons/consulting.svg':
+                return require('../../assets/image/icons/consulting.svg').ReactComponent;
+            case '/assets/image/icons/development.svg':
+                return require('../../assets/image/icons/development.svg').ReactComponent;
+            case '/assets/image/icons/quality.svg':
+                return require('../../assets/image/icons/quality.svg').ReactComponent;
+            case '/assets/image/icons/mobile.svg':
+                return require('../../assets/image/icons/mobile.svg').ReactComponent;
+            case '/assets/image/icons/creative.svg':
+                return require('../../assets/image/icons/creative.svg').ReactComponent;
+            case '/assets/image/icons/quality.svg':
+                return require('../../assets/image/icons/quality.svg').ReactComponent;
+            default:
+                return null;
+        }
+    } catch (error) {
+        console.error('Error importing icon:', error);
+        return null;
     }
 }
 
