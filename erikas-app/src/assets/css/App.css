@@ -15,10 +15,14 @@ body {
     color: var(--purple) !important;
 }
 
-.box-broder-box {
+/* .w-60 {
+    width: 60% !important;
+} */
+
+/* .box-broder-box {
     display: inline;
     box-sizing: border-box !important;
-}
+} */
 
 .navbar {
     background-color: var(--purple) !important;
@@ -84,7 +88,7 @@ body {
 
 .services--header {
     font-weight: 700;
-    font-size: 62px;
+    font-size: 3.875rem;
 }
 
 .services--paragraph {
@@ -120,28 +124,35 @@ body {
     color: var(--black);
 }
 
+.about {
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+}
 
 .about-text {
     font-size: 5.75rem;
     font-weight: 700;
     line-height: 7.188rem;
     letter-spacing: 0.3;
-    width: 43rem;
+    /* width: 43rem; */
 }
 
 .about-image {
+    aspect-ratio: 9/8;
     position: relative;
-    z-index: 2;
+    top: 0px;
+    right: 10px;
+    height: 79vh;
+    width: auto;
 }
 
 .bg-triangle {
-    position: relative;
-    background-color: var(--gray);
-    /* max-height: 774px; */
-    /* max-width: 960px; */
-    /* height: 774px; */
-    /* width: 960px; */
-    width: 48.5vw;
-    height: 77vh;
-    z-index: 1;
+   background-image: url('../image/Rectangle.svg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: local;
+   background-size: cover;
+   height: 80vh;
+   width: 60vw;
 }

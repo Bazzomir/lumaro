@@ -3,7 +3,7 @@ import { ReactComponent as HomepageImage } from '../../assets/image/homepage.svg
 
 export default function Homepage() {
     return (
-        <div className="homepage container mt-5 vh-100">
+        <div className="homepage container mt-5">
             <div className="d-flex row justify-content-between">
                 <div className="col-12 col-lg-5">
                     <div className="d-flex row gap-5">
