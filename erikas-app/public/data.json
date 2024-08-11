@@ -72,5 +72,27 @@
       ],
       "icon": "/assets/image/icons/quality.svg"
     }
+  ],
+  "about": [
+    {
+      "category": "Global Expertise",
+      "description": "Harness cutting-edge tech for market-leading solutions.",
+      "icon": "/assets/image/icons/gExpertise.svg"
+    },
+    {
+      "category": "Precision",
+      "description": "Detail-oriented approaches ensuring impeccable results.",
+      "icon": "/assets/image/icons/precision.svg"
+    },
+    {
+      "category": "Efficiency",
+      "description": "Maximized ROI with smart, budget-friendly solutions.",
+      "icon": "/assets/image/icons/efficiency.svg"
+    },
+    {
+      "category": "Scalability",
+      "description": "Adaptable strategies poised for growth and expansion.",
+      "icon": "/assets/image/icons/scalability.svg"
+    }
   ]
 }

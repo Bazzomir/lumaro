@@ -11,10 +11,7 @@ export default function About() {
                     </p>
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block bg-triangle">
-                    {/* <div className="d-flex justify-conent-end"> */}
-                    {/* <div > */}
                     <MeetingImg alt="About us Image" className="about-image mx-auto" />
-                    {/* </div> */}
                 </div>
             </div>
         </div>
