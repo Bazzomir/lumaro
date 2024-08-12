@@ -94,5 +94,22 @@
       "category": "Scalability",
       "description": "Adaptable strategies poised for growth and expansion."
     }
+  ],
+  "contact": [
+    {
+      "fullName": "Casey W.",
+      "quote": "Pixonium took our project to the next level with their extensive expertise. They not only met our expectations but exceeded them, refining our initial concept beautifully. Perfect for anyone facing complex challenges.",
+      "avatar": "/src/assets/avatars/caseyW.svg"
+    },
+    {
+      "fullName": "Jordan M.",
+      "quote": "Pixonium helped us to turn complex projects into simple user-friendly solutions. Their communication and creative insight were exceptional, elevating our project beyond. Highly recommend Pixonium.",
+      "avatar": "/src/assets/avatars/jordanM.svg"
+    },
+    {
+      "fullName": "Avery R.",
+      "quote": "Pixonium truly transformed our approach to business strategy and product development. Their insights were spot on with their collaboration. Working with Pixonium felt like a partnership geared toward excellence.",
+      "avatar": "/src/assets/avatars/averyR.svg"
+    }
   ]
 }

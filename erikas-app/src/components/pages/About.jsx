@@ -18,17 +18,17 @@ export default function About() {
 
     useEffect(() => {
         fetch('/data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok!');
                 }
-                return response.json();
+                return res.json();
             })
             .then(data => {
                 setAboutData(data.aboutUs);
             })
-            .catch(error => {
-                console.error('Error fetching data:', error);
+            .catch(err => {
+                console.error('Error fetching data:', err);
             });
     }, []);
 
@@ -50,10 +50,10 @@ export default function About() {
                 </div>
                 <div className="col-12 pt-4">
                     <div className="row p-0 m-0">
-                        {aboutData.map((about, index) => {
+                        {aboutData.map((about, i) => {
                             const IconPath = iconMap[about.icon];
                             return (
-                                <div key={index} className="col-md-3 my-4">
+                                <div key={i} className="col-md-3 my-4">
                                     {IconPath && (
                                         <AboutCard
                                             CardIcon={IconPath}

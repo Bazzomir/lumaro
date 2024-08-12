@@ -19,17 +19,17 @@ export default function Services() {
 
     useEffect(() => {
         fetch('/data.json')
-            .then(response => {
-                if (!response.ok) {
+            .then(res => {
+                if (!res.ok) {
                     throw new Error('Network response was not ok');
                 }
-                return response.json();
+                return res.json();
             })
             .then(data => {
                 setServicesData(data.services);
             })
-            .catch(error => {
-                console.error('Error fetching data:', error);
+            .catch(err => {
+                console.error('Error fetching data:', err);
             });
     }, []);
 
@@ -40,10 +40,10 @@ export default function Services() {
                 <p className="services--paragraph text-center">Welcome to our website</p>
             </div>
             <div className="row py-3">
-                {servicesData.map((service, index) => {
+                {servicesData.map((service, i) => {
                     const IconPath = iconMap[service.icon];
                     return (
-                        <div key={index} className="col-md-4 my-4">
+                        <div key={i} className="col-md-4 my-4">
                             <ServicesCard
                                 category={service.category}
                                 description={service.description}
