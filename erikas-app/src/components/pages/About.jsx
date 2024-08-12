@@ -1,27 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import AboutCard from '../component/AboutCard';
 import MeetingImg from '../../assets/image/meeting.svg';
+import GlobalExpertiseIcon from '../../assets/image/icons/gExpertise.svg';
+import PrecisionIcon from '../../assets/image/icons/precision.svg';
+import EfficiencyIcon from '../../assets/image/icons/efficiency.svg';
+import ScalabilityIcon from '../../assets/image/icons/scalability.svg';
 
-function importIcons(iconPath) {
-    try {
-        switch (iconPath) {
-            case '/assets/image/icons/consulting.svg':
-                return require('../../assets/image/icons/gExpertise.svg').ReactComponent;
-            case '/assets/image/icons/development.svg':
-                return require('../../assets/image/icons/precision.svg').ReactComponent;
-            case '/assets/image/icons/quality.svg':
-                return require('../../assets/image/icons/efficiency.svg').ReactComponent;
-            case '/assets/image/icons/mobile.svg':
-                return require('../../assets/image/icons/scalability.svg').ReactComponent;
-            default:
-                return null;
-        }
-    }
-    catch (error) {
-        console.error('Error importing icon:', error);
-        return null;
-    }
-}
+const iconMap = {
+    'gExpertise': GlobalExpertiseIcon,
+    'precision': PrecisionIcon,
+    'efficiency': EfficiencyIcon,
+    'scalability': ScalabilityIcon,
+};
 
 export default function About() {
     const [aboutData, setAboutData] = useState([]);
@@ -61,12 +51,12 @@ export default function About() {
                 <div className="col-12">
                     <div className="row p-0 m-0">
                         {aboutData.map((about, index) => {
-                            const IconComponent = importIcons(about.icon);
+                            const IconPath = iconMap[about.icon];
                             return (
-                                <div key={index} className="col-md-4 my-4">
-                                    {IconComponent && (
+                                <div key={index} className="col-md-3 my-4">
+                                    {IconPath && (
                                         <AboutCard
-                                            CardIcon={IconComponent}
+                                            CardIcon={IconPath}
                                             category={about.category}
                                             description={about.description}
                                         />

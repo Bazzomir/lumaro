@@ -75,24 +75,24 @@
   ],
   "aboutUs": [
     {
+      "icon": "gExpertise",
       "category": "Global Expertise",
-      "description": "Harness cutting-edge tech for market-leading solutions.",
-      "icon": "/assets/image/icons/gExpertise.svg"
+      "description": "Harness cutting-edge tech for market-leading solutions."
     },
     {
+      "icon": "precision",
       "category": "Precision",
-      "description": "Detail-oriented approaches ensuring impeccable results.",
-      "icon": "/assets/image/icons/precision.svg"
+      "description": "Detail-oriented approaches ensuring impeccable results."
     },
     {
+      "icon": "efficiency",
       "category": "Efficiency",
-      "description": "Maximized ROI with smart, budget-friendly solutions.",
-      "icon": "/assets/image/icons/efficiency.svg"
+      "description": "Maximized ROI with smart, budget-friendly solutions."
     },
     {
+      "icon": "scalability",
       "category": "Scalability",
-      "description": "Adaptable strategies poised for growth and expansion.",
-      "icon": "/assets/image/icons/scalability.svg"
+      "description": "Adaptable strategies poised for growth and expansion."
     }
   ]
 }

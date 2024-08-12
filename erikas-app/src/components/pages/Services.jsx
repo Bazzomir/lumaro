@@ -1,29 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ServicesCard from '../component/ServicesCard';
+import ConsultingIcon from '../../assets/image/icons/consulting.svg';
+import DevelopmentIcon from '../../assets/image/icons/development.svg';
+import QualityIcon from '../../assets/image/icons/quality.svg';
+import MobileIcon from '../../assets/image/icons/mobile.svg';
+import CreativeIcon from '../../assets/image/icons/creative.svg';
 
-function importIcons(iconPath) {
-    try {
-        switch (iconPath) {
-            case '/assets/image/icons/consulting.svg':
-                return require('../../assets/image/icons/consulting.svg').ReactComponent;
-            case '/assets/image/icons/development.svg':
-                return require('../../assets/image/icons/development.svg').ReactComponent;
-            case '/assets/image/icons/quality.svg':
-                return require('../../assets/image/icons/quality.svg').ReactComponent;
-            case '/assets/image/icons/mobile.svg':
-                return require('../../assets/image/icons/mobile.svg').ReactComponent;
-            case '/assets/image/icons/creative.svg':
-                return require('../../assets/image/icons/creative.svg').ReactComponent;
-            case '/assets/image/icons/quality.svg':
-                return require('../../assets/image/icons/quality.svg').ReactComponent;
-            default:
-                return null;
-        }
-    } catch (error) {
-        console.error('Error importing icon:', error);
-        return null;
-    }
-}
+const iconMap = {
+    '/assets/image/icons/consulting.svg': ConsultingIcon,
+    '/assets/image/icons/development.svg': DevelopmentIcon,
+    '/assets/image/icons/quality.svg': QualityIcon,
+    '/assets/image/icons/mobile.svg': MobileIcon,
+    '/assets/image/icons/creative.svg': CreativeIcon,
+};
 
 export default function Services() {
     const [servicesData, setServicesData] = useState([]);
@@ -52,14 +41,14 @@ export default function Services() {
             </div>
             <div className="row py-3">
                 {servicesData.map((service, index) => {
-                    const IconComponent = importIcons(service.icon);
+                    const IconPath = iconMap[service.icon];
                     return (
                         <div key={index} className="col-md-4 my-4">
                             <ServicesCard
                                 category={service.category}
                                 description={service.description}
                                 offerings={service.offerings}
-                                cardIcon={IconComponent}
+                                iconPath={IconPath} 
                             />
                         </div>
                     );
