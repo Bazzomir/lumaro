@@ -118,7 +118,7 @@ body {
 }
 
 .card-body__text {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 26px;
     color: var(--black);
@@ -127,6 +127,12 @@ body {
 .about {
     box-sizing: border-box;
     overflow: hidden;
+}
+
+.about-header {
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 75px;
 }
 
 .about-text {
@@ -142,7 +148,7 @@ body {
     top: 0px;
     right: 10px;
     /* height: 79vh; */
-    height: 43.2rem;
+    /* height: 43.2rem; */
     width: auto;
 }
 

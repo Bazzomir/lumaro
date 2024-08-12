@@ -44,11 +44,11 @@ export default function About() {
                     <img src={MeetingImg} alt="About us Image" className="about-image mx-auto" />
                 </div>
             </div>
-            <div className="row justify-content-center align-items-center">
+            <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
-                    <h2 className="text-center p-3 mb-0">Why Work With Us</h2>
+                    <h2 className="text-center p-3 mb-0 about-header">Why Work With Us</h2>
                 </div>
-                <div className="col-12">
+                <div className="col-12 pt-4">
                     <div className="row p-0 m-0">
                         {aboutData.map((about, index) => {
                             const IconPath = iconMap[about.icon];
