@@ -124,6 +124,12 @@ body {
     color: var(--black);
 }
 
+.card-text__name {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 26.6px !important;
+}
+
 .about {
     box-sizing: border-box;
     overflow: hidden;
@@ -136,7 +142,7 @@ body {
     line-height: 75px;
 }
 
-.about-text, 
+.about-text,
 .contact-text {
     font-size: 5.75rem;
     font-weight: 700;
@@ -161,12 +167,32 @@ body {
     right: 20px;
 }
 
+.contact-card-body {
+    max-width: 500px !important;
+    max-height: 660px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.contact-card-body__text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    color: var(--black);
+    width: 375px;
+}
+
+.contact-card-body__avatar {
+    height: 98px;
+    width: 98px;
+}
+
 .bg-triangle {
-   background-image: url('../image/Rectangle.svg');
-   background-repeat: no-repeat;
-   background-position: center;
-   background-attachment: local;
-   background-size: cover;
-   height: 80vh;
-   width: 60vw;
+    background-image: url('../image/Rectangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: local;
+    background-size: cover;
+    height: 80vh;
+    width: 60vw;
 }

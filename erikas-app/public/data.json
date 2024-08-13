@@ -10,7 +10,7 @@
         "User Experience Consulting",
         "Business Strategy"
       ],
-      "icon": "/assets/image/icons/consulting.svg"
+      "icon": "consulting"
     },
     {
       "category": "Web Development",
@@ -22,7 +22,7 @@
         "Full Stack Development",
         "User Experience & User Interface"
       ],
-      "icon": "/assets/image/icons/development.svg"
+      "icon": "development"
     },
     {
       "category": "Quality Assurance",
@@ -34,7 +34,7 @@
         "User Acceptance Testing",
         "Integration & Delivery"
       ],
-      "icon": "/assets/image/icons/quality.svg"
+      "icon": "quality"
     },
     {
       "category": "Mobile",
@@ -46,7 +46,7 @@
         "User Experience & User Interface",
         "Mobile Optimization"
       ],
-      "icon": "/assets/image/icons/mobile.svg"
+      "icon": "mobile"
     },
     {
       "category": "Creative",
@@ -58,7 +58,7 @@
         "WordPress Development",
         "Animation & Motion Design"
       ],
-      "icon": "/assets/image/icons/creative.svg"
+      "icon": "creative"
     },
     {
       "category": "Business Analysis",
@@ -70,7 +70,7 @@
         "Digital Strategy",
         "Requirements Planning"
       ],
-      "icon": "/assets/image/icons/quality.svg"
+      "icon": "quality"
     }
   ],
   "aboutUs": [
@@ -99,17 +99,17 @@
     {
       "fullName": "Casey W.",
       "quote": "Pixonium took our project to the next level with their extensive expertise. They not only met our expectations but exceeded them, refining our initial concept beautifully. Perfect for anyone facing complex challenges.",
-      "avatar": "/src/assets/avatars/caseyW.svg"
+      "avatar": "caseyW"
     },
     {
       "fullName": "Jordan M.",
       "quote": "Pixonium helped us to turn complex projects into simple user-friendly solutions. Their communication and creative insight were exceptional, elevating our project beyond. Highly recommend Pixonium.",
-      "avatar": "/src/assets/avatars/jordanM.svg"
+      "avatar": "jordanM"
     },
     {
       "fullName": "Avery R.",
       "quote": "Pixonium truly transformed our approach to business strategy and product development. Their insights were spot on with their collaboration. Working with Pixonium felt like a partnership geared toward excellence.",
-      "avatar": "/src/assets/avatars/averyR.svg"
+      "avatar": "averyR"
     }
   ]
 }

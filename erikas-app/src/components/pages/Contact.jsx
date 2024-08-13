@@ -8,7 +8,7 @@ const avatarMap = {
     'averyR': avatarAveryR,
     'caseyW': avatarCaseyW,
     'jordanM': avatarJordanM,
-}
+};
 
 export default function Contact() {
     const [contactData, setContactData] = useState([]);
@@ -17,7 +17,7 @@ export default function Contact() {
         fetch('/data.json')
             .then(res => {
                 if (!res.ok) {
-                    throw new Error('Network response was not ok!')
+                    throw new Error('Network response was not ok!');
                 }
                 return res.json();
             })
@@ -27,7 +27,7 @@ export default function Contact() {
             .catch(err => {
                 console.error('Error fetching data:', err);
             });
-    }, [])
+    }, []);
 
     return (
         <div className="contact container-fluid mt-5">
@@ -39,8 +39,8 @@ export default function Contact() {
                     <button className="btn btn-purple text-uppercase">Contact us</button>
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block bg-triangle">
-                    <div className="ratio contact-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XFu4VNBUtlc?si=1t_1pe1QyYtT8lGn" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    <div className="ratio contact-video rounded-md">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                 </div>
             </div>
@@ -50,23 +50,25 @@ export default function Contact() {
                 </div>
                 <div className="col-12 pt-4">
                     <div className="row p-0 m-0">
-                        {contactData.map((contact, i) => {
-                            const AvatarPath = avatarMap[contact.avatar]
-                            return (
-                                <div key={i} className="col-md-3 my-4">
-                                    {AvatarPath && (
-                                        <ContactCard
-                                            avatarCard={AvatarPath}
-                                            fullName={contact.fullName}
-                                            quote={contact.quote}
-                                        />
-                                    )}
-                                </div>
-                            )
-                        })}
+                        <div className="d-flex justify-content-between" >
+                            {contactData.map((contact, i) => {
+                                const AvatarPath = avatarMap[contact.avatar];
+                                return (
+                                    <div key={i} className="col-md-3">
+                                        {AvatarPath && (
+                                            <ContactCard
+                                                avatarCard={AvatarPath}
+                                                fullName={contact.fullName}
+                                                quote={contact.quote}
+                                            />
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

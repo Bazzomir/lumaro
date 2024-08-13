@@ -7,11 +7,11 @@ import MobileIcon from '../../assets/image/icons/mobile.svg';
 import CreativeIcon from '../../assets/image/icons/creative.svg';
 
 const iconMap = {
-    '/assets/image/icons/consulting.svg': ConsultingIcon,
-    '/assets/image/icons/development.svg': DevelopmentIcon,
-    '/assets/image/icons/quality.svg': QualityIcon,
-    '/assets/image/icons/mobile.svg': MobileIcon,
-    '/assets/image/icons/creative.svg': CreativeIcon,
+    'consulting': ConsultingIcon,
+    'development': DevelopmentIcon,
+    'quality': QualityIcon,
+    'mobile': MobileIcon,
+    'creative': CreativeIcon,
 };
 
 export default function Services() {
