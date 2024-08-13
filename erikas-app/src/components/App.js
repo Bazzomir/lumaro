@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Services />
       <About />
       <Contact />
+      <Footer />
     </>
   );
 }
