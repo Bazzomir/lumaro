@@ -30,7 +30,7 @@ export default function Contact() {
     }, []);
 
     return (
-        <div className="contact container-fluid mt-5">
+        <div className="contact container-fluid my-5">
             <div className="row justify-content-center align-items-center">
                 <div className="contact-text col-12 col-lg-6">
                     <p className="mb-0 mx-auto text-justify text-wrap w-85">
