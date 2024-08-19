@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import AboutCard from '../component/AboutCard';
+import { AboutCard } from '../component/cards';
 import MeetingImg from '../../assets/image/meeting.svg';
 import GlobalExpertiseIcon from '../../assets/image/icons/gExpertise.svg';
 import PrecisionIcon from '../../assets/image/icons/precision.svg';
@@ -53,7 +53,7 @@ export default function About() {
                         {aboutData.map((about, i) => {
                             const IconPath = iconMap[about.icon];
                             return (
-                                <div key={i} className="col-md-3 my-4">
+                                <div key={i} className="col-md-6 col-lg-3 my-4">
                                     {IconPath && (
                                         <AboutCard
                                             CardIcon={IconPath}

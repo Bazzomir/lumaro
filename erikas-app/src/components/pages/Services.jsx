@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ServicesCard from '../component/ServicesCard';
+import { ServicesCard } from '../component/cards';
 import ConsultingIcon from '../../assets/image/icons/consulting.svg';
 import DevelopmentIcon from '../../assets/image/icons/development.svg';
 import QualityIcon from '../../assets/image/icons/quality.svg';
@@ -43,12 +43,12 @@ export default function Services() {
                 {servicesData.map((service, i) => {
                     const IconPath = iconMap[service.icon];
                     return (
-                        <div key={i} className="col-md-4 my-4">
+                        <div key={i} className="col-md-6 col-lg-4 my-4">
                             <ServicesCard
                                 category={service.category}
                                 description={service.description}
                                 offerings={service.offerings}
-                                iconPath={IconPath} 
+                                iconPath={IconPath}
                             />
                         </div>
                     );

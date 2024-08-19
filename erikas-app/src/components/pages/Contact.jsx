@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import avatarAveryR from '../../assets/image/avatars/averyR.svg';
 import avatarCaseyW from '../../assets/image/avatars/caseyW.svg';
 import avatarJordanM from '../../assets/image/avatars/jordanM.svg';
-import ContactCard from '../component/ContactCard';
+import { ContactCard } from '../component/cards';
+import { Button } from '../component/buttons';
 
 const avatarMap = {
     'averyR': avatarAveryR,
@@ -30,17 +31,17 @@ export default function Contact() {
     }, []);
 
     return (
-        <div className="contact container-fluid mt-5">
+        <div className="contact container-fluid my-5">
             <div className="row justify-content-center align-items-center">
                 <div className="contact-text col-12 col-lg-6">
-                    <p className="mb-0 mx-auto text-justify text-wrap w-85">
+                    <p className="mb-0 mx-auto text-justify text-wrap w-100">
                         <span className="text-purple">Your</span> Success Is Our <span className="text-purple">Success</span>
                     </p>
-                    <button className="btn btn-purple text-uppercase">Contact us</button>
+                    <Button btnName="Contact us" />
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block bg-triangle">
                     <div className="ratio contact-video rounded-md">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                 </div>
             </div>
@@ -50,22 +51,20 @@ export default function Contact() {
                 </div>
                 <div className="col-12 pt-4">
                     <div className="row p-0 m-0">
-                        <div className="d-flex justify-content-between" >
-                            {contactData.map((contact, i) => {
-                                const AvatarPath = avatarMap[contact.avatar];
-                                return (
-                                    <div key={i} className="col-md-3">
-                                        {AvatarPath && (
-                                            <ContactCard
-                                                avatarCard={AvatarPath}
-                                                fullName={contact.fullName}
-                                                quote={contact.quote}
-                                            />
-                                        )}
-                                    </div>
-                                );
-                            })}
-                        </div>
+                        {contactData.map((contact, i) => {
+                            const AvatarPath = avatarMap[contact.avatar];
+                            return (
+                                <div key={i} className="col-md-6 col-lg-4">
+                                    {AvatarPath && (
+                                        <ContactCard
+                                            avatarCard={AvatarPath}
+                                            fullName={contact.fullName}
+                                            quote={contact.quote}
+                                        />
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
