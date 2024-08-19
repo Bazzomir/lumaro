@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import AboutCard from '../component/AboutCard';
+import { AboutCard } from '../component/cards';
 import MeetingImg from '../../assets/image/meeting.svg';
 import GlobalExpertiseIcon from '../../assets/image/icons/gExpertise.svg';
 import PrecisionIcon from '../../assets/image/icons/precision.svg';

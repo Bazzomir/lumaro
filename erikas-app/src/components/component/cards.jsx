@@ -1,0 +1,52 @@
+import React from 'react';
+import { ReactComponent as ListIcon } from '../../assets/image/icons/list-circle.svg';
+
+export function ServicesCard({ category, description, offerings, iconPath }) {
+    return (
+        <div className="services-card gap-5 p-3 border shadow-sm">
+            <div className="services-card-body mx-auto">
+                <div className="mb-3">
+                    {iconPath && <img src={iconPath} alt={category} className="img-fluid" />}
+                </div>
+                <h5 className="services-card-body__title">{category}</h5>
+                <p className="services-card-body__text text-muted">{description}</p>
+                <ul className="list-group grid gap-0 row-gap-3">
+                    {offerings.map((offering, index) => (
+                        <li key={index} className="d-flex">
+                            <span className="me-2"><ListIcon /></span>
+                            <span className="services-card-body__text">{offering}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+export function ContactCard({ quote, fullName, avatarCard }) {
+    return (
+        <div className="contact-card">
+            <div className="contact-card-body">
+                <p className="contact-card-body__text">{quote}</p>
+                <div className="col">
+                    {avatarCard && <img src={avatarCard} alt={fullName} className="contact-card-body__avatar" />}
+                    <span className="contact-card-text__name">{fullName}</span>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export function AboutCard({ category, description, CardIcon }) {
+    return (
+        <div className="about-card gap-5 p-3 shadow-sm border-0 h-100">
+            <div className="about-card-body">
+                <div className="mb-3">
+                    {CardIcon && <img src={CardIcon} alt={category} className="img-fluid" />}
+                </div>
+                <h5 className="about-card-body__title">{category}</h5>
+                <p className="about-card-body__text text-muted">{description}</p>
+            </div>
+        </div>
+    );
+}

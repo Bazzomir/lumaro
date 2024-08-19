@@ -23,11 +23,6 @@ body {
     border-top: 1px solid var(--purple);
 }
 
-/* .box-broder-box {
-    display: inline;
-    box-sizing: border-box !important;
-} */
-
 .navbar {
     background-color: var(--purple) !important;
 }
@@ -100,43 +95,65 @@ body {
     font-size: 22px;
 }
 
-.card {
+.services-card {
     max-width: 500px !important;
     max-height: 529px !important;
     width: 100% !important;
     height: 100% !important;
 }
 
-.card-body {
+.services-card-body {
     max-width: 312px !important;
     max-height: 460px !important;
     width: 100% !important;
     height: 100% !important;
 }
 
-.card-body__title {
+.services-card-body__title {
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
     color: var(--black);
 }
 
-.card-body__text {
+.services-card-body__text {
     font-size: 20px;
     font-weight: 300;
     line-height: 26px;
     color: var(--black);
 }
 
-.card-text__name {
-    font-size: 22px !important;
-    font-weight: 500 !important;
-    line-height: 26.6px !important;
-}
-
 .about {
     box-sizing: border-box;
     overflow: hidden;
+}
+
+.about-card {
+    max-width: 312px !important;
+    max-height: 460px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.about-card-body {
+    max-width: 312px !important;
+    max-height: 460px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.about-card-body__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    color: var(--black);
+}
+
+.about-card-body__text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    color: var(--black);
 }
 
 .about-header,
@@ -184,6 +201,12 @@ body {
     line-height: 26px;
     color: var(--black);
     width: 375px;
+}
+
+.contact-card-text__name {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 26.6px !important;
 }
 
 .contact-card-body__avatar {

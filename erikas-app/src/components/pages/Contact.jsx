@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import avatarAveryR from '../../assets/image/avatars/averyR.svg';
 import avatarCaseyW from '../../assets/image/avatars/caseyW.svg';
 import avatarJordanM from '../../assets/image/avatars/jordanM.svg';
-import ContactCard from '../component/ContactCard';
+import {ContactCard} from '../component/cards';
 
 const avatarMap = {
     'averyR': avatarAveryR,
