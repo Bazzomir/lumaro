@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="container-fluid px-0 footer-border-top">
                 <div className="container py-5">
                     <div className="row">
-                        <div className="col-5">
+                        <div className="col-sm-12 col-lg-5">
                             <DarkLogo alt="Logo Footer" className="footer-logo" />
                             <div className="footer-paragraph">
                                 <p className="footer-paragraph__text mb-0 mt-4">
@@ -15,7 +15,7 @@ export default function Footer() {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-2">
+                        <div className="col-sm-4 col-lg-2 pt-5 pt-lg-0">
                             <span className="footer-item-names">Quick Links</span>
                             <ul className="footer-nav mt-3">
                                 <li className="footer-nav-item">
@@ -32,7 +32,7 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-3">
+                        <div className="col-sm-4 col-lg-3 pt-5 pt-lg-0">
                             <span className="footer-item-names">Get In Touch</span>
                             <ul className="footer-getInTouch mt-3">
                                 <li className="getInTocuh-item">
@@ -44,7 +44,7 @@ export default function Footer() {
                                 <li className="getInTocuh-item">Hours: Mon-Fri 9:00AM - 5:00PM</li>
                             </ul>
                         </div>
-                        <div className="col-2">
+                        <div className="col-sm-4 col-lg-2 pt-5 pt-lg-0">
                             <span className="footer-item-names">Social</span>
                             <ul className="footer-social mt-3">
                                 <li className="social-item">
@@ -63,10 +63,10 @@ export default function Footer() {
                 <div className="container-fluid footer-border-top" >
                     <div className="container">
                         <div className="row pt-3">
-                            <div className="col-5 footer-paragraph__text">©2024 Pixonium</div>
-                            <div className="col-2 footer-paragraph__text">Terms & Conditions</div>
-                            <div className="col-3 footer-paragraph__text">Privacy Policy</div>
-                            <div className="col-2 footer-paragraph__text">Made with 💜 by <br /> Blagoj Jovanovski - Bazzomir</div>
+                            <div className="col-12 col-lg-5 footer-paragraph__text">©2024 Pixonium</div>
+                            <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Terms & Conditions</div>
+                            <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Privacy Policy</div>
+                            <div className="col-12 col-lg-3 py-2 py-lg-0 footer-paragraph__text">Made with 💜 by <br className="d-none d-lg-block"/> Blagoj Jovanovski - Bazzomir</div>
                         </div>
                     </div>
                 </div>
