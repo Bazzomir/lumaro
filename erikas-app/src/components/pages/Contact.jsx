@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import avatarAveryR from '../../assets/image/avatars/averyR.svg';
 import avatarCaseyW from '../../assets/image/avatars/caseyW.svg';
 import avatarJordanM from '../../assets/image/avatars/jordanM.svg';
-import {ContactCard} from '../component/cards';
+import { ContactCard } from '../component/cards';
 
 const avatarMap = {
     'averyR': avatarAveryR,
@@ -50,22 +50,22 @@ export default function Contact() {
                 </div>
                 <div className="col-12 pt-4">
                     <div className="row p-0 m-0">
-                        <div className="d-flex justify-content-between" >
-                            {contactData.map((contact, i) => {
-                                const AvatarPath = avatarMap[contact.avatar];
-                                return (
-                                    <div key={i} className="col-md-3">
-                                        {AvatarPath && (
-                                            <ContactCard
-                                                avatarCard={AvatarPath}
-                                                fullName={contact.fullName}
-                                                quote={contact.quote}
-                                            />
-                                        )}
-                                    </div>
-                                );
-                            })}
-                        </div>
+                        {/* <div className="d-flex justify-content-between" > */}
+                        {contactData.map((contact, i) => {
+                            const AvatarPath = avatarMap[contact.avatar];
+                            return (
+                                <div key={i} className="col-md-6 col-lg-4">
+                                    {AvatarPath && (
+                                        <ContactCard
+                                            avatarCard={AvatarPath}
+                                            fullName={contact.fullName}
+                                            quote={contact.quote}
+                                        />
+                                    )}
+                                </div>
+                            );
+                        })}
+                        {/* </div> */}
                     </div>
                 </div>
             </div>

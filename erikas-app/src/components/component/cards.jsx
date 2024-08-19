@@ -27,8 +27,8 @@ export function ContactCard({ quote, fullName, avatarCard }) {
     return (
         <div className="contact-card">
             <div className="contact-card-body">
-                <p className="contact-card-body__text">{quote}</p>
-                <div className="col">
+                <p className="contact-card-body__text mx-auto mx-md-0 text-center text-lg-start">{quote}</p>
+                <div className="col text-center text-lg-start">
                     {avatarCard && <img src={avatarCard} alt={fullName} className="contact-card-body__avatar" />}
                     <span className="contact-card-text__name">{fullName}</span>
                 </div>
