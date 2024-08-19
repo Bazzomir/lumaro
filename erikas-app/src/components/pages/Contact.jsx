@@ -3,6 +3,7 @@ import avatarAveryR from '../../assets/image/avatars/averyR.svg';
 import avatarCaseyW from '../../assets/image/avatars/caseyW.svg';
 import avatarJordanM from '../../assets/image/avatars/jordanM.svg';
 import { ContactCard } from '../component/cards';
+import { Button } from '../component/buttons';
 
 const avatarMap = {
     'averyR': avatarAveryR,
@@ -33,10 +34,10 @@ export default function Contact() {
         <div className="contact container-fluid my-5">
             <div className="row justify-content-center align-items-center">
                 <div className="contact-text col-12 col-lg-6">
-                    <p className="mb-0 mx-auto text-justify text-wrap w-85">
+                    <p className="mb-0 mx-auto text-justify text-wrap w-100">
                         <span className="text-purple">Your</span> Success Is Our <span className="text-purple">Success</span>
                     </p>
-                    <button className="btn btn-purple text-uppercase">Contact us</button>
+                    <Button btnName="Contact us" />
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block bg-triangle">
                     <div className="ratio contact-video rounded-md">
@@ -50,7 +51,6 @@ export default function Contact() {
                 </div>
                 <div className="col-12 pt-4">
                     <div className="row p-0 m-0">
-                        {/* <div className="d-flex justify-content-between" > */}
                         {contactData.map((contact, i) => {
                             const AvatarPath = avatarMap[contact.avatar];
                             return (
@@ -65,7 +65,6 @@ export default function Contact() {
                                 </div>
                             );
                         })}
-                        {/* </div> */}
                     </div>
                 </div>
             </div>
