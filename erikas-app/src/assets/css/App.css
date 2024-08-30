@@ -52,16 +52,17 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
-.second-text {
-    font-size: 5.125rem !important; 
-    font-weight: 700 !important;
-    line-height: 5.688rem !important;
+.homepage-bigText {
+    font-size: 5.125rem;
+    font-weight: 700;
+    line-height: 5.688rem;
 }
 
-.third-text {
-    font-size: 1.375rem !important;
-    font-weight: 300 !important;
-    line-height: 1.625rem !important;
+.homepage-smallText {
+    font-size: 1.375rem;
+    /* font-size: calc(1.375em + 1vmin) !important; */
+    font-weight: 300;
+    line-height: 1.625rem;
 }
 
 .btn-purple {
@@ -168,7 +169,6 @@ body {
     font-size: 5.75rem;
     font-weight: 700;
     line-height: 7.188rem;
-    letter-spacing: 0.3;
 }
 
 .about-image {
@@ -176,8 +176,6 @@ body {
     position: relative;
     top: 35px;
     right: 20px;
-    /* height: 79vh; */
-    /* height: 43.2rem; */
     width: auto;
 }
 
@@ -279,4 +277,86 @@ body {
     margin: 0;
     padding: 0;
     color: var(--black) !important;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    /* Styles for xs */
+    .homepage-bigText {
+        font-size: 2.625rem;
+        line-height: 3rem;
+    }
+
+    /* .homepage-smallText {
+        font-size: 1.375rem;
+        font-weight: 300;
+        line-height: 1.625rem;
+    } */
+
+    .about-text,
+    .contact-text {
+        font-size: 3.425rem;
+        line-height: 3.5rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /* Styles for sm */
+    .homepage-bigText {
+        font-size: 3.688rem;
+        line-height: 3.688rem;
+    }
+
+    .about-text,
+    .contact-text {
+        font-size: 6.025rem;
+        line-height: 6.8rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    /* Styles for md */
+    .homepage-bigText {
+        font-size: 4.025rem;
+        line-height: 4.888rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    /* Styles for lg */
+    .homepage-bigText {
+        font-size: 4.425rem;
+        line-height: 4.888rem;
+    }
+
+    .about-text,
+    .contact-text {
+        font-size: 4.625rem;
+        line-height: 5.2rem;
+    }
+
+    .about-image {
+        top: 59px;
+    }
+
+    .bg-triangle {
+        height: 67vh;
+    }    
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    /* Styles for xl */
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    /* Styles for xxl */
 }
