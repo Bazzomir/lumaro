@@ -50,11 +50,11 @@ export default function Contact() {
                     <h2 className="text-center p-3 mb-0 contact-header">In Their Own Words</h2>
                 </div>
                 <div className="col-12 pt-4">
-                    <div className="row p-0 m-0">
+                    <div className="row p-0 m-0 gap-5 gap-md-4 gap-lg-0">
                         {contactData.map((contact, i) => {
                             const AvatarPath = avatarMap[contact.avatar];
                             return (
-                                <div key={i} className="col-md-6 col-lg-4">
+                                <div key={i} className="col-md-6 col-lg-4 contact-card gap-5">
                                     {AvatarPath && (
                                         <ContactCard
                                             avatarCard={AvatarPath}

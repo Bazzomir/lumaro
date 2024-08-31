@@ -102,10 +102,11 @@ body {
 }
 
 .services-card-body {
-    max-width: 312px !important;
+    /* max-width: 312px !important;
     max-height: 460px !important;
     width: 100% !important;
-    height: 100% !important;
+    height: 100% !important; */
+    height: auto;
 }
 
 .services-card-body__title {
@@ -186,16 +187,18 @@ body {
     right: 20px;
 }
 
-.contact-card {
+/* .contact-card {
     overflow: hidden;
     box-sizing: border-box;
-}
+} */
 
 .contact-card-body {
-    max-width: 500px !important;
+    /* max-width: 500px !important;
     max-height: 660px !important;
     width: 100% !important;
-    height: 100% !important;
+    height: 100% !important; */
+    width: auto;
+    height: auto;
 }
 
 .contact-card-body__text {
@@ -203,7 +206,6 @@ body {
     font-weight: 300;
     line-height: 26px;
     color: var(--black);
-    width: 375px;
 }
 
 .contact-card-text__name {
