@@ -36,7 +36,7 @@ export default function About() {
         <div className="about container-fluid mt-5">
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-lg-6 ">
-                    <p className="mb-0 mx-0 mx-sm-auto text-center text-md-start about-text w-75">
+                    <p className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75 ">
                         <span className="text-purple">We're</span> Your Strategic Ally In The <span className="text-purple">Digital</span> IT World.
                     </p>
                 </div>
@@ -46,14 +46,14 @@ export default function About() {
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
-                    <h2 className="text-center p-3 mb-0 about-header">Why Work With Us</h2>
+                    <h2 className="text-center p-3 mb-0 header-text--small">Why Work With Us</h2>
                 </div>
                 <div className="col-12 pt-4">
-                    <div className="row p-0 m-0">
+                    <div className="row p-0 m-0 justify-content-around align-items-center">
                         {aboutData.map((about, i) => {
                             const IconPath = iconMap[about.icon];
                             return (
-                                <div key={i} className="col-md-6 col-lg-3 my-4">
+                                <div key={i} className="col-md-6 col-lg-3 my-4 w-auto">
                                     {IconPath && (
                                         <AboutCard
                                             CardIcon={IconPath}

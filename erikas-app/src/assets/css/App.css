@@ -52,7 +52,7 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
-.homepage-bigText {
+.header-text--big {
     font-size: 5.125rem;
     font-weight: 700;
     line-height: 5.688rem;
@@ -60,7 +60,6 @@ body {
 
 .homepage-smallText {
     font-size: 1.375rem;
-    /* font-size: calc(1.375em + 1vmin) !important; */
     font-weight: 300;
     line-height: 1.625rem;
 }
@@ -68,13 +67,18 @@ body {
 .btn-purple {
     color: var(--purple) !important;
     border-color: var(--purple) !important;
-    border-radius: 31px !important;
-    width: 18.875rem !important;
-    height: 62px;
+    border-radius: 40px !important;
+    letter-spacing: 0.1em !important;
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.btn-purple--text {
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 21.78px;
-    letter-spacing: 0.1em;
 }
 
 .btn-purple:hover {
@@ -102,10 +106,6 @@ body {
 }
 
 .services-card-body {
-    /* max-width: 312px !important;
-    max-height: 460px !important;
-    width: 100% !important;
-    height: 100% !important; */
     height: auto;
 }
 
@@ -158,11 +158,11 @@ body {
     color: var(--black);
 }
 
-.about-header,
-.contact-header {
-    font-size: 62px;
+
+.header-text--small {
+    font-size: 4.425rem;
     font-weight: 700;
-    line-height: 75px;
+    line-height: 4.888rem;
 }
 
 .about-text,
@@ -187,16 +187,7 @@ body {
     right: 20px;
 }
 
-/* .contact-card {
-    overflow: hidden;
-    box-sizing: border-box;
-} */
-
 .contact-card-body {
-    /* max-width: 500px !important;
-    max-height: 660px !important;
-    width: 100% !important;
-    height: 100% !important; */
     width: auto;
     height: auto;
 }
@@ -285,19 +276,26 @@ body {
 @media (max-width: 575.98px) {
 
     /* Styles for xs */
-    .homepage-bigText {
-        font-size: 2.625rem;
-        line-height: 3rem;
-    }
-
-    .about-text,
-    .contact-text {
+    .header-text--big {
         font-size: 3.425rem;
         line-height: 3.5rem;
     }
 
+    .header-text--small {
+        font-size: 2.625rem;
+        line-height: 3.3rem;
+    }
+
     .footer-paragraph {
         max-width: 350px;
+    }
+
+    .btn-purple {
+        border-radius: 40px !important;
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+        padding-top: 0.7rem !important;
+        padding-bottom: 0.7rem !important;
     }
 }
 
@@ -305,15 +303,22 @@ body {
 @media (min-width: 576px) and (max-width: 767.98px) {
 
     /* Styles for sm */
-    .homepage-bigText {
+    .header-text--big {
         font-size: 3.688rem;
         line-height: 3.688rem;
     }
 
-    .about-text,
-    .contact-text {
-        font-size: 6.025rem;
-        line-height: 6.8rem;
+    .header-text--small {
+        font-size: 3rem;
+        line-height: 3.8rem;
+    }
+
+    .btn-purple {
+        border-radius: 40px !important;
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
     }
 }
 
@@ -321,9 +326,22 @@ body {
 @media (min-width: 768px) and (max-width: 991.98px) {
 
     /* Styles for md */
-    .homepage-bigText {
-        font-size: 4.025rem;
-        line-height: 4.888rem;
+    .header-text--big {
+        font-size: 4.25rem;
+        line-height: 4.5rem;
+    }
+
+    .header-text--small {
+        font-size: 3.488rem;
+        line-height: 4.588rem;
+    }
+
+    .btn-purple {
+        border-radius: 40px !important;
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
+        padding-top: 1.2rem !important;
+        padding-bottom: 1.2rem !important;
     }
 }
 
@@ -331,15 +349,14 @@ body {
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
     /* Styles for lg */
-    .homepage-bigText {
-        font-size: 4.425rem;
-        line-height: 4.888rem;
+    .header-text--big {
+        font-size: 4.65rem;
+        line-height: 5.2rem;
     }
 
-    .about-text,
-    .contact-text {
-        font-size: 4.625rem;
-        line-height: 5.2rem;
+    .header-text--small {
+        font-size: 3.875rem;
+        line-height: 4.688rem;
     }
 
     .about-image {
@@ -348,7 +365,7 @@ body {
 
     .bg-triangle {
         height: 67vh;
-    }   
+    }
 
     .footer-paragraph {
         width: 23.25rem;

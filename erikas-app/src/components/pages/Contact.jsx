@@ -33,7 +33,7 @@ export default function Contact() {
     return (
         <div className="contact container-fluid my-5">
             <div className="row justify-content-center align-items-center">
-                <div className="contact-text col-12 col-lg-6">
+                <div className="header-text--big col-12 col-lg-6">
                     <p className="mb-0 mx-auto text-justify text-wrap w-100">
                         <span className="text-purple">Your</span> Success Is Our <span className="text-purple">Success</span>
                     </p>
@@ -47,7 +47,7 @@ export default function Contact() {
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
-                    <h2 className="text-center p-3 mb-0 contact-header">In Their Own Words</h2>
+                    <h2 className="text-center p-3 mb-0 header-text--small">In Their Own Words</h2>
                 </div>
                 <div className="col-12 pt-4">
                     <div className="row p-0 m-0 gap-5 gap-md-4 gap-lg-0">

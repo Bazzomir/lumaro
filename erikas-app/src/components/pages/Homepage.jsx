@@ -9,7 +9,7 @@ export default function Homepage() {
                 <div className="col-12 col-lg-5">
                     <div className="d-flex row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
-                            <h1 className="m-0 homepage-bigText">
+                            <h1 className="m-0 header-text--big">
                                 Shape Your Future <br />  with Global Innovation
                             </h1>
                         </div>
