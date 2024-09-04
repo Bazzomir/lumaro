@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import Lottie from 'react-lottie';
 import { ReactComponent as HomepageImage } from '../../assets/image/homepage.svg';
 import { Button } from '../component/buttons';
+import scrollDownAnimation from '../../assets/animation/scrollDown.json';
 
 export default function Homepage() {
+
+    const [isLottieVisible, setIsLottieVisible] = useState(true);
+    const homepageRef = useRef(null);
+
+    const handleScroll = () => {
+        if (homepageRef.current) {
+            const homePage = homepageRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (homePage.bottom < windowHeight / 2) {
+                setIsLottieVisible(false);
+            }
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: scrollDownAnimation,
+        rendererSettings: {
+            preserveAspectRatio: "scrollDown slice"
+        }
+    };
+
     return (
-        <div className="homepage container mt-5" id="home">
+        <div className="homepage container mt-5" id="home" ref={homepageRef}>
             <div className="d-flex row justify-content-between">
                 <div className="col-12 col-lg-5">
                     <div className="d-flex row gap-3 gap-md-5 text-center text-md-start">
@@ -25,6 +58,14 @@ export default function Homepage() {
                     </div>
                 </div>
             </div>
+
+            {isLottieVisible && (
+                <Lottie
+                    options={defaultOptions}
+                    height={100}
+                    width={100}
+                />
+            )}
         </div>
-    )
+    );
 }

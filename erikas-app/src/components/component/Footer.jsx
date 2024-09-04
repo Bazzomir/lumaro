@@ -19,16 +19,16 @@ export default function Footer() {
                             <span className="footer-item-names">Quick Links</span>
                             <ul className="footer-nav mt-3">
                                 <li className="footer-nav-item">
-                                    <a className="footer-nav-link" href="#">Home</a>
+                                    <a className="footer-nav-link" href="#home">Home</a>
                                 </li>
                                 <li className="footer-nav-item">
-                                    <a className="footer-nav-link" href="#">Services</a>
+                                    <a className="footer-nav-link" href="#services">Services</a>
                                 </li>
                                 <li className="footer-nav-item">
-                                    <a className="footer-nav-link" href="#">About</a>
+                                    <a className="footer-nav-link" href="#about">About</a>
                                 </li>
                                 <li className="footer-nav-item">
-                                    <a className="footer-nav-link" href="#">Contact</a>
+                                    <a className="footer-nav-link" href="#contact">Contact</a>
                                 </li>
                             </ul>
                         </div>

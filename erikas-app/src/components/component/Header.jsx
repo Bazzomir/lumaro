@@ -11,7 +11,7 @@ export default function Header() {
             </div>
             <nav className="navbar navbar-expand-lg container-fluid">
                 <div className="container">
-                    <a className="navbar-brand" href="#">pixonium</a>
+                    <a className="navbar-brand" href="#home">pixonium</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
