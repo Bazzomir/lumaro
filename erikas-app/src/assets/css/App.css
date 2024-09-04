@@ -3,7 +3,10 @@
     --white: #fff;
     --black: #010512;
     --gray: #E6E1EA;
+}
 
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,9 +18,9 @@ body {
     color: var(--purple) !important;
 }
 
-.w-85 {
+/* .w-85 {
     width: 85% !important;
-}
+} */
 
 .footer-border-top {
     border-top: 1px solid var(--purple);

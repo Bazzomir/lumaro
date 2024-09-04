@@ -34,7 +34,7 @@ export default function Services() {
     }, []);
 
     return (
-        <div className="services container mt-5">
+        <div className="services container mt-5" id="services">
             <div className="row">
                 <h2 className="header-text--small text-center">Our Services</h2>
                 <p className="services--paragraph text-center">Welcome to our website</p>

@@ -18,16 +18,16 @@ export default function Header() {
                     <div className="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
                         <ul className="navbar-nav gap-3">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Home</a>
+                                <a className="nav-link" href="#home">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Services</a>
+                                <a className="nav-link" href="#services">Services</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
+                                <a className="nav-link" href="#about">About</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
+                                <a className="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>

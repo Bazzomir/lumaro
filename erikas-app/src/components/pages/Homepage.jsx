@@ -4,7 +4,7 @@ import { Button } from '../component/buttons';
 
 export default function Homepage() {
     return (
-        <div className="homepage container mt-5">
+        <div className="homepage container mt-5" id="home">
             <div className="d-flex row justify-content-between">
                 <div className="col-12 col-lg-5">
                     <div className="d-flex row gap-3 gap-md-5 text-center text-md-start">
