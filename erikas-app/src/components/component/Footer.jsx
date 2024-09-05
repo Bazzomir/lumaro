@@ -5,8 +5,8 @@ export default function Footer() {
     return (
         <div className="footer">
             <div className="container-fluid px-0 footer-border-top">
-                <div className="container py-5">
-                    <div className="row">
+                <div className="p-5 mt-5">
+                    <div className="row mt-5">
                         <div className="col-sm-12 col-lg-5">
                             <DarkLogo alt="Logo Footer" className="footer-logo" />
                             <div className="footer-paragraph">
@@ -61,13 +61,11 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="container-fluid footer-border-top" >
-                    <div className="container">
-                        <div className="row pt-3">
-                            <div className="col-12 col-lg-5 footer-paragraph__text">©2024 Pixonium</div>
-                            <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Terms & Conditions</div>
-                            <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Privacy Policy</div>
-                            <div className="col-12 col-lg-3 py-2 py-lg-0 footer-paragraph__text">Made with 💜 by <br className="d-none d-lg-block"/> Blagoj Jovanovski - Bazzomir</div>
-                        </div>
+                    <div className="row py-3 px-5 align-items-center">
+                        <div className="col-12 col-lg-5 px-0 footer-paragraph__text">©2024 Pixonium</div>
+                        <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Terms & Conditions</div>
+                        <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Privacy Policy</div>
+                        <div className="col-12 col-lg-3 footer-paragraph__text">Made with 💜 by <br className="d-none d-lg-block" /> Blagoj Jovanovski - Bazzomir</div>
                     </div>
                 </div>
             </div>

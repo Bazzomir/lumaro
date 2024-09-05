@@ -33,7 +33,7 @@ export default function About() {
     }, []);
 
     return (
-        <div className="about container-fluid mt-5" id="about">
+        <div className="about container-fluid mt-5 px-5" id="about">
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-lg-6 ">
                     <p className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75 ">

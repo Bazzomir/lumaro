@@ -34,25 +34,27 @@ export default function Services() {
     }, []);
 
     return (
-        <div className="services container mt-5" id="services">
-            <div className="row">
-                <h2 className="header-text--small text-center">Our Services</h2>
-                <p className="services--paragraph text-center">Welcome to our website</p>
-            </div>
-            <div className="row py-3">
-                {servicesData.map((service, i) => {
-                    const IconPath = iconMap[service.icon];
-                    return (
-                        <div key={i} className="col-md-6 col-lg-4 my-4">
-                            <ServicesCard
-                                category={service.category}
-                                description={service.description}
-                                offerings={service.offerings}
-                                iconPath={IconPath}
-                            />
-                        </div>
-                    );
-                })}
+        <div className="services container-fluid mt-5 px-5" id="services">
+            <div className="container">
+                <div className="row">
+                    <h2 className="header-text--small text-center">Our Services</h2>
+                    <p className="services--paragraph text-center">Welcome to our website</p>
+                </div>
+                <div className="row py-3">
+                    {servicesData.map((service, i) => {
+                        const IconPath = iconMap[service.icon];
+                        return (
+                            <div key={i} className="col-md-6 col-lg-4 my-4">
+                                <ServicesCard
+                                    category={service.category}
+                                    description={service.description}
+                                    offerings={service.offerings}
+                                    iconPath={IconPath}
+                                />
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
