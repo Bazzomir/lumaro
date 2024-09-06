@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <div className="footer">
             <div className="container-fluid px-0 footer-border-top">
-                <div className="p-5 mt-5">
+                <div className="py-5 px-120 mt-5">
                     <div className="row mt-5">
                         <div className="col-sm-12 col-lg-5">
                             <DarkLogo alt="Logo Footer" className="footer-logo" />
@@ -61,7 +61,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="container-fluid footer-border-top" >
-                    <div className="row py-3 px-5 align-items-center">
+                    <div className="row py-3 px-120 align-items-center">
                         <div className="col-12 col-lg-5 px-0 footer-paragraph__text">©2024 Pixonium</div>
                         <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Terms & Conditions</div>
                         <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Privacy Policy</div>

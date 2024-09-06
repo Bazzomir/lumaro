@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactComponent as Logo } from '../../assets/image/logo/logo.svg';
 
 export default function Header() {
     return (
@@ -9,8 +10,12 @@ export default function Header() {
                     <p className="mb-0 py-2">760-284-8287</p>
                 </div>
             </div>
-            <nav className="navbar navbar-expand-lg container-fluid px-5">
-                <a className="navbar-brand" href="#home">pixonium</a>
+            <nav className="navbar navbar-expand-lg container-fluid px-120">
+                <a className="navbar-brand d-grid align-items-center" href="#home">
+                    {/* <img src={logo} /> */}
+                    <Logo alt="Navigation Logo" className="nav-logo" />
+                    {/* pixonium */}
+                </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

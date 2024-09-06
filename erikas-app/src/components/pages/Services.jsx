@@ -34,11 +34,11 @@ export default function Services() {
     }, []);
 
     return (
-        <div className="services container-fluid mt-5 px-5" id="services">
+        <div className="services container-fluid mt-5 px-120" id="services">
             <div className="container">
                 <div className="row">
                     <h2 className="header-text--small text-center">Our Services</h2>
-                    <p className="services--paragraph text-center">Welcome to our website</p>
+                    <p className="services--paragraph text-center">We're equipped to deliver with precison and expertise.</p>
                 </div>
                 <div className="row py-3">
                     {servicesData.map((service, i) => {

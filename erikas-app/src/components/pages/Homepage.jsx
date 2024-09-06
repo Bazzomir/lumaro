@@ -37,13 +37,13 @@ export default function Homepage() {
     };
 
     return (
-        <div className="homepage container-fluid mt-5 px-5" id="home" ref={homepageRef}>
-            <div className="d-flex row justify-content-between">
-                <div className="col-12 col-lg-5">
-                    <div className="d-flex row gap-3 gap-md-5 text-center text-md-start">
+        <div className="homepage container-fluid mt-5 px-120" id="home" ref={homepageRef}>
+            <div className="row pt-5">
+                <div className="col-12 col-lg-7  align-self-center">
+                    <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
                             <h1 className="m-0 header-text--big">
-                                Shape Your Future <br />  with Global Innovation
+                                Shape Your Future with Global Innovation
                             </h1>
                         </div>
                         <div className="col-12">

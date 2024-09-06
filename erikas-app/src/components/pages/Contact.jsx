@@ -31,7 +31,7 @@ export default function Contact() {
     }, []);
 
     return (
-        <div className="contact container-fluid my-5 px-5" id="contact">
+        <div className="contact container-fluid my-5 px-120" id="contact">
             <div className="row justify-content-center align-items-center">
                 <div className="header-text--big col-12 col-lg-6">
                     <p className="mb-0 mx-auto text-justify text-wrap w-100">
