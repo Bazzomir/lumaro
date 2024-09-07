@@ -28,12 +28,11 @@ body {
 }
 
 .homepage {
-    /* height: 100vh !important; */
     height: 85vh;
 }
 
-.contact, 
-.about, 
+.contact,
+.about,
 .services {
     height: 135vh;
 }
@@ -315,6 +314,12 @@ body {
         padding-top: 0.7rem !important;
         padding-bottom: 0.7rem !important;
     }
+
+    .px-120 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -338,6 +343,11 @@ body {
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;
     }
+
+    .px-120 {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -360,6 +370,11 @@ body {
         padding-right: 5rem !important;
         padding-top: 1.2rem !important;
         padding-bottom: 1.2rem !important;
+    }
+
+    .px-120 {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
     }
 }
 
@@ -388,11 +403,20 @@ body {
     .footer-paragraph {
         width: 23.25rem;
     }
+
+    .px-120 {
+        padding-left: 75px !important;
+        padding-right: 75px !important;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
     /* Styles for xl */
+    .px-120 {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
 }
 
 /* Extra extra large devices (larger desktops, 1400px and up) */

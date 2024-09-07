@@ -37,7 +37,7 @@ export default function Homepage() {
     };
 
     return (
-        <div className="homepage container-fluid mt-5 px-120" id="home" ref={homepageRef}>
+        <div className="homepage container-fluid mt-0 mt-md-5 px-120" id="home" ref={homepageRef}>
             <div className="row pt-5">
                 <div className="col-12 col-lg-7  align-self-center">
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
