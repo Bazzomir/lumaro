@@ -37,7 +37,7 @@ export function ContactCard({ quote, fullName, avatarCard }) {
 
 export function AboutCard({ category, description, CardIcon }) {
     return (
-        <div className="about-card gap-5 p-3 shadow-sm border-0 h-100">
+        <div className="about-card gap-5 p-3 shadow-sm border-0 rounded h-100">
             <div className="about-card-body">
                 <div className="mb-3">
                     {CardIcon && <img src={CardIcon} alt={category} className="img-fluid" />}

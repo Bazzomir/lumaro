@@ -36,7 +36,7 @@ export default function Contact() {
             <div className="row justify-content-center align-items-center">
                 <div className="header-text--big col-12 col-lg-6">
                     <p className="mb-0 mx-auto text-justify text-wrap w-100">
-                        <span className="text-purple">Your</span> Success Is Our <span className="text-purple">Success</span>
+                        <span className="text-purple">Your</span> Success <br /> Is Our <span className="text-purple">Success</span>
                     </p>
                     <Button btnName="Contact us" />
                 </div>
