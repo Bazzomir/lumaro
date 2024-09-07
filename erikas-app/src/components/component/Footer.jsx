@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactComponent as DarkLogo } from '../../assets/image/logo/darkLogo.svg';
 
 export default function Footer({ activeLink, setActiveLink }) {
@@ -64,10 +64,10 @@ export default function Footer({ activeLink, setActiveLink }) {
                             <span className="footer-item-names">Get In Touch</span>
                             <ul className="footer-getInTouch mt-3">
                                 <li className="getInTocuh-item">
-                                    <a className="getInTocuh-link" href="#">Email: contact@pixonium.com</a>
+                                    <a className="getInTocuh-link" href="mailto:someone@example.com">Email: contact@pixonium.com</a>
                                 </li>
                                 <li className="getInTocuh-item">
-                                    <a className="getInTocuh-link" href="#">Phone: 760-284-8287</a>
+                                    <a className="getInTocuh-link" href="tel:012-345-6789">Phone: 760-284-8287</a>
                                 </li>
                                 <li className="getInTocuh-item">Hours: Mon-Fri 9:00AM - 5:00PM</li>
                             </ul>
@@ -76,10 +76,10 @@ export default function Footer({ activeLink, setActiveLink }) {
                             <span className="footer-item-names">Social</span>
                             <ul className="footer-social mt-3">
                                 <li className="social-item">
-                                    <a className="social-link" href="#">LinkedIn</a>
+                                    <a className="social-link" href="https://www.linkedin.com/">LinkedIn</a>
                                 </li>
                                 <li className="social-item">
-                                    <a className="social-link" href="#">Instagram</a>
+                                    <a className="social-link" href="https://www.Instagram.com/">Instagram</a>
                                 </li>
                             </ul>
                         </div>

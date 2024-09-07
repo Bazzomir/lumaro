@@ -14,6 +14,7 @@ const iconMap = {
 };
 
 export default function About() {
+
     const [aboutData, setAboutData] = useState([]);
 
     useEffect(() => {
@@ -41,7 +42,7 @@ export default function About() {
                     </p>
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block bg-triangle">
-                    <img src={MeetingImg} alt="About us Image" className="about-image mx-auto" />
+                    <img src={MeetingImg} alt="About us" className="about-image mx-auto" />
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">

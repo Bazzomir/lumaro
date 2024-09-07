@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactComponent as Logo } from '../../assets/image/logo/logo.svg';
 
 export default function Header({activeLink, setActiveLink}) {
