@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ReactComponent as BgTrangle } from '../../assets/image/rectangle.svg';
 import avatarAveryR from '../../assets/image/avatars/averyR.svg';
 import avatarCaseyW from '../../assets/image/avatars/caseyW.svg';
 import avatarJordanM from '../../assets/image/avatars/jordanM.svg';
@@ -39,10 +40,9 @@ export default function Contact() {
                     </p>
                     <Button btnName="Contact us" />
                 </div>
-                <div className="col-0 col-lg-6 d-none d-lg-block bg-triangle">
-                    <div className="ratio contact-video rounded-md">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                    </div>
+                <div className="col-0 col-lg-6 d-none d-lg-block relative">
+                    <BgTrangle alt="Background" className="bg-triangle" />
+                    <iframe width="800" height="600" src="https://www.youtube.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="contact-video rounded" />
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">

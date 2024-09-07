@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AboutCard } from '../component/cards';
-import MeetingImg from '../../assets/image/meeting.svg';
+import { ReactComponent as MeetingImg } from '../../assets/image/meeting.svg';
+import { ReactComponent as BgTrangle } from '../../assets/image/rectangle.svg';
 import GlobalExpertiseIcon from '../../assets/image/icons/gExpertise.svg';
 import PrecisionIcon from '../../assets/image/icons/precision.svg';
 import EfficiencyIcon from '../../assets/image/icons/efficiency.svg';
@@ -41,8 +42,9 @@ export default function About() {
                         <span className="text-purple">We're</span> Your Strategic Ally In The <span className="text-purple">Digital</span> IT World.
                     </p>
                 </div>
-                <div className="col-0 col-lg-6 d-none d-lg-block bg-triangle">
-                    <img src={MeetingImg} alt="About us" className="about-image mx-auto" />
+                <div className="col-0 col-lg-6 d-none d-lg-block relative">
+                    <BgTrangle alt="Background" className="bg-triangle" />
+                    <MeetingImg alt="About us meeting" className="about-image mx-auto rounded" />
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
