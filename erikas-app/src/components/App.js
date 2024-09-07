@@ -7,16 +7,20 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './component/Footer';
+import { useState } from 'react';
 
 function App() {
+
+  const [activeLink, setActiveLink] = useState('home');
+
   return (
     <>
-      <Header />
+      <Header activeLink={activeLink} setActiveLink={setActiveLink} />
       <Homepage />
       <Services />
       <About />
       <Contact />
-      <Footer />
+      <Footer activeLink={activeLink} setActiveLink={setActiveLink} />
     </>
   );
 }
