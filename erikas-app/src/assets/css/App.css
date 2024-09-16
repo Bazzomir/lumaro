@@ -34,18 +34,18 @@ body {
     position: relative;
 }
 
+.contact,
+.about,
+.services {
+    height: 135vh;
+}
+
 .homepage-image {
     aspect-ratio: 4/3;
     position: absolute;
     top: 20px;
     right: 0;
     z-index: 2;
-}
-
-.contact,
-.about,
-.services {
-    height: 135vh;
 }
 
 .navbar {
@@ -343,6 +343,13 @@ body {
         padding-right: 10px !important;
     }
 
+    .homepage,
+    .contact,
+    .about,
+    .services {
+        height: auto;
+    }
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -371,6 +378,13 @@ body {
         padding-left: 30px !important;
         padding-right: 30px !important;
     }
+
+    .homepage,
+    .contact,
+    .about,
+    .services {
+        height: auto;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -398,6 +412,13 @@ body {
     .px-120 {
         padding-left: 50px !important;
         padding-right: 50px !important;
+    }
+
+    .homepage,
+    .contact,
+    .about,
+    .services {
+        height: auto;
     }
 }
 
@@ -445,5 +466,8 @@ body {
 
 /* Extra extra large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-    /* Styles for xxl */
+    /* .px-120 {
+        padding-left: 1000px !important;
+        padding-right: 1000px !important;
+    } */
 }
