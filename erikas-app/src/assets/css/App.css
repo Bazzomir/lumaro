@@ -418,7 +418,7 @@ body {
     .contact,
     .about,
     .services {
-        height: auto;
+        height: auto !important;
     }
 }
 
