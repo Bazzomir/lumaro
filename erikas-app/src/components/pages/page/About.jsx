@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { AboutCard } from '../component/cards';
-import { ReactComponent as MeetingImg } from '../../assets/image/meeting.svg';
-import { ReactComponent as BgTrangle } from '../../assets/image/rectangle.svg';
-import GlobalExpertiseIcon from '../../assets/image/icons/gExpertise.svg';
-import PrecisionIcon from '../../assets/image/icons/precision.svg';
-import EfficiencyIcon from '../../assets/image/icons/efficiency.svg';
-import ScalabilityIcon from '../../assets/image/icons/scalability.svg';
+import { AboutCard } from '../../component/cards';
+import { ReactComponent as MeetingImg } from '../../../assets/image/meeting.svg';
+import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
+import GlobalExpertiseIcon from '../../../assets/image/icons/gExpertise.svg';
+import PrecisionIcon from '../../../assets/image/icons/precision.svg';
+import EfficiencyIcon from '../../../assets/image/icons/efficiency.svg';
+import ScalabilityIcon from '../../../assets/image/icons/scalability.svg';
 
 const iconMap = {
     'gExpertise': GlobalExpertiseIcon,

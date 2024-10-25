@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { ReactComponent as BgTrangle } from '../../assets/image/rectangle.svg';
-import avatarAveryR from '../../assets/image/avatar/averyR.svg';
-import avatarCaseyW from '../../assets/image/avatar/caseyW.svg';
-import avatarJordanM from '../../assets/image/avatar/jordanM.svg';
-import { ContactCard } from '../component/cards';
-import { Button } from '../component/buttons';
+import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
+import avatarAveryR from '../../../assets/image/avatar/averyR.svg';
+import avatarCaseyW from '../../../assets/image/avatar/caseyW.svg';
+import avatarJordanM from '../../../assets/image/avatar/jordanM.svg';
+import { ContactCard } from '../../component/cards';
+import { Button } from '../../component/buttons';
 
 const avatarMap = {
     'averyR': avatarAveryR,
