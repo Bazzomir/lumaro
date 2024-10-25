@@ -6,7 +6,6 @@ import About from './page/About';
 import Contact from './page/Contact';
 import Footer from '../component/Footer';
 
-
 function Main() {
 
   const [activeLink, setActiveLink] = useState('home');
