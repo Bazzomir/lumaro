@@ -28,7 +28,7 @@ body {
 }
 
 .homepage {
-    height: 85vh;
+    height: 100%;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
@@ -37,12 +37,14 @@ body {
 .contact,
 .about,
 .services {
-    height: 135vh;
+    height: 100%;
 }
 
 .homepage-image {
     aspect-ratio: 4/3;
     position: absolute;
+    width: 100%;
+    max-width: 600px;
     top: 20px;
     right: 0;
     z-index: 2;
@@ -111,6 +113,30 @@ body {
     border: 2px solid var(--purple) !important;
     transform: scale(1.1) !important;
     box-shadow: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
+}
+
+.btn-form {
+    color: var(--white) !important;
+    border: 2px solid var(--purple) !important;
+    background-color: var(--purple) !important;
+    border-radius: 40px !important;
+    letter-spacing: 0.1em !important;
+    padding: 0.7rem 3.5rem !important;
+    transition: 0.3s !important;
+}
+
+.btn-form:hover {
+    background-color: var(--white) !important;
+    color: var(--purple) !important;
+    border: 2px solid var(--purple) !important;
+    transform: scale(1.1) !important;
+    box-shadow: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
+}
+
+#radio1,
+#radio2 {
+    accent-color: var(--purple);
+    margin-right: 10px;
 }
 
 .services--header {
@@ -204,26 +230,21 @@ body {
 .about-image {
     aspect-ratio: 4/3;
     position: absolute;
-    top: 77px;
-    right: 139px;
+    max-width: 600px;
+    width: 100%;
+    top: 176px;
+    right: 120px;
     z-index: 2;
-    height: 600px;
-    width: auto;
-}
-
-.bg-triangle {
-    position: absolute;
-    z-index: 1;
 }
 
 .contact-video {
     aspect-ratio: 4/3;
     position: absolute;
+    max-width: 600px;
+    width: 100%;
     top: 77px;
     right: 139px;
     z-index: 2;
-    height: 600px;
-    width: auto;
 }
 
 .contact-card-body {
@@ -247,6 +268,26 @@ body {
 .contact-card-body__avatar {
     height: 98px;
     width: 98px;
+}
+
+.contact-input {
+    border-color: transparent !important;
+    border-bottom: 1px solid var(--purple) !important;
+    border-radius: 40px !important;
+}
+
+.contact-input:focus {
+    box-shadow: 0px 0px 9px 0px rgba(82, 32, 129, 0.9) !important;
+    border-color: #522081 !important;
+}
+
+.modal {
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+}
+
+textarea.form-control {
+    transition: 0.3s ease !important;
 }
 
 .bg-triangle {
@@ -347,7 +388,7 @@ body {
     .contact,
     .about,
     .services {
-        height: auto !important;
+        height: 100% !important;
     }
 
 }
@@ -383,7 +424,7 @@ body {
     .contact,
     .about,
     .services {
-        height: auto !important;
+        height: 100% !important;
     }
 }
 
@@ -418,7 +459,7 @@ body {
     .contact,
     .about,
     .services {
-        height: auto !important;
+        height: 100% !important;
     }
 }
 
