@@ -9,3 +9,9 @@ export function Button({ btnName }) {
         </div>
     );
 }
+
+export function ButtonForm() {
+    return (
+        <button type="button" className="btn-form text-uppercase">Send</button>
+    )
+}
