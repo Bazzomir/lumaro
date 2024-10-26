@@ -246,6 +246,17 @@ body {
     width: 98px;
 }
 
+.contact-input {
+    border-color: transparent !important;
+    border-bottom: 1px solid var(--purple) !important;
+    border-radius: 40px !important;
+}
+
+.contact-input:focus {
+    box-shadow: 0px 0px 9px 0px rgba(82,32,129,0.9) !important;
+    border-color: #522081 !important;
+}
+
 .bg-triangle {
     position: relative;
     z-index: 1;

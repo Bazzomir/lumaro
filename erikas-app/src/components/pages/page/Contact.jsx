@@ -4,7 +4,7 @@ import avatarAveryR from '../../../assets/image/avatar/averyR.svg';
 import avatarCaseyW from '../../../assets/image/avatar/caseyW.svg';
 import avatarJordanM from '../../../assets/image/avatar/jordanM.svg';
 import { ContactCard } from '../../component/cards';
-import { Button } from '../../component/buttons';
+// import { Button } from '../../component/buttons';
 import Form from '../../component/form';
 
 const avatarMap = {

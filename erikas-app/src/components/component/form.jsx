@@ -18,41 +18,37 @@ function Form() {
                         </div>
                         <div className="modal-body">
                             <form>
-                                <div className="wrap-contact3-form-radio">
-                                    <div className="contact3-form-radio m-r-42">
+                                <div className="wrap-contact3-form-radio row py-4">
+                                    <div className="contact3-form-radio m-r-42 col-6">
                                         <input className="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked" />
                                         <label className="label-radio3" for="radio1">
                                             Say Hi
                                         </label>
                                     </div>
 
-                                    <div className="contact3-form-radio">
+                                    <div className="contact3-form-radio col-6">
                                         <input className="input-radio3" id="radio2" type="radio" name="choice" value="get-quote" />
                                         <label className="label-radio3" for="radio2">
                                             Get a Quote
                                         </label>
                                     </div>
                                 </div>
-                                <div className="mb-3">
-                                    <label htmlFor="recipient-name" className="col-form-label">Fullname:</label>
-                                    <input type="text" className="form-control" id="recipient-name" required />
+                                <div className="mb-4">
+                                    <input type="text" className="form-control py-2 contact-input" id="recipient-name" placeholder="Fullname" required />
                                 </div>
-                                <div className="mb-3">
-                                    <label htmlFor="recipient-name" className="col-form-label">Email:</label>
-                                    <input type="text" className="form-control" id="recipient-name" required />
+                                <div className="mb-4">
+                                    <input type="email" className="form-control py-2 contact-input" id="recipient-name" placeholder="Email" required />
                                 </div>
-                                <div className="mb-3">
-                                    <label htmlFor="recipient-name" className="col-form-label">Subject:</label>
-                                    <input type="text" className="form-control" id="recipient-name" required />
+                                <div className="mb-4">
+                                    <input type="text" className="form-control py-2 contact-input" id="recipient-name" placeholder="Subject" required />
                                 </div>
-                                <div className="mb-3">
-                                    <label htmlFor="message-text" className="col-form-label">Message:</label>
-                                    <textarea className="form-control" id="message-text"></textarea>
+                                <div className="mb-4">
+                                    <textarea className="form-control py-2 contact-input" id="message-text" placeholder="Message"></textarea>
                                 </div>
                             </form>
                         </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-primary">Send</button>
+                        <div className="modal-footer justify-content-start">
+                            <button type="button" className="btn btn-success">Send</button>
                         </div>
                     </div>
                 </div>
