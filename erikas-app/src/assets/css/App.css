@@ -1,19 +1,46 @@
+/* =============================================================================
+   PROFESSIONAL CSS STYLESHEET
+   Bootstrap Compatible - Modern Writing Style
+   ============================================================================= */
+
+/* =============================================================================
+   CSS CUSTOM PROPERTIES
+   ============================================================================= */
 :root {
+    /* Brand Colors */
     --purple: #522081;
-    --white: #fff;
+    --white: #ffffff;
     --black: #010512;
-    --gray: #E6E1EA;
+    --gray: #e6e1ea;
+
+    /* Shadow System */
+    --shadow-primary: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
+    --shadow-focus: 0px 0px 9px 0px rgba(82, 32, 129, 0.9);
+
+    /* Transitions */
+    --transition-smooth: 0.3s ease;
+
+    /* Border Radius */
+    --border-radius-pill: 40px;
 }
 
+/* =============================================================================
+   BASE STYLES
+   ============================================================================= */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Inter';
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--black) !important;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
+/* =============================================================================
+   UTILITY CLASSES
+   ============================================================================= */
 .px-120 {
     padding-left: 120px !important;
     padding-right: 120px !important;
@@ -27,6 +54,9 @@ body {
     color: var(--purple) !important;
 }
 
+/* =============================================================================
+   LAYOUT SECTIONS
+   ============================================================================= */
 .homepage {
     height: 100%;
     box-sizing: border-box;
@@ -40,6 +70,9 @@ body {
     height: 100%;
 }
 
+/* =============================================================================
+   MEDIA ELEMENTS
+   ============================================================================= */
 .homepage-image {
     aspect-ratio: 4/3;
     position: absolute;
@@ -50,13 +83,36 @@ body {
     z-index: 2;
 }
 
+.about-image {
+    aspect-ratio: 4/3;
+    position: absolute;
+    max-width: 600px;
+    width: 100%;
+    top: 2348px;
+    right: 100px;
+    z-index: 2;
+}
+
+.contact-video {
+    aspect-ratio: 4/3;
+    position: absolute;
+    max-width: 600px;
+    width: 100%;
+    top: 3830px;
+    right: 100px;
+    z-index: 2;
+}
+
+/* =============================================================================
+   NAVIGATION
+   ============================================================================= */
 .navbar {
     background-color: var(--purple) !important;
 }
 
 .nav-link {
     color: var(--white) !important;
-    transition: .3s !important;
+    transition: var(--transition-smooth) !important;
     font-weight: 500 !important;
     font-size: 16px !important;
 }
@@ -68,7 +124,7 @@ body {
 }
 
 .navbar-toggler {
-    border-color: #fff !important;
+    border-color: var(--white) !important;
 }
 
 .navbar-toggler:focus {
@@ -79,10 +135,26 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
+/* =============================================================================
+   TYPOGRAPHY
+   ============================================================================= */
 .header-text--big {
     font-size: 5.125rem;
     font-weight: 700;
     line-height: 5.688rem;
+}
+
+.header-text--small {
+    font-size: 4.425rem;
+    font-weight: 700;
+    line-height: 4.888rem;
+}
+
+.about-text,
+.contact-text {
+    font-size: 5.75rem;
+    font-weight: 700;
+    line-height: 7.188rem;
 }
 
 .homepage-smallText {
@@ -91,14 +163,27 @@ body {
     line-height: 1.625rem;
 }
 
+.services--header {
+    font-weight: 700;
+    font-size: 3.875rem;
+}
+
+.services--paragraph {
+    font-weight: 300;
+    font-size: 22px;
+}
+
+/* =============================================================================
+   BUTTONS
+   ============================================================================= */
 .btn-purple {
     color: var(--white) !important;
     border: 2px solid var(--purple) !important;
     background-color: var(--purple) !important;
-    border-radius: 40px !important;
+    border-radius: var(--border-radius-pill) !important;
     letter-spacing: 0.1em !important;
     padding: 1.5rem 6rem !important;
-    transition: 0.3s !important;
+    transition: var(--transition-smooth) !important;
 }
 
 .btn-purple--text {
@@ -112,17 +197,17 @@ body {
     color: var(--purple) !important;
     border: 2px solid var(--purple) !important;
     transform: scale(1.1) !important;
-    box-shadow: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
+    box-shadow: var(--shadow-primary);
 }
 
 .btn-form {
     color: var(--white) !important;
     border: 2px solid var(--purple) !important;
     background-color: var(--purple) !important;
-    border-radius: 40px !important;
+    border-radius: var(--border-radius-pill) !important;
     letter-spacing: 0.1em !important;
     padding: 0.7rem 3.5rem !important;
-    transition: 0.3s !important;
+    transition: var(--transition-smooth) !important;
 }
 
 .btn-form:hover {
@@ -130,25 +215,36 @@ body {
     color: var(--purple) !important;
     border: 2px solid var(--purple) !important;
     transform: scale(1.1) !important;
-    box-shadow: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
+    box-shadow: var(--shadow-primary);
 }
 
+/* =============================================================================
+   FORM CONTROLS
+   ============================================================================= */
 #radio1,
 #radio2 {
     accent-color: var(--purple);
     margin-right: 10px;
 }
 
-.services--header {
-    font-weight: 700;
-    font-size: 3.875rem;
+.contact-input {
+    border-color: transparent !important;
+    border-bottom: 1px solid var(--purple) !important;
+    border-radius: var(--border-radius-pill) !important;
 }
 
-.services--paragraph {
-    font-weight: 300;
-    font-size: 22px;
+.contact-input:focus {
+    box-shadow: var(--shadow-focus) !important;
+    border-color: var(--purple) !important;
 }
 
+textarea.form-control {
+    transition: var(--transition-smooth) !important;
+}
+
+/* =============================================================================
+   CARDS
+   ============================================================================= */
 .services-card {
     max-width: 500px !important;
     max-height: 529px !important;
@@ -174,13 +270,6 @@ body {
     font-weight: 300;
     line-height: 26px;
     color: var(--black);
-}
-
-.about,
-.contact {
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
 }
 
 .about-card {
@@ -213,40 +302,6 @@ body {
     color: var(--black);
 }
 
-
-.header-text--small {
-    font-size: 4.425rem;
-    font-weight: 700;
-    line-height: 4.888rem;
-}
-
-.about-text,
-.contact-text {
-    font-size: 5.75rem;
-    font-weight: 700;
-    line-height: 7.188rem;
-}
-
-.about-image {
-    aspect-ratio: 4/3;
-    position: absolute;
-    max-width: 600px;
-    width: 100%;
-    top: 176px;
-    right: 120px;
-    z-index: 2;
-}
-
-.contact-video {
-    aspect-ratio: 4/3;
-    position: absolute;
-    max-width: 600px;
-    width: 100%;
-    top: 77px;
-    right: 139px;
-    z-index: 2;
-}
-
 .contact-card-body {
     width: auto;
     height: auto;
@@ -270,31 +325,25 @@ body {
     width: 98px;
 }
 
-.contact-input {
-    border-color: transparent !important;
-    border-bottom: 1px solid var(--purple) !important;
-    border-radius: 40px !important;
-}
-
-.contact-input:focus {
-    box-shadow: 0px 0px 9px 0px rgba(82, 32, 129, 0.9) !important;
-    border-color: #522081 !important;
-}
-
+/* =============================================================================
+   MODAL
+   ============================================================================= */
 .modal {
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
 }
 
-textarea.form-control {
-    transition: 0.3s ease !important;
-}
-
+/* =============================================================================
+   DECORATIVE ELEMENTS
+   ============================================================================= */
 .bg-triangle {
     position: relative;
     z-index: 1;
 }
 
+/* =============================================================================
+   FOOTER
+   ============================================================================= */
 .footer-border-top {
     border-top: 1px solid var(--purple);
 }
@@ -324,14 +373,12 @@ textarea.form-control {
     padding: 12px 0;
 }
 
-
 .footer-nav-link,
 .getInTocuh-link,
 .social-link {
     text-decoration: none !important;
     color: var(--black) !important;
-    transition: 0.3s !important;
-
+    transition: var(--transition-smooth) !important;
 }
 
 .footer-nav-link:hover,
@@ -353,85 +400,97 @@ textarea.form-control {
     color: var(--black) !important;
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+/* =============================================================================
+   RESPONSIVE DESIGN - PROFESSIONAL MEDIA QUERIES
+   ============================================================================= */
 
-    /* Styles for xs */
+/* Ultra-Wide Screens (1400px and up) */
+@media (min-width: 1400px) {
+    .px-120 {
+        padding-left: 140px !important;
+        padding-right: 140px !important;
+    }
+
+    .homepage-image,
+    .about-image,
+    .contact-video {
+        max-width: 650px;
+    }
+}
+
+/* Extra Large Devices (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .px-120 {
+        padding-left: min(100px, 7vw) !important;
+        padding-right: min(100px, 7vw) !important;
+    }
+
+    .homepage-image,
+    .about-image,
+    .contact-video {
+        max-width: min(600px, calc(100vw - 14vw));
+    }
+
+    .about-image {
+        right: min(120px, 8vw);
+    }
+
+    .contact-video {
+        right: min(139px, 9vw);
+    }
+}
+
+/* Large Devices (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .px-120 {
+        padding-left: min(75px, 6vw) !important;
+        padding-right: min(75px, 6vw) !important;
+    }
+
     .header-text--big {
-        font-size: 3.425rem;
-        line-height: 3.5rem;
+        font-size: min(4.65rem, 7vw);
+        line-height: 1.12;
     }
 
     .header-text--small {
-        font-size: 2.625rem;
-        line-height: 3.3rem;
+        font-size: min(3.875rem, 6vw);
+        line-height: 1.21;
+    }
+
+    .about-image {
+        top: 59px;
+        right: min(120px, 8vw);
+        max-width: min(550px, calc(100vw - 16vw));
+    }
+
+    .homepage-image {
+        max-width: min(550px, calc(100vw - 12vw));
+    }
+
+    .contact-video {
+        max-width: min(550px, calc(100vw - 16vw));
+        right: min(139px, 9vw);
+    }
+
+    .bg-triangle {
+        height: 67vh;
     }
 
     .footer-paragraph {
-        max-width: 350px;
+        width: min(23.25rem, 90vw);
     }
 
     .btn-purple {
-        border-radius: 40px !important;
-        padding-left: 2.5rem !important;
-        padding-right: 2.5rem !important;
-        padding-top: 0.7rem !important;
-        padding-bottom: 0.7rem !important;
+        padding: 1.3rem min(5rem, 8vw) !important;
     }
 
-    .px-120 {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-
-    .homepage,
-    .contact,
-    .about,
-    .services {
-        height: 100% !important;
-    }
-
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-
-    /* Styles for sm */
-    .header-text--big {
-        font-size: 3.688rem;
-        line-height: 3.688rem;
-    }
-
-    .header-text--small {
-        font-size: 3rem;
-        line-height: 3.8rem;
-    }
-
-    .btn-purple {
-        border-radius: 40px !important;
-        padding-left: 3rem !important;
-        padding-right: 3rem !important;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-    }
-
-    .px-120 {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-    }
-
-    .homepage,
-    .contact,
-    .about,
-    .services {
-        height: 100% !important;
+    .btn-form {
+        padding: 0.65rem min(3rem, 6vw) !important;
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium Devices (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-
-    /* Styles for md */
     .header-text--big {
         font-size: 4.25rem;
         line-height: 4.5rem;
@@ -442,8 +501,18 @@ textarea.form-control {
         line-height: 4.588rem;
     }
 
+    .about-text,
+    .contact-text {
+        font-size: 4.5rem;
+        line-height: 5.5rem;
+    }
+
+    .services--header {
+        font-size: 3.2rem;
+    }
+
     .btn-purple {
-        border-radius: 40px !important;
+        border-radius: var(--border-radius-pill) !important;
         padding-left: 5rem !important;
         padding-right: 5rem !important;
         padding-top: 1.2rem !important;
@@ -461,54 +530,370 @@ textarea.form-control {
     .services {
         height: 100% !important;
     }
-}
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-    /* Styles for lg */
-    .header-text--big {
-        font-size: 4.65rem;
-        line-height: 5.2rem;
+    .homepage-image,
+    .about-image,
+    .contact-video {
+        position: relative;
+        max-width: 100%;
+        top: auto;
+        right: auto;
+        margin: 20px 0;
     }
 
-    .header-text--small {
-        font-size: 3.875rem;
-        line-height: 4.688rem;
-    }
-
-    .about-image {
-        top: 59px;
-    }
-
-    .bg-triangle {
-        height: 67vh;
+    .services-card,
+    .about-card {
+        max-width: 100% !important;
+        margin-bottom: 30px;
     }
 
     .footer-paragraph {
-        width: 23.25rem;
-    }
-
-    .px-120 {
-        padding-left: 75px !important;
-        padding-right: 75px !important;
+        width: 100%;
+        max-width: 450px;
     }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+/* Small Devices (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header-text--big {
+        font-size: 3.688rem;
+        line-height: 3.688rem;
+    }
 
-    /* Styles for xl */
+    .header-text--small {
+        font-size: 3rem;
+        line-height: 3.8rem;
+    }
+
+    .about-text,
+    .contact-text {
+        font-size: 3.2rem;
+        line-height: 4rem;
+    }
+
+    .services--header {
+        font-size: 2.8rem;
+    }
+
+    .homepage-smallText {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+    }
+
+    .services--paragraph {
+        font-size: 18px;
+    }
+
+    .btn-purple {
+        border-radius: var(--border-radius-pill) !important;
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
     .px-120 {
-        padding-left: 100px !important;
-        padding-right: 100px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .homepage,
+    .contact,
+    .about,
+    .services {
+        height: 100% !important;
+    }
+
+    .homepage-image,
+    .about-image,
+    .contact-video {
+        position: relative;
+        max-width: 100%;
+        top: auto;
+        right: auto;
+        margin: 15px 0;
+    }
+
+    .services-card,
+    .about-card {
+        max-width: 100% !important;
+        margin-bottom: 25px;
+    }
+
+    .services-card-body__title,
+    .about-card-body__title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .services-card-body__text,
+    .about-card-body__text,
+    .contact-card-body__text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .footer-paragraph {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contact-card-body__avatar {
+        height: 85px;
+        width: 85px;
     }
 }
 
-/* Extra extra large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-    /* .px-120 {
-        padding-left: 1000px !important;
-        padding-right: 1000px !important;
-    } */
+/* Extra Small Devices (Less than 576px) */
+@media (max-width: 575.98px) {
+    .header-text--big {
+        font-size: 3.425rem;
+        line-height: 3.5rem;
+    }
+
+    .header-text--small {
+        font-size: 2.625rem;
+        line-height: 3.3rem;
+    }
+
+    .about-text,
+    .contact-text {
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+    }
+
+    .services--header {
+        font-size: 2.2rem;
+    }
+
+    .homepage-smallText {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .services--paragraph {
+        font-size: 16px;
+    }
+
+    .footer-paragraph {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .btn-purple {
+        border-radius: var(--border-radius-pill) !important;
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+        padding-top: 0.7rem !important;
+        padding-bottom: 0.7rem !important;
+    }
+
+    .btn-form {
+        padding: 0.5rem 2rem !important;
+    }
+
+    .px-120 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .homepage,
+    .contact,
+    .about,
+    .services {
+        height: 100% !important;
+    }
+
+    .homepage-image,
+    .about-image,
+    .contact-video {
+        position: relative;
+        max-width: 100%;
+        top: auto;
+        right: auto;
+        margin: 10px 0;
+    }
+
+    .services-card,
+    .about-card {
+        max-width: 100% !important;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .services-card-body__title,
+    .about-card-body__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .services-card-body__text,
+    .about-card-body__text,
+    .contact-card-body__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .contact-card-text__name {
+        font-size: 18px !important;
+        line-height: 22px !important;
+    }
+
+    .contact-card-body__avatar {
+        height: 70px;
+        width: 70px;
+    }
+
+    .nav-link {
+        font-size: 14px !important;
+    }
+
+    .nav-link:hover,
+    .nav-active {
+        transform: scale(1.15);
+    }
+
+    .footer-item-names {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .footer-nav-item,
+    .getInTocuh-item,
+    .social-item {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 8px 0;
+    }
+
+    .footer-nav-link:hover,
+    .getInTocuh-link:hover,
+    .social-link:hover,
+    .footer-active {
+        transform: scale(1.15);
+    }
+}
+
+/* Micro Devices (Less than 360px) */
+@media (max-width: 359.98px) {
+    .header-text--big {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    .header-text--small {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+
+    .about-text,
+    .contact-text {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+
+    .services--header {
+        font-size: 1.8rem;
+    }
+
+    .px-120 {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .btn-purple {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        font-size: 0.9rem;
+    }
+
+    .footer-paragraph {
+        max-width: 280px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    .homepage-image,
+    .about-image,
+    .contact-video {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+    .header-text--big {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+
+    .about-text,
+    .contact-text {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .homepage,
+    .contact,
+    .about,
+    .services {
+        height: auto !important;
+        min-height: 100vh;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .navbar,
+    .btn-purple,
+    .btn-form,
+    .contact-video {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black !important;
+    }
+
+    .header-text--big,
+    .about-text,
+    .contact-text {
+        font-size: 24pt;
+        line-height: 28pt;
+    }
+
+    .px-120 {
+        padding-left: 1in !important;
+        padding-right: 1in !important;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .nav-link:hover,
+    .nav-active,
+    .btn-purple:hover,
+    .btn-form:hover,
+    .footer-nav-link:hover,
+    .getInTocuh-link:hover,
+    .social-link:hover {
+        transform: none !important;
+    }
 }
