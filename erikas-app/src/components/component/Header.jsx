@@ -5,12 +5,12 @@ export default function Header({activeLink, setActiveLink}) {
 
     return (
         <div className="container-fluid px-0">
-            <div className="container-fluid px-120">
+            {/* <div className="container-fluid px-120">
                 <div className="d-flex justify-content-between align-items-center">
                     <p className="mb-0 py-2">440 N Barranca Ave, California, 91723</p>
                     <p className="mb-0 py-2">760-284-8287</p>
                 </div>
-            </div>
+            </div> */}
             <nav className="navbar navbar-expand-lg container-fluid px-120">
                   {/* <nav className="navbar navbar-expand-lg container-fluid px-120 fixed-top">  */}
                 <a className="navbar-brand d-grid align-items-center" href="#home">
