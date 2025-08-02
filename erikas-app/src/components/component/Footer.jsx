@@ -1,5 +1,5 @@
-import React from 'react';
-import { ReactComponent as DarkLogo } from '../../assets/image/logo/darkLogo.svg';
+// import { ReactComponent as DarkLogo } from '../../assets/image/logo/darkLogo.svg';
+import darkLogo from '../../assets/image/logo/darkLogo.svg';
 
 export default function Footer({ activeLink, setActiveLink }) {
 
@@ -9,7 +9,8 @@ export default function Footer({ activeLink, setActiveLink }) {
                 <div className="py-5 px-120 mt-5">
                     <div className="row mt-5">
                         <div className="col-sm-12 col-lg-5">
-                            <DarkLogo alt="Logo Footer" className="footer-logo" />
+                            {/* <DarkLogo alt="Logo Footer" className="footer-logo" /> */}
+                            <img src={darkLogo} alt="Logo Footer" className="footer-logo" />
                             <div className="footer-paragraph">
                                 <p className="footer-paragraph__text py-4 mb-0">
                                     Empowering businesses with cutting-edge solutions, Pixonium specializes in connecting you with global talent and innovative strategies for sustainable growth.

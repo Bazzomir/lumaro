@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
+import { useEffect, useState } from 'react';
+// import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
+import rectangle from '../../../assets/image/rectangle.svg';
 import avatarAveryR from '../../../assets/image/avatar/averyR.svg';
 import avatarCaseyW from '../../../assets/image/avatar/caseyW.svg';
 import avatarJordanM from '../../../assets/image/avatar/jordanM.svg';
 import { ContactCard } from '../../component/cards';
-// import { Button } from '../../component/buttons';
 import Form from '../../component/form';
 
 const avatarMap = {
@@ -45,7 +45,8 @@ export default function Contact() {
                         <Form />
                     </div>
                     <div className="col-0 col-lg-6 d-none d-lg-block relative">
-                        <BgTrangle alt="Background" className="bg-triangle" />
+                        {/* <BgTrangle alt="Background" className="bg-triangle" /> */}
+                        <img src={rectangle} alt="Background Image" className="bg-triangle" />
                         <iframe width="800" height="600" src="https://www.youtube.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="contact-video rounded" />
                     </div>
                 </div>

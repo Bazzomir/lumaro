@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AboutCard } from '../../component/cards';
-import { ReactComponent as MeetingImg } from '../../../assets/image/meeting.svg';
-import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
+// import { ReactComponent as MeetingImg } from '../../../assets/image/meeting.svg';
+import meeting from '../../../assets/image/meeting.svg';
+// import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
+import rectangle from '../../../assets/image/rectangle.svg';
 import GlobalExpertiseIcon from '../../../assets/image/icons/gExpertise.svg';
 import PrecisionIcon from '../../../assets/image/icons/precision.svg';
 import EfficiencyIcon from '../../../assets/image/icons/efficiency.svg';
@@ -43,8 +45,10 @@ export default function About() {
                     </p>
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block relative">
-                    <BgTrangle alt="Background" className="bg-triangle" />
-                    <MeetingImg alt="About us meeting" className="about-image mx-auto rounded" />
+                    {/* <BgTrangle alt="Background" className="bg-triangle" /> */}
+                    <img src={rectangle} alt="Background Image" className="bg-triangle" />
+                    {/* <MeetingImg alt="About us meeting" className="about-image mx-auto rounded" /> */}
+                    <img src={meeting} alt="About us meeting" className="about-image mx-auto rounded" />
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
