@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function Button({ btnName }) {
     return (
         <div className="text-center text-md-start py-5">

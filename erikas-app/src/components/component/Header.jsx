@@ -1,5 +1,5 @@
-import React from 'react';
-import { ReactComponent as Logo } from '../../assets/image/logo/logo.svg';
+// import { ReactComponent as Logo } from '../../assets/image/logo/logo.svg';
+import logo from '../../assets/image/logo/logo.svg'
 
 export default function Header({activeLink, setActiveLink}) {
 
@@ -14,7 +14,8 @@ export default function Header({activeLink, setActiveLink}) {
             <nav className="navbar navbar-expand-lg container-fluid px-120">
                   {/* <nav className="navbar navbar-expand-lg container-fluid px-120 fixed-top">  */}
                 <a className="navbar-brand d-grid align-items-center" href="#home">
-                    <Logo alt="Navigation Logo" className="nav-logo" />
+                    {/* <Logo alt="Navigation Logo" className="nav-logo" /> */}
+                    <img src={logo} alt="Navigation Logo" className="nav-logo" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

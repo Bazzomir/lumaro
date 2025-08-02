@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ServicesCard } from '../../component/cards';
 import ConsultingIcon from '../../../assets/image/icons/consulting.svg';
 import DevelopmentIcon from '../../../assets/image/icons/development.svg';
