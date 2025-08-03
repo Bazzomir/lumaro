@@ -21,7 +21,11 @@ export default function About() {
     const [aboutData, setAboutData] = useState([]);
 
     useEffect(() => {
-        fetch('/data.json')
+        // fetch('/data.json')
+        const url = `${import.meta.env.BASE_URL}/data.json`;
+        // console.log('Fetching from:', url);
+
+        fetch(url)
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok!');
