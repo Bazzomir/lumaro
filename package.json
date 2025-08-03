@@ -1,6 +1,12 @@
 {
-  "name": "erikas-app",
+  "name": "lumaro-website",
   "version": "2.1.0",
+  "author": {
+    "name": "Bazzomir",
+    "email": "bazzomir97@gmail.com",
+    "year": "2025"
+  },
+  "main": "index.html",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -8,16 +14,27 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
     "react-lottie": "^1.2.4",
     "web-vitals": "^2.1.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bazzomir/lumaro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bazzomir/lumaro/issues"
+  },
+  "homepage": "https://bazzomir.github.io/lumaro/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d disk"
   },
   "eslintConfig": {
     "extends": [
