@@ -1,4 +1,4 @@
-# Erikas-App
+# Lumaro
 
 Project Instructions
 
