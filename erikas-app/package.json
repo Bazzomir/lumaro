@@ -1,6 +1,12 @@
 {
-  "name": "erikas-app",
+  "name": "lumaro-website",
   "version": "2.1.0",
+  "author": {
+    "name": "Bazzomir",
+    "email": "bazzomir97@gmail.com",
+    "year": "2025"
+  },
+  "main": "index.html",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -14,6 +20,14 @@
     "react-lottie": "^1.2.4",
     "web-vitals": "^2.1.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bazzomir/lumora.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bazzomir/lumora/issues"
+  },
+  "homepage": "https://bazzomir.github.io/lumora/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
