@@ -20,7 +20,7 @@ export default function Services() {
     useEffect(() => {
         // fetch('/data.json')
         const url = `${import.meta.env.BASE_URL}/data.json`;
-        console.log('Fetching from:', url);
+        // console.log('Fetching from:', url);
 
         fetch(url)
             .then(res => {
