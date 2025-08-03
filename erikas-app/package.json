@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bazzomir/lumora.git"
+    "url": "https://github.com/Bazzomir/lumaro.git"
   },
   "bugs": {
-    "url": "https://github.com/Bazzomir/lumora/issues"
+    "url": "https://github.com/Bazzomir/lumaro/issues"
   },
-  "homepage": "https://bazzomir.github.io/lumora/",
+  "homepage": "https://bazzomir.github.io/lumaro/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
