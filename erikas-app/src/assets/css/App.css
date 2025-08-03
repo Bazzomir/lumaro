@@ -110,6 +110,13 @@ body {
     background-color: var(--purple) !important;
 }
 
+.nav-logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.9rem;
+    color: var(--white)
+}
+
 .nav-link {
     color: var(--white) !important;
     transition: var(--transition-smooth) !important;
@@ -346,6 +353,12 @@ textarea.form-control {
    ============================================================================= */
 .footer-border-top {
     border-top: 1px solid var(--purple);
+}
+
+.footer-logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.9rem;
 }
 
 .footer-paragraph {

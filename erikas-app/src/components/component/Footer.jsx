@@ -10,14 +10,16 @@ export default function Footer({ activeLink, setActiveLink }) {
                     <div className="row mt-5">
                         <div className="col-sm-12 col-lg-5">
                             {/* <DarkLogo alt="Logo Footer" className="footer-logo" /> */}
-                            <img src={darkLogo} alt="Logo Footer" className="footer-logo" />
+                            {/* <img src={darkLogo} alt="Logo Footer" className="footer-logo" /> */}
+                            <h2 className="footer-logo">Lumaro</h2>
                             <div className="footer-paragraph">
                                 <p className="footer-paragraph__text py-4 mb-0">
                                     Empowering businesses with cutting-edge solutions, Pixonium specializes in connecting you with global talent and innovative strategies for sustainable growth.
                                 </p>
                             </div>
                             <div className="footer-paragraph__text pt-5">
-                                440 N Barranca Ave, California, CA 91723
+                                {/* 440 N Barranca Ave, California, CA 91723 */}
+                                1776 Constitution Ave NW, Washington DC 20006
                             </div>
                         </div>
                         <div className="col-sm-4 col-lg-2 pt-5 pt-lg-0">
@@ -65,10 +67,10 @@ export default function Footer({ activeLink, setActiveLink }) {
                             <span className="footer-item-names">Get In Touch</span>
                             <ul className="footer-getInTouch mt-3">
                                 <li className="getInTocuh-item">
-                                    <a className="getInTocuh-link" href="mailto:someone@example.com">Email: contact@pixonium.com</a>
+                                    <a className="getInTocuh-link" href="mailto:someone@example.com">Email: contact@lumaro.com</a>
                                 </li>
                                 <li className="getInTocuh-item">
-                                    <a className="getInTocuh-link" href="tel:012-345-6789">Phone: 760-284-8287</a>
+                                    <a className="getInTocuh-link" href="tel:012-345-6789">Phone: +1 8883218572</a>
                                 </li>
                                 <li className="getInTocuh-item">Hours: Mon-Fri 9:00AM - 5:00PM</li>
                             </ul>
@@ -80,7 +82,7 @@ export default function Footer({ activeLink, setActiveLink }) {
                                     <a className="social-link" href="https://www.linkedin.com/">LinkedIn</a>
                                 </li>
                                 <li className="social-item">
-                                    <a className="social-link" href="https://www.Instagram.com/">Instagram</a>
+                                    <a className="social-link" href="https://www.instagram.com/">Instagram</a>
                                 </li>
                             </ul>
                         </div>
@@ -88,7 +90,7 @@ export default function Footer({ activeLink, setActiveLink }) {
                 </div>
                 <div className="container-fluid footer-border-top">
                     <div className="row py-3 px-120 align-items-center">
-                        <div className="col-12 col-lg-5 px-0 footer-paragraph__text">©2024 Pixonium</div>
+                        <div className="col-12 col-lg-5 px-0 footer-paragraph__text">©2025 Lumaro</div>
                         <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Terms & Conditions</div>
                         <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Privacy Policy</div>
                         <div className="col-12 col-lg-3 footer-paragraph__text">Made with 💜 by <br className="d-none d-lg-block" /> Blagoj Jovanovski - Bazzomir</div>

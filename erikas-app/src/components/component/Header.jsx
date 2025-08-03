@@ -15,7 +15,8 @@ export default function Header({activeLink, setActiveLink}) {
                   {/* <nav className="navbar navbar-expand-lg container-fluid px-120 fixed-top">  */}
                 <a className="navbar-brand d-grid align-items-center" href="#home">
                     {/* <Logo alt="Navigation Logo" className="nav-logo" /> */}
-                    <img src={logo} alt="Navigation Logo" className="nav-logo" />
+                    {/* <img src={logo} alt="Navigation Logo" className="nav-logo" /> */}
+                    <h2 className="nav-logo">LUMARO</h2>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
