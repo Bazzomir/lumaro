@@ -43,7 +43,7 @@ export function AboutCard({ category, description, CardIcon }) {
                 <div className="mb-3">
                     {CardIcon && <img src={CardIcon} alt={category} className="img-fluid" />}
                 </div>
-                <h5 className="about-card-body__title">{category}</h5>
+                <h3 className="about-card-body__title">{category}</h3>
                 <p className="about-card-body__text text-muted">{description}</p>
             </div>
         </div>
