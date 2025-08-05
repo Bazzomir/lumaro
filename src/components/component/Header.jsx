@@ -1,21 +1,8 @@
-// import { ReactComponent as Logo } from '../../assets/image/logo/logo.svg';
-import logo from '../../assets/image/logo/logo.svg'
-
-export default function Header({activeLink, setActiveLink}) {
-
+export default function Header({ activeLink, setActiveLink }) {
     return (
         <div className="container-fluid px-0">
-            {/* <div className="container-fluid px-120">
-                <div className="d-flex justify-content-between align-items-center">
-                    <p className="mb-0 py-2">440 N Barranca Ave, California, 91723</p>
-                    <p className="mb-0 py-2">760-284-8287</p>
-                </div>
-            </div> */}
             <nav className="navbar navbar-expand-lg container-fluid px-120">
-                  {/* <nav className="navbar navbar-expand-lg container-fluid px-120 fixed-top">  */}
                 <a className="navbar-brand d-grid align-items-center" href="#home">
-                    {/* <Logo alt="Navigation Logo" className="nav-logo" /> */}
-                    {/* <img src={logo} alt="Navigation Logo" className="nav-logo" /> */}
                     <h2 className="nav-logo">LUMARO</h2>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

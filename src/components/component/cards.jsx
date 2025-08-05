@@ -1,4 +1,3 @@
-// import { ReactComponent as ListIcon } from '../../assets/image/icons/list-circle.svg';
 import listCircle from '../../assets/image/icons/listCircle.svg';
 
 export function ServicesCard({ category, description, offerings, iconPath }) {
@@ -14,7 +13,6 @@ export function ServicesCard({ category, description, offerings, iconPath }) {
                     {offerings.map((offering, index) => (
                         <li key={index} className="d-flex">
                             <span className="me-2">
-                                {/* <ListIcon /> */}
                                 <img src={listCircle} alt="List Circle Icon" />
                             </span>
                             <span className="services-card-body__text">{offering}</span>
