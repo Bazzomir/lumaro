@@ -1,4 +1,4 @@
-import listCircle from '../../assets/image/icons/listCircle.svg';
+import listCircle from '../../../public/image/icons/listCircle.svg';
 
 export function ServicesCard({ category, description, offerings, iconPath }) {
     return (
