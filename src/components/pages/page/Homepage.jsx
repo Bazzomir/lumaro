@@ -47,7 +47,7 @@ export default function Homepage() {
                             </h1>
                         </div>
                         <div className="col-12">
-                            <p className="m-0 homepage-smallText ">Discover comprehensive talent, where every step forward is tailored to your vision.</p>
+                            <p className="m-0 homepage-smallText">Discover comprehensive talent, where every step forward is tailored to your vision.</p>
                         </div>
                         <Button btnName="Start Now" />
                     </div>
