@@ -18,10 +18,7 @@ export default function Services() {
     const [servicesData, setServicesData] = useState([]);
 
     useEffect(() => {
-        // fetch('/data.json')
         const url = `${import.meta.env.BASE_URL}/data.json`;
-        // console.log('Fetching from:', url);
-
         fetch(url)
             .then(res => {
                 if (!res.ok) {

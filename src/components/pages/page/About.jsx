@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AboutCard } from '../../component/cards';
-// import { ReactComponent as MeetingImg } from '../../../assets/image/meeting.svg';
 import meeting from '../../../assets/image/meeting.svg';
-// import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
 import rectangle from '../../../assets/image/rectangle.svg';
 import GlobalExpertiseIcon from '../../../assets/image/icons/gExpertise.svg';
 import PrecisionIcon from '../../../assets/image/icons/precision.svg';
@@ -17,14 +15,10 @@ const iconMap = {
 };
 
 export default function About() {
-
     const [aboutData, setAboutData] = useState([]);
 
     useEffect(() => {
-        // fetch('/data.json')
         const url = `${import.meta.env.BASE_URL}/data.json`;
-        // console.log('Fetching from:', url);
-
         fetch(url)
             .then(res => {
                 if (!res.ok) {
@@ -49,9 +43,7 @@ export default function About() {
                     </p>
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block relative">
-                    {/* <BgTrangle alt="Background" className="bg-triangle" /> */}
                     <img src={rectangle} alt="Background Image" className="bg-triangle" />
-                    {/* <MeetingImg alt="About us meeting" className="about-image mx-auto rounded" /> */}
                     <img src={meeting} alt="About us meeting" className="about-image mx-auto rounded" />
                 </div>
             </div>

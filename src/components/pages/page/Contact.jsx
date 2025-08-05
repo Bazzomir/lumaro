@@ -17,10 +17,7 @@ export default function Contact() {
     const [contactData, setContactData] = useState([]);
 
     useEffect(() => {
-        // fetch('/data.json')
         const url = `${import.meta.env.BASE_URL}/data.json`;
-        // console.log('Fetching from:', url);
-        
         fetch(url)
             .then(res => {
                 if (!res.ok) {
@@ -49,7 +46,6 @@ export default function Contact() {
                         <Form />
                     </div>
                     <div className="col-0 col-lg-6 d-none d-lg-block relative">
-                        {/* <BgTrangle alt="Background" className="bg-triangle" /> */}
                         <img src={rectangle} alt="Background Image" className="bg-triangle" />
                         <iframe width="800" height="600" src="https://www.youtube.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="contact-video rounded" />
                     </div>

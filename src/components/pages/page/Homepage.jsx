@@ -55,7 +55,6 @@ export default function Homepage() {
                 </div>
                 <div className="col-0 col-lg-5 d-none d-lg-block">
                     <div className="d-flex p-3 relative">
-                        {/* <HomepageImage alt="Homepage Image" className="homepage-image" /> */}
                         <img src={homepage} alt="Homepage Image" className="homepage-image" />
                     </div>
                 </div>
