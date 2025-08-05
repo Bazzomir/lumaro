@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { AboutCard } from '../../component/cards';
-import GlobalExpertiseIcon from '@/assets/image/icons/gExpertise.svg';
-import PrecisionIcon from '@/assets/image/icons/precision.svg';
-import EfficiencyIcon from '@/assets/image/icons/efficiency.svg';
-import ScalabilityIcon from '@/assets/image/icons/scalability.svg';
+import GlobalExpertiseIcon from '../../../assets/image/icons/gExpertise.svg';
+import PrecisionIcon from '../../../assets/image/icons/precision.svg';
+import EfficiencyIcon from '../../../assets/image/icons/efficiency.svg';
+import ScalabilityIcon from '../../../assets/image/icons/scalability.svg';
 
 const iconMap = {
     'gExpertise': GlobalExpertiseIcon,

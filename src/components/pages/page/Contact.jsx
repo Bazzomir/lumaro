@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import avatarAveryR from '@/assets/image/avatar/averyR.svg';
-import avatarCaseyW from '@/assets/image/avatar/caseyW.svg';
-import avatarJordanM from '@/assets/image/avatar/jordanM.svg';
+import avatarAveryR from '../../../assets/image/avatar/averyR.svg';
+import avatarCaseyW from '../../../assets/image/avatar/caseyW.svg';
+import avatarJordanM from '../../../assets/image/avatar/jordanM.svg';
 import { ContactCard } from '../../component/cards';
 import Form from '../../component/form';
 
