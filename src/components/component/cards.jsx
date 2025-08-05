@@ -1,4 +1,4 @@
-import listCircle from '../../../public/image/icons/listCircle.svg';
+import circle from '@/assets/image/icons/listCircle.svg';
 
 export function ServicesCard({ category, description, offerings, iconPath }) {
     return (
@@ -13,7 +13,8 @@ export function ServicesCard({ category, description, offerings, iconPath }) {
                     {offerings.map((offering, index) => (
                         <li key={index} className="d-flex">
                             <span className="me-2">
-                                <img src={listCircle} alt="List Circle Icon" />
+                                {/* <img src="/lumaro/image/icons/listCircle.svg" alt="List Circle Icon" /> */}
+                                <img src={circle} alt="List Circle Icon" />
                             </span>
                             <span className="services-card-body__text">{offering}</span>
                         </li>
