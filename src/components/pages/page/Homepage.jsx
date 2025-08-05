@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Lottie from 'react-lottie';
-import homepage from '../../../../public/image/homepage.svg';
 import { Button } from '../../component/buttons';
-import scrollDownAnimation from '../../../../public/animation/scrollDown.json';
+import scrollDownAnimation from '@/assets/animation/scrollDown.json';
 
 export default function Homepage() {
 
@@ -47,14 +46,14 @@ export default function Homepage() {
                             </h1>
                         </div>
                         <div className="col-12">
-                            <p className="m-0 homepage-smallText ">Discover comprehensive talent, where every step forward is tailored to your vision.</p>
+                            <p className="m-0 homepage-smallText">Discover comprehensive talent, where every step forward is tailored to your vision.</p>
                         </div>
                         <Button btnName="Start Now" />
                     </div>
                 </div>
                 <div className="col-0 col-lg-5 d-none d-lg-block">
                     <div className="d-flex p-3 relative">
-                        <img src={homepage} alt="Homepage Image" className="homepage-image" />
+                        <img src="/lumaro/homepage.svg" alt="Homepage Image" className="homepage-image" />
                     </div>
                 </div>
             </div>
