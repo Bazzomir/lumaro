@@ -1,16 +1,10 @@
-// import { ReactComponent as DarkLogo } from '../../assets/image/logo/darkLogo.svg';
-import darkLogo from '../../assets/image/logo/darkLogo.svg';
-
 export default function Footer({ activeLink, setActiveLink }) {
-
     return (
         <div className="footer">
             <div className="container-fluid px-0 footer-border-top">
                 <div className="py-5 px-120 mt-5">
                     <div className="row mt-5">
                         <div className="col-sm-12 col-lg-5">
-                            {/* <DarkLogo alt="Logo Footer" className="footer-logo" /> */}
-                            {/* <img src={darkLogo} alt="Logo Footer" className="footer-logo" /> */}
                             <h2 className="footer-logo">Lumaro</h2>
                             <div className="footer-paragraph">
                                 <p className="footer-paragraph__text py-4 mb-0">
@@ -18,7 +12,6 @@ export default function Footer({ activeLink, setActiveLink }) {
                                 </p>
                             </div>
                             <div className="footer-paragraph__text pt-5">
-                                {/* 440 N Barranca Ave, California, CA 91723 */}
                                 1776 Constitution Ave NW, Washington DC 20006
                             </div>
                         </div>

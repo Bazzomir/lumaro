@@ -1,5 +1,4 @@
-// import { ReactComponent as ListIcon } from '../../assets/image/icons/list-circle.svg';
-import listCircle from '../../assets/image/icons/listCircle.svg';
+import listCircle from '../../../public/image/icons/listCircle.svg';
 
 export function ServicesCard({ category, description, offerings, iconPath }) {
     return (
@@ -8,13 +7,12 @@ export function ServicesCard({ category, description, offerings, iconPath }) {
                 <div className="mb-3">
                     {iconPath && <img src={iconPath} alt={category} className="img-fluid" />}
                 </div>
-                <h5 className="services-card-body__title">{category}</h5>
+                <h3 className="services-card-body__title">{category}</h3>
                 <p className="services-card-body__text text-muted">{description}</p>
                 <ul className="list-group grid gap-0 row-gap-3 py-3">
                     {offerings.map((offering, index) => (
                         <li key={index} className="d-flex">
                             <span className="me-2">
-                                {/* <ListIcon /> */}
                                 <img src={listCircle} alt="List Circle Icon" />
                             </span>
                             <span className="services-card-body__text">{offering}</span>

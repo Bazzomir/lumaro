@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { ServicesCard } from '../../component/cards';
-import ConsultingIcon from '../../../assets/image/icons/consulting.svg';
-import DevelopmentIcon from '../../../assets/image/icons/development.svg';
-import QualityIcon from '../../../assets/image/icons/quality.svg';
-import MobileIcon from '../../../assets/image/icons/mobile.svg';
-import CreativeIcon from '../../../assets/image/icons/creative.svg';
+import ConsultingIcon from '../../../../public/image/icons/consulting.svg';
+import DevelopmentIcon from '../../../../public/image/icons/development.svg';
+import QualityIcon from '../../../../public/image/icons/quality.svg';
+import MobileIcon from '../../../../public/image/icons/mobile.svg';
+import CreativeIcon from '../../../../public/image/icons/creative.svg';
 
 const iconMap = {
     'consulting': ConsultingIcon,
@@ -18,10 +18,7 @@ export default function Services() {
     const [servicesData, setServicesData] = useState([]);
 
     useEffect(() => {
-        // fetch('/data.json')
         const url = `${import.meta.env.BASE_URL}/data.json`;
-        // console.log('Fetching from:', url);
-
         fetch(url)
             .then(res => {
                 if (!res.ok) {
