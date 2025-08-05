@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-// import { ReactComponent as BgTrangle } from '../../../assets/image/rectangle.svg';
-import rectangle from '../../../assets/image/rectangle.svg';
-import avatarAveryR from '../../../assets/image/avatar/averyR.svg';
-import avatarCaseyW from '../../../assets/image/avatar/caseyW.svg';
-import avatarJordanM from '../../../assets/image/avatar/jordanM.svg';
+import rectangle from '../../../../public/image/rectangle.svg';
+import avatarAveryR from '../../../../public/image/avatar/averyR.svg';
+import avatarCaseyW from '../../../../public/image/avatar/caseyW.svg';
+import avatarJordanM from '../../../../public/image/avatar/jordanM.svg';
 import { ContactCard } from '../../component/cards';
 import Form from '../../component/form';
 

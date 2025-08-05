@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import Lottie from 'react-lottie';
-// import { ReactComponent as HomepageImage } from '../../../assets/image/homepage.svg';
-import homepage from '../../../assets/image/homepage.svg';
+import homepage from '../../../../public/image/homepage.svg';
 import { Button } from '../../component/buttons';
-import scrollDownAnimation from '../../../assets/animation/scrollDown.json';
+import scrollDownAnimation from '../../../../public/animation/scrollDown.json';
 
 export default function Homepage() {
 
