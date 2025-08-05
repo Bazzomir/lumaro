@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { ServicesCard } from '../../component/cards';
-import ConsultingIcon from '@/assets/image/icons/consulting.svg';
-import DevelopmentIcon from '@/assets/image/icons/development.svg';
-import QualityIcon from '@/assets/image/icons/quality.svg';
-import MobileIcon from '@/assets/image/icons/mobile.svg';
-import CreativeIcon from '@/assets/image/icons/creative.svg';
+import ConsultingIcon from '../../../assets/image/icons/consulting.svg';
+import DevelopmentIcon from '../../../assets/image/icons/development.svg';
+import QualityIcon from '../../../assets/image/icons/quality.svg';
+import MobileIcon from '../../../assets/image/icons/mobile.svg';
+import CreativeIcon from '../../../assets/image/icons/creative.svg';
 
 const iconMap = {
     'consulting': ConsultingIcon,
