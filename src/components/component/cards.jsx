@@ -8,7 +8,7 @@ export function ServicesCard({ category, description, offerings, iconPath }) {
                 <div className="mb-3">
                     {iconPath && <img src={iconPath} alt={category} className="img-fluid" />}
                 </div>
-                <h5 className="services-card-body__title">{category}</h5>
+                <h3 className="services-card-body__title">{category}</h3>
                 <p className="services-card-body__text text-muted">{description}</p>
                 <ul className="list-group grid gap-0 row-gap-3 py-3">
                     {offerings.map((offering, index) => (
