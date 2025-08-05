@@ -33,7 +33,7 @@ export default function Homepage() {
         autoplay: true,
         animationData: scrollDownAnimation,
         rendererSettings: {
-            preserveAspectRatio: "scrollDown slice"
+            "preserveAspectRatio": "xMidYMid meet"
         }
     };
 
