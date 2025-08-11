@@ -344,8 +344,9 @@ textarea.form-control {
    DECORATIVE ELEMENTS
    ============================================================================= */
 .bg-triangle {
-    position: relative;
-    z-index: 1;
+    /* position: relative;
+    z-index: 1; */
+    background-image: url(../../../public/rectangle.svg);
 }
 
 /* =============================================================================

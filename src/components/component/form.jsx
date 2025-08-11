@@ -24,7 +24,6 @@ function Form() {
                         </div>
                         <div className="modal-body">
                             <form>
-                                {/* Radio Buttons */}
                                 <fieldset className="form-radio row py-4">
                                     <legend className="visually-hidden">Contact type</legend>
 
@@ -59,7 +58,6 @@ function Form() {
                                     </div>
                                 </fieldset>
 
-                                {/* Full Name */}
                                 <div className="mb-4">
                                     <label htmlFor="fullname" className="visually-hidden">Full Name</label>
                                     <input
@@ -73,7 +71,6 @@ function Form() {
                                     />
                                 </div>
 
-                                {/* Email */}
                                 <div className="mb-4">
                                     <label htmlFor="email" className="visually-hidden">Email</label>
                                     <input
@@ -87,7 +84,6 @@ function Form() {
                                     />
                                 </div>
 
-                                {/* Subject */}
                                 <div className="mb-4">
                                     <label htmlFor="subject" className="visually-hidden">Subject</label>
                                     <input
@@ -101,7 +97,6 @@ function Form() {
                                     />
                                 </div>
 
-                                {/* Message */}
                                 <div className="mb-4">
                                     <label htmlFor="message" className="visually-hidden">Message</label>
                                     <textarea
