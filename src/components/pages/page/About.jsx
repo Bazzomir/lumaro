@@ -47,7 +47,7 @@ export default function About() {
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
-                    <h2 className="text-center p-3 mb-0 header-text--small">Why Work With Us</h2>
+                    <h2 className="text-center p-3 mb-0 header-text--small"><span className="text-purple">Why</span> Work With <span className="text-purple">Us</span></h2>
                 </div>
                 <div className="col-12 pt-4">
                     <div className="row p-0 m-0 justify-content-around align-items-center">
