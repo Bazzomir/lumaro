@@ -24,8 +24,10 @@ function Form() {
                         </div>
                         <div className="modal-body">
                             <form>
-                                <div className="form-radio row py-4">
-                                    <div className="form-radio m-r-42 col-6 ">
+                                <fieldset className="form-radio row py-4">
+                                    <legend className="visually-hidden">Contact type</legend>
+
+                                    <div className="form-radio m-r-42 col-6">
                                         <input
                                             className="input-radio3"
                                             id="radio1"
@@ -35,7 +37,9 @@ function Form() {
                                             checked={selectedChoice === "say-hi"}
                                             onChange={handleChoiceChange}
                                         />
-                                        <label className="label-radio3" htmlFor="radio1">Say Hi</label>
+                                        <label className="label-radio3" htmlFor="radio1">
+                                            Say Hi
+                                        </label>
                                     </div>
 
                                     <div className="form-radio col-6">
@@ -48,29 +52,67 @@ function Form() {
                                             checked={selectedChoice === "get-quote"}
                                             onChange={handleChoiceChange}
                                         />
-                                        <label className="label-radio3" htmlFor="radio2">Get a Quote</label>
+                                        <label className="label-radio3" htmlFor="radio2">
+                                            Get a Quote
+                                        </label>
                                     </div>
-                                </div>
+                                </fieldset>
+
                                 <div className="mb-4">
-                                    <input type="text" className="form-control py-2 contact-input" placeholder="Fullname" required />
+                                    <label htmlFor="fullname" className="visually-hidden">Full Name</label>
+                                    <input
+                                        id="fullname"
+                                        name="fullname"
+                                        type="text"
+                                        className="form-control py-2 contact-input"
+                                        placeholder="Fullname"
+                                        autoComplete="name"
+                                        required
+                                    />
                                 </div>
+
                                 <div className="mb-4">
-                                    <input type="email" className="form-control py-2 contact-input" placeholder="Email" required />
+                                    <label htmlFor="email" className="visually-hidden">Email</label>
+                                    <input
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        className="form-control py-2 contact-input"
+                                        placeholder="Email"
+                                        autoComplete="email"
+                                        required
+                                    />
                                 </div>
+
                                 <div className="mb-4">
-                                    <input type="text" className="form-control py-2 contact-input" placeholder="Subject" required />
+                                    <label htmlFor="subject" className="visually-hidden">Subject</label>
+                                    <input
+                                        id="subject"
+                                        name="subject"
+                                        type="text"
+                                        className="form-control py-2 contact-input"
+                                        placeholder="Subject"
+                                        autoComplete="off"
+                                        required
+                                    />
                                 </div>
+
                                 <div className="mb-4">
+                                    <label htmlFor="message" className="visually-hidden">Message</label>
                                     <textarea
+                                        id="message"
+                                        name="message"
                                         ref={textareaRef}
                                         rows="1"
                                         className="form-control py-2 contact-input"
                                         placeholder="Message"
-                                        onFocus={() => textareaRef.current.rows = 7}
-                                        onBlur={() => textareaRef.current.rows = 1}
+                                        onFocus={() => (textareaRef.current.rows = 7)}
+                                        onBlur={() => (textareaRef.current.rows = 1)}
+                                        required
                                     ></textarea>
                                 </div>
                             </form>
+
                         </div>
                         <div className="modal-footer justify-content-start p-3">
                             <ButtonForm />
