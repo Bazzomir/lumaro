@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Lottie from 'react-lottie';
+import Lottie from "lottie-react";
 import { Button } from '../../component/buttons';
 import scrollDownAnimation from '../../../assets/animation/scrollDown.json';
 
@@ -8,31 +8,19 @@ export default function Homepage() {
     const [isLottieVisible, setIsLottieVisible] = useState(true);
     const homepageRef = useRef(null);
 
-    const handleScroll = () => {
-        if (homepageRef.current) {
-            const homePage = homepageRef.current.getBoundingClientRect();
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
-            if (homePage.bottom < windowHeight / 2) {
-                setIsLottieVisible(false);
-            }
-        }
-    };
-
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
+        const onScroll = () => {
+            const rect = homepageRef.current?.getBoundingClientRect();
+            if (rect?.bottom < window.innerHeight / 3) setIsLottieVisible(false);
         };
+
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: scrollDownAnimation,
-        rendererSettings: {
-            "preserveAspectRatio": "xMidYMid meet"
-        }
+    const scrollToServices = () => {
+        document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+        setIsLottieVisible(false);
     };
 
     return (
@@ -42,7 +30,7 @@ export default function Homepage() {
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
                             <h1 className="m-0 header-text--big">
-                                Shape Your Future with Global Innovation
+                                <span className="text-purple">Shape</span> Your <span className="text-purple">Future</span> with Global <span className="text-purple">Innovation</span>
                             </h1>
                         </div>
                         <div className="col-12">
@@ -51,20 +39,15 @@ export default function Homepage() {
                         <Button btnName="Start Now" />
                     </div>
                 </div>
-                <div className="col-0 col-lg-5 d-none d-lg-block">
-                    <div className="d-flex p-3 relative">
-                        <img src="/lumaro/homepage.svg" alt="Homepage Image" className="homepage-image" />
-                    </div>
-                </div>
+                {isLottieVisible && (
+                    <Lottie
+                        animationData={scrollDownAnimation}
+                        loop={true}
+                        className="scrollDownAnimation"
+                        onClick={scrollToServices}
+                    />
+                )}
             </div>
-
-            {isLottieVisible && (
-                <Lottie
-                    options={defaultOptions}
-                    height={100}
-                    width={100}
-                />
-            )}
         </div>
     );
 }

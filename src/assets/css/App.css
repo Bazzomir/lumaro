@@ -62,6 +62,12 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+    background-image: url(/public/homepage.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-position-x: 700px;
+    background-position-y: 106px;
 }
 
 .contact,
@@ -73,14 +79,15 @@ body {
 /* =============================================================================
    MEDIA ELEMENTS
    ============================================================================= */
-.homepage-image {
-    aspect-ratio: 4/3;
+.scrollDownAnimation {
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    cursor: pointer;
     position: absolute;
-    width: 100%;
-    max-width: 600px;
-    top: 20px;
-    right: 0;
-    z-index: 2;
+    bottom: 0;
+    right: 50px;
+    left: 50px;
 }
 
 .about-image {
@@ -146,7 +153,7 @@ body {
    TYPOGRAPHY
    ============================================================================= */
 .header-text--big {
-    font-size: 5.125rem;
+    font-size: 5.225rem;
     font-weight: 700;
     line-height: 5.688rem;
 }
@@ -344,9 +351,8 @@ textarea.form-control {
    DECORATIVE ELEMENTS
    ============================================================================= */
 .bg-triangle {
-    /* position: relative;
-    z-index: 1; */
-    background-image: url(../../../public/rectangle.svg);
+    position: relative;
+    z-index: 1;
 }
 
 /* =============================================================================
