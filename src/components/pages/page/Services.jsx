@@ -37,7 +37,7 @@ export default function Services() {
     return (
         <div className="services container-fluid mt-5 px-120" id="services">
             <div className="container">
-                <div className="row">
+                <div className="row" data-aos="fade-up-right">
                     <h2 className="header-text--small text-center">Our Services</h2>
                     <p className="services--paragraph text-center">We're equipped to deliver with precison and expertise.</p>
                 </div>
