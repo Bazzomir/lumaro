@@ -121,7 +121,8 @@ body {
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.9rem;
-    color: var(--white)
+    color: var(--white);
+    margin: 0 !important;
 }
 
 .nav-link {
@@ -366,6 +367,7 @@ textarea.form-control {
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.9rem;
+    margin: 0;
 }
 
 .footer-paragraph {
