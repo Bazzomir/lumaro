@@ -58,10 +58,10 @@ body {
    LAYOUT SECTIONS
    ============================================================================= */
 .homepage {
-    height: 100%;
-    box-sizing: border-box;
+    /* height: 100%; */
+    /* box-sizing: border-box;
     overflow: hidden;
-    position: relative;
+    position: relative; */
     background-image: url(/public/homepage.svg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -70,11 +70,11 @@ body {
     background-position-y: 106px;
 }
 
-.contact,
+/* .contact,
 .about,
 .services {
     height: 100%;
-}
+} */
 
 /* =============================================================================
    MEDIA ELEMENTS
@@ -260,18 +260,23 @@ textarea.form-control {
 /* =============================================================================
    CARDS
    ============================================================================= */
-.services-card {
-    max-width: 500px !important;
-    max-height: 529px !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: auto;
-    box-sizing: border-box;
+/* .services-card { */
+    /* max-width: 500px !important; */
+    /* max-height: 529px !important; */
+    /* width: 100% !important; */
+    /* height: 100% !important; */
+    /* overflow: auto; */
+    /* box-sizing: border-box; */
+/* } */
+
+.services-card:hover {
+    box-shadow: 12px 12px 12px rgba(82, 23, 129, 0.2) !important;
 }
 
-.services-card-body {
+
+/* .services-card-body {
     height: auto;
-}
+} */
 
 .services-card-body__title {
     font-size: 32px;
@@ -294,6 +299,10 @@ textarea.form-control {
     height: 100% !important;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+.about-card:hover {
+    box-shadow: 12px 12px 12px rgba(82, 23, 129, 0.2) !important;
 }
 
 .about-card-body {
