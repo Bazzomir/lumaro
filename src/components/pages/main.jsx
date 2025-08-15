@@ -25,11 +25,11 @@ function Main() {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute("id");
             setActiveLink(id);
-            navigate(`#${id}`, { replace: true }); // го менува URL-то
+            navigate(`#${id}`, { replace: true });
           }
         });
       },
-      { rootMargin: "-30% 0px -70% 0px" } // 50% од секцијата да биде видлива
+      { rootMargin: "-30% 0px -70% 0px" }
     );
 
     sections.forEach((sec) => observer.observe(sec));
