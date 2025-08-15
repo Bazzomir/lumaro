@@ -1,31 +1,43 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import Header from '../component/Header';
-import Homepage from './page/Homepage';
-import Services from './page/Services';
-import About from './page/About';
-import Contact from './page/Contact';
-import Footer from '../component/Footer';
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import Header from "../component/Header";
+import Homepage from "./page/Homepage";
+import Services from "./page/Services";
+import About from "./page/About";
+import Contact from "./page/Contact";
+import Footer from "../component/Footer";
 import AOS from "aos";
 
 function Main() {
-
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState("home");
+  const [manualScroll, setManualScroll] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
+    // AOS анимации
     AOS.init({ duration: 1000, once: false });
     AOS.refresh();
 
-    const sections = document.querySelectorAll("section[id]");
+    // Скрол до секцијата според URL
+    const sectionId = location.pathname.replace("/lumaro/", "") || "home";
+    const section = document.getElementById(sectionId);
+    if (section) {
+      setManualScroll(true); // блокирај observer за време на скрол
+      section.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => setManualScroll(false), 500); // по скрол дозволи observer
+    }
 
+    // IntersectionObserver за scroll-spy
+    const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
       (entries) => {
+        if (manualScroll) return; // ако е кликано, игнорирај
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute("id");
             setActiveLink(id);
-            navigate(`#${id}`, { replace: true });
+            navigate(`/lumaro/${id}`, { replace: true });
           }
         });
       },
@@ -35,7 +47,7 @@ function Main() {
     sections.forEach((sec) => observer.observe(sec));
 
     return () => observer.disconnect();
-  }, [navigate]);
+  }, [location.pathname, navigate, manualScroll]);
 
   return (
     <>

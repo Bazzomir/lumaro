@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer({ activeLink, setActiveLink }) {
     return (
         <div className="footer">
@@ -19,40 +21,40 @@ export default function Footer({ activeLink, setActiveLink }) {
                             <span className="footer-item-names">Quick Links</span>
                             <ul className="footer-nav mt-3">
                                 <li className="footer-nav-item">
-                                    <a
+                                    <Link
                                         className={`footer-nav-link ${activeLink === "home" ? "footer-active" : ""}`}
-                                        href="#home"
+                                        to="/lumaro/home"
                                         onClick={() => setActiveLink("home")}
                                     >
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="footer-nav-item">
-                                    <a
+                                    <Link
                                         className={`footer-nav-link ${activeLink === "services" ? "footer-active" : ""}`}
-                                        href="#services"
+                                        to="/lumaro/services"
                                         onClick={() => setActiveLink("services")}
                                     >
                                         Services
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="footer-nav-item">
-                                    <a
+                                    <Link
                                         className={`footer-nav-link ${activeLink === "about" ? "footer-active" : ""}`}
-                                        href="#about"
+                                        to="/lumaro/about"
                                         onClick={() => setActiveLink("about")}
                                     >
                                         About
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="footer-nav-item">
-                                    <a
+                                    <Link
                                         className={`footer-nav-link ${activeLink === "contact" ? "footer-active" : ""}`}
-                                        href="#contact"
+                                        to="/lumaro/contact"
                                         onClick={() => setActiveLink("contact")}
                                     >
                                         Contact
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
