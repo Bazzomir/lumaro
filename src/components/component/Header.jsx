@@ -15,7 +15,7 @@ export default function Header({ activeLink, setActiveLink }) {
                         <li className="nav-item">
                             <Link
                                 className={`nav-link ${activeLink === "home" ? "nav-active" : ""}`}
-                                to="/lumaro/home"
+                                to="/lumaro"
                                 onClick={() => setActiveLink("home")}
                             >
                                 Home

@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom';
 
 export default function Footer({ activeLink, setActiveLink }) {
+    // Функција за директно скролање до секција
+    // const handleFooterNavClick = (e, sectionId) => {
+    //     e.preventDefault(); // Спречи го дефолтното однесување на Link
+
+    //     // Скролај до секцијата
+    //     const element = document.getElementById(sectionId);
+    //     if (element) {
+    //         element.scrollIntoView({ behavior: "auto", block: "start" });
+    //     }
+
+    //     // Ажурирај ја состојбата
+    //     setActiveLink(sectionId);
+    // };
+
     return (
         <div className="footer">
             <div className="container-fluid px-0 footer-border-top">
@@ -23,8 +37,8 @@ export default function Footer({ activeLink, setActiveLink }) {
                                 <li className="footer-nav-item">
                                     <Link
                                         className={`footer-nav-link ${activeLink === "home" ? "footer-active" : ""}`}
-                                        to="/lumaro/home"
-                                        onClick={() => setActiveLink("home")}
+                                        to="/lumaro"
+                                        onClick={(e) => setActiveLink(e, "home")}
                                     >
                                         Home
                                     </Link>
@@ -33,7 +47,7 @@ export default function Footer({ activeLink, setActiveLink }) {
                                     <Link
                                         className={`footer-nav-link ${activeLink === "services" ? "footer-active" : ""}`}
                                         to="/lumaro/services"
-                                        onClick={() => setActiveLink("services")}
+                                        onClick={(e) => setActiveLink(e, "services")}
                                     >
                                         Services
                                     </Link>
@@ -42,7 +56,7 @@ export default function Footer({ activeLink, setActiveLink }) {
                                     <Link
                                         className={`footer-nav-link ${activeLink === "about" ? "footer-active" : ""}`}
                                         to="/lumaro/about"
-                                        onClick={() => setActiveLink("about")}
+                                        onClick={(e) => setActiveLink(e, "about")}
                                     >
                                         About
                                     </Link>
@@ -51,7 +65,7 @@ export default function Footer({ activeLink, setActiveLink }) {
                                     <Link
                                         className={`footer-nav-link ${activeLink === "contact" ? "footer-active" : ""}`}
                                         to="/lumaro/contact"
-                                        onClick={() => setActiveLink("contact")}
+                                        onClick={(e) => setActiveLink(e, "contact")}
                                     >
                                         Contact
                                     </Link>
@@ -62,10 +76,10 @@ export default function Footer({ activeLink, setActiveLink }) {
                             <span className="footer-item-names">Get In Touch</span>
                             <ul className="footer-getInTouch mt-3">
                                 <li className="getInTocuh-item">
-                                    <a className="getInTocuh-link" href="mailto:someone@example.com">Email: contact@lumaro.com</a>
+                                    <Link className="getInTocuh-link" to="mailto:contact@lumaro.com">Email: contact@lumaro.com</Link>
                                 </li>
                                 <li className="getInTocuh-item">
-                                    <a className="getInTocuh-link" href="tel:012-345-6789">Phone: +1 8883218572</a>
+                                    <Link className="getInTocuh-link" to="tel:+18883218572">Phone: +1 8883218572</Link>
                                 </li>
                                 <li className="getInTocuh-item">Hours: Mon-Fri 9:00AM - 5:00PM</li>
                             </ul>
@@ -74,10 +88,10 @@ export default function Footer({ activeLink, setActiveLink }) {
                             <span className="footer-item-names">Social</span>
                             <ul className="footer-social mt-3">
                                 <li className="social-item">
-                                    <a className="social-link" href="https://www.linkedin.com/">LinkedIn</a>
+                                    <Link className="social-link" to="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</Link>
                                 </li>
                                 <li className="social-item">
-                                    <a className="social-link" href="https://www.instagram.com/">Instagram</a>
+                                    <Link className="social-link" to="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</Link>
                                 </li>
                             </ul>
                         </div>

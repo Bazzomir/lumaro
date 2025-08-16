@@ -1,53 +1,79 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import AOS from "aos";
 import Header from "../component/Header";
 import Homepage from "./page/Homepage";
 import Services from "./page/Services";
 import About from "./page/About";
 import Contact from "./page/Contact";
 import Footer from "../component/Footer";
-import AOS from "aos";
 
 function Main() {
   const [activeLink, setActiveLink] = useState("home");
-  const [manualScroll, setManualScroll] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const isNavigatingRef = useRef(false);
 
   useEffect(() => {
-    // AOS анимации
     AOS.init({ duration: 1000, once: false });
-    AOS.refresh();
 
-    // Скрол до секцијата според URL
-    const sectionId = location.pathname.replace("/lumaro/", "") || "home";
-    const section = document.getElementById(sectionId);
-    if (section) {
-      setManualScroll(true); // блокирај observer за време на скрол
-      section.scrollIntoView({ behavior: "smooth" });
-      setTimeout(() => setManualScroll(false), 500); // по скрол дозволи observer
-    }
+    const path = location.pathname.replace(/^\/+|\/+$/g, "");
+    setActiveLink(path.split("/").pop() || "home");
 
-    // IntersectionObserver за scroll-spy
-    const sections = document.querySelectorAll("section[id]");
+    const handleNavClick = (e) => {
+      const navLink = e.target.closest("a.nav-link, a.footer-nav-link");
+      if (!navLink) return;
+
+      e.preventDefault();
+
+      const url = new URL(navLink.href);
+      const id = url.pathname === "/lumaro" || url.pathname === "/lumaro/"
+        ? "home"
+        : url.pathname.split("/").pop() || "home";
+
+      isNavigatingRef.current = true;
+
+      if (id === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      setActiveLink(id);
+      const path = id === "home" ? "/lumaro" : `/lumaro/${id}`;
+      navigate(path, { replace: true });
+
+      setTimeout(() => isNavigatingRef.current = false, 200);
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
-        if (manualScroll) return; // ако е кликано, игнорирај
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute("id");
+        if (isNavigatingRef.current) return;
+
+        const bestEntry = entries
+          .filter(e => e.isIntersecting)
+          .reduce((best, curr) => curr.intersectionRatio > (best?.intersectionRatio || 0) ? curr : best, null);
+
+        if (bestEntry) {
+          const id = bestEntry.target.id;
+          if (id !== activeLink) {
             setActiveLink(id);
-            navigate(`/lumaro/${id}`, { replace: true });
+            const path = id === "home" ? "/lumaro" : `/lumaro/${id}`;
+            navigate(path, { replace: true });
           }
-        });
+        }
       },
-      { rootMargin: "-30% 0px -70% 0px" }
+      { rootMargin: "-45% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
     );
 
-    sections.forEach((sec) => observer.observe(sec));
+    document.querySelectorAll("section[id]").forEach(s => observer.observe(s));
+    document.addEventListener("click", handleNavClick, true);
 
-    return () => observer.disconnect();
-  }, [location.pathname, navigate, manualScroll]);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("click", handleNavClick, true);
+    };
+  }, [location.pathname, navigate, activeLink]);
 
   return (
     <>
