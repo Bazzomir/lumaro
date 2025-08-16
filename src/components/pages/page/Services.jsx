@@ -35,7 +35,7 @@ export default function Services() {
     }, []);
 
     return (
-        <div className="services container-fluid mt-5 px-120" id="services">
+        <section className="services container-fluid mt-5 px-120 h-100" id="services">
             <div className="container">
                 <div className="row" data-aos="fade-up-right">
                     <h2 className="header-text--small text-center">Our Services</h2>
@@ -57,6 +57,6 @@ export default function Services() {
                     })}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

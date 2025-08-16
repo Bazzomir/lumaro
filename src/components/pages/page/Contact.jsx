@@ -33,7 +33,7 @@ export default function Contact() {
 
     return (
         <>
-            <div className="contact container-fluid my-5 px-120" id="contact">
+            <section className="contact container-fluid my-5 px-120 h-100" id="contact">
                 <div className="row justify-content-center align-items-center">
                     <div className=" col-12 col-lg-6">
                         <div className="header-text--big">
@@ -67,7 +67,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 }
