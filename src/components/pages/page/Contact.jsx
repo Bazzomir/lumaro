@@ -12,6 +12,7 @@ const avatarMap = {
 };
 
 export default function Contact() {
+
     const [contactData, setContactData] = useState([]);
 
     useEffect(() => {
