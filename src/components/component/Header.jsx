@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Header({ activeLink, setActiveLink }) {
     return (
         <div className="container-fluid px-0">
@@ -11,40 +13,40 @@ export default function Header({ activeLink, setActiveLink }) {
                 <div className="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
                     <ul className="navbar-nav gap-3">
                         <li className="nav-item">
-                            <a
+                            <Link
                                 className={`nav-link ${activeLink === "home" ? "nav-active" : ""}`}
-                                href="#home"
+                                to="/lumaro"
                                 onClick={() => setActiveLink("home")}
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a
+                            <Link
                                 className={`nav-link ${activeLink === "services" ? "nav-active" : ""}`}
-                                href="#services"
+                                to="/lumaro/services"
                                 onClick={() => setActiveLink("services")}
                             >
                                 Services
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a
+                            <Link
                                 className={`nav-link ${activeLink === "about" ? "nav-active" : ""}`}
-                                href="#about"
+                                to="/lumaro/about"
                                 onClick={() => setActiveLink("about")}
                             >
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a
+                            <Link
                                 className={`nav-link ${activeLink === "contact" ? "nav-active" : ""}`}
-                                href="#contact"
+                                to="/lumaro/contact"
                                 onClick={() => setActiveLink("contact")}
                             >
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

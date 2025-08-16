@@ -2,7 +2,7 @@ import circle from '../../assets/image/icons/listCircle.svg';
 
 export function ServicesCard({ category, description, offerings, iconPath }) {
     return (
-        <div className="services-card gap-5 p-3 border shadow-sm rounded" data-aos="zoom-in-down" data-aos-duration="2000">
+        <div className="services-card gap-5 p-3 h-100 border shadow-sm rounded overflow-hidden box-sizing" data-aos="zoom-in-down" data-aos-duration="1100">
             <div className="services-card-body py-3 px-4">
                 <div className="mb-3">
                     {iconPath && <img src={iconPath} alt={category} className="img-fluid" />}
@@ -26,7 +26,7 @@ export function ServicesCard({ category, description, offerings, iconPath }) {
 
 export function ContactCard({ quote, fullName, avatarCard }) {
     return (
-        <div className="contact-card-body" data-aos="fade-up" data-aos-duration="2000">
+        <div className="contact-card-body" data-aos="fade-up" data-aos-duration="1100">
             <p className="contact-card-body__text mx-auto mx-md-0 text-center text-lg-start">{quote}</p>
             <div className="col text-center text-lg-start pt-3">
                 {avatarCard && <img src={avatarCard} alt={fullName} className="contact-card-body__avatar" />}
@@ -38,7 +38,7 @@ export function ContactCard({ quote, fullName, avatarCard }) {
 
 export function AboutCard({ category, description, CardIcon }) {
     return (
-        <div className="about-card gap-5 p-3 shadow-sm border-0 rounded h-100" data-aos="fade-up" data-aos-duration="2000">
+        <div className="about-card gap-5 p-3 shadow-sm border-0 rounded h-100" data-aos="flip-up" data-aos-duration="1500">
             <div className="about-card-body">
                 <div className="mb-3">
                     {CardIcon && <img src={CardIcon} alt={category} className="img-fluid" />}
