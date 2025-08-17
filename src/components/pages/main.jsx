@@ -21,7 +21,7 @@ function Main() {
     setActiveLink(path.split("/").pop() || "home");
 
     const handleNavClick = (e) => {
-      const navLink = e.target.closest("a.nav-link, a.footer-nav-link");
+      const navLink = e.target.closest("a.nav-link, a.navbar-brand, a.footer-nav-link");
       if (!navLink) return;
 
       e.preventDefault();

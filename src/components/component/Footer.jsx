@@ -24,7 +24,7 @@ export default function Footer({ activeLink, setActiveLink }) {
                                 <li className="footer-nav-item">
                                     <Link
                                         className={`footer-nav-link ${activeLink === "home" ? "footer-active" : ""}`}
-                                        to="/lumaro"
+                                        to="/lumaro/home"
                                         onClick={(e) => setActiveLink(e, "home")}
                                     >
                                         Home
