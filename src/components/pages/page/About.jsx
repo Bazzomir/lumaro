@@ -33,7 +33,7 @@ export default function About() {
     }, []);
 
     return (
-        <section className="about container-fluid mt-5 px-120 h-100" id="about">
+        <section className="about ontainer-fluid my-5 pt-5 px-120 h-100 box-sizing overflow-hidden relative" id="about">
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-lg-6 ">
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">

@@ -31,10 +31,10 @@ export default function Contact() {
                 console.error('Error fetching data:', err);
             });
     }, []);
-
+ 
     return (
         <>
-            <section className="contact container-fluid my-5 px-120 h-100" id="contact">
+            <section className="contact container-fluid my-5 pt-5 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
                 <div className="row justify-content-center align-items-center">
                     <div className=" col-12 col-lg-6">
                         <div className="header-text--big">
