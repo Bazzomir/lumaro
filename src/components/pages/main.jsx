@@ -27,9 +27,7 @@ function Main() {
       e.preventDefault();
 
       const url = new URL(navLink.href);
-      const id = url.pathname === "/lumaro" || url.pathname === "/lumaro/"
-        ? "home"
-        : url.pathname.split("/").pop() || "home";
+      const id = url.pathname === "/lumaro" || url.pathname === "/lumaro/" ? "home" : url.pathname.split("/").pop() || "home";
 
       isNavigatingRef.current = true;
 
@@ -73,7 +71,7 @@ function Main() {
       observer.disconnect();
       document.removeEventListener("click", handleNavClick, true);
     };
-  }, [location.pathname, navigate, activeLink]);
+  }, [location.pathname, navigate]);
 
   return (
     <>
