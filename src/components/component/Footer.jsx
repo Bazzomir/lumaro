@@ -1,19 +1,6 @@
 import { Link } from 'react-router-dom';
 
 export default function Footer({ activeLink, setActiveLink }) {
-    // Функција за директно скролање до секција
-    // const handleFooterNavClick = (e, sectionId) => {
-    //     e.preventDefault(); // Спречи го дефолтното однесување на Link
-
-    //     // Скролај до секцијата
-    //     const element = document.getElementById(sectionId);
-    //     if (element) {
-    //         element.scrollIntoView({ behavior: "auto", block: "start" });
-    //     }
-
-    //     // Ажурирај ја состојбата
-    //     setActiveLink(sectionId);
-    // };
 
     return (
         <div className="footer">
