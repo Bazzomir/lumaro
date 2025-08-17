@@ -26,9 +26,9 @@ export default function Homepage() {
     };
 
     return (
-        <section className="homepage container-fluid mt-0 mt-md-5 px-120 h-100 box-sizing overflow-hidden relative" id="home" ref={homepageRef}>
+        <section className="homepage container-fluid pt-6 px-120 h-100 box-sizing overflow-hidden relative" id="home" ref={homepageRef}>
             <div className="row pt-5">
-                <div className="col-12 col-lg-7  align-self-center">
+                <div className="col-12 col-lg-7 align-self-center">
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
                             <h1 className="m-0 header-text--big" data-aos="fade-up" data-aos-easing="ease-in-all" data-aos-anchor-placement="center-center">
@@ -45,7 +45,7 @@ export default function Homepage() {
                     <Lottie
                         animationData={scrollDownAnimation}
                         loop={true}
-                        className="scrollDownAnimation"
+                        className="scrollDownAnimation fixed-bottom mx-auto cursor-pointer"
                         onClick={scrollToServices}
                     />
                 )}

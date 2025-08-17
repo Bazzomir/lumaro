@@ -56,7 +56,7 @@ export default function About() {
                         {aboutData.map((about, i) => {
                             const IconPath = iconMap[about.icon];
                             return (
-                                <div key={i} className="col-md-6 col-lg-3 my-4 w-auto" data-aos="zoom-in">
+                                <div key={i} className="col-md-6 col-lg-3 my-4 h-100" data-aos="zoom-in">
                                     {IconPath && (
                                         <AboutCard
                                             CardIcon={IconPath}

@@ -21,15 +21,13 @@ function Main() {
     setActiveLink(path.split("/").pop() || "home");
 
     const handleNavClick = (e) => {
-      const navLink = e.target.closest("a.nav-link, a.footer-nav-link");
+      const navLink = e.target.closest("a.nav-link, a.navbar-brand, a.footer-nav-link");
       if (!navLink) return;
 
       e.preventDefault();
 
       const url = new URL(navLink.href);
-      const id = url.pathname === "/lumaro" || url.pathname === "/lumaro/"
-        ? "home"
-        : url.pathname.split("/").pop() || "home";
+      const id = url.pathname === "/lumaro" || url.pathname === "/lumaro/" ? "home" : url.pathname.split("/").pop() || "home";
 
       isNavigatingRef.current = true;
 
@@ -73,7 +71,7 @@ function Main() {
       observer.disconnect();
       document.removeEventListener("click", handleNavClick, true);
     };
-  }, [location.pathname, navigate, activeLink]);
+  }, [location.pathname, navigate]);
 
   return (
     <>

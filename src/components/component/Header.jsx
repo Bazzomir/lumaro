@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 export default function Header({ activeLink, setActiveLink }) {
     return (
         <div className="container-fluid px-0">
-            <nav className="navbar navbar-expand-lg container-fluid px-120">
-                <a className="navbar-brand d-grid align-items-center" href="#home">
+            <nav className="navbar navbar-expand-lg container-fluid px-120 fixed-top" >
+                <Link className="navbar-brand d-grid align-items-center" to="/lumaro">
                     <h2 className="nav-logo">LUMARO</h2>
-                </a>
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -15,7 +15,7 @@ export default function Header({ activeLink, setActiveLink }) {
                         <li className="nav-item">
                             <Link
                                 className={`nav-link ${activeLink === "home" ? "nav-active" : ""}`}
-                                to="/lumaro"
+                                to="/lumaro/home"
                                 onClick={() => setActiveLink("home")}
                             >
                                 Home
