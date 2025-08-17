@@ -35,7 +35,7 @@ export default function Services() {
     }, []);
 
     return (
-        <section className="services container-fluid mt-6 pt-6 px-120 h-100" id="services">
+        <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services">
             <div className="container">
                 <div className="row" data-aos="fade-up-right">
                     <h2 className="header-text--small text-center">Our Services</h2>

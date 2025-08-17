@@ -11,7 +11,7 @@ export default function Footer({ activeLink, setActiveLink }) {
                             <h2 className="footer-logo">Lumaro</h2>
                             <div className="footer-paragraph">
                                 <p className="footer-paragraph__text py-4 mb-0">
-                                    Empowering businesses with cutting-edge solutions, Pixonium specializes in connecting you with global talent and innovative strategies for sustainable growth.
+                                    Empowering businesses with cutting-edge solutions, Lumaro specializes in connecting you with global talent and innovative strategies for sustainable growth.
                                 </p>
                             </div>
                             <div className="footer-paragraph__text pt-5">
