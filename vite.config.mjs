@@ -12,6 +12,7 @@ export default defineConfig({
           aos: ['aos'],
         },
       },
-    }
+    },
+    chunkSizeWarningLimit: 1000,
   }
 })
