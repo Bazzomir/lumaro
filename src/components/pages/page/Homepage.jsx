@@ -10,7 +10,6 @@ export default function Homepage() {
 
     useEffect(() => {
 
-
         const onScroll = () => {
             const rect = homepageRef.current?.getBoundingClientRect();
             if (rect?.bottom < window.innerHeight / 3) setIsLottieVisible(false);
