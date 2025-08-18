@@ -2,11 +2,12 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import AOS from "aos";
 import Header from "../component/Header";
-import Homepage from "./page/Homepage";
-import Services from "./page/Services";
-import About from "./page/About";
-import Contact from "./page/Contact";
+// import Homepage from "./page/Homepage";
+// import Services from "./page/Services";
+// import About from "./page/About";
+// import Contact from "./page/Contact";
 import Footer from "../component/Footer";
+import LazyPage from "./lazyPage";
 
 function Main() {
   const [activeLink, setActiveLink] = useState("home");
@@ -76,10 +77,13 @@ function Main() {
   return (
     <>
       <Header activeLink={activeLink} setActiveLink={setActiveLink} />
-      <Homepage />
-      <Services />
-      <About />
-      <Contact />
+      {/* <Suspense fallback={<div className="loading">Loading...</div>}>
+        <Homepage />
+        <Services />
+        <About />
+        <Contact />
+      </Suspense> */}
+      <LazyPage />
       <Footer activeLink={activeLink} setActiveLink={setActiveLink} />
     </>
   );
