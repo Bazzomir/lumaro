@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import Lottie from "lottie-react";
-import LoadingBar from "../../assets/animation/LoadingBar.json";
+import ProgressBar from "../../assets/animation/ProgressBar.json";
 
 // const Header = lazy(() => import("../component/Header"));
 const Homepage = lazy(() => import("./page/Homepage"));
@@ -17,9 +17,10 @@ export default function LazyPage() {
     <>
       <Suspense fallback={
         <Lottie
-          animationData={LoadingBar}
+          animationData={ProgressBar}
           loop={true}
-          className="flex justify-center items-center h-screen"
+          className="flex justify-center items-center h-screen w-100 h-100"
+          style={{height: "100px", width: "300px"}}
         />
       }>
         {/* <Header /> */}
