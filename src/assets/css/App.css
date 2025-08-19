@@ -11,11 +11,11 @@
     --purple: #522081;
     --white: #ffffff;
     --black: #010512;
-    --gray: #e6e1ea;
 
     /* Shadow System */
     --shadow-primary: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
     --shadow-focus: 0px 0px 9px 0px rgba(82, 32, 129, 0.9);
+    --shadow-card: 12px 12px 12px rgba(82, 23, 129, 0.5);
 
     /* Transitions */
     --transition-smooth: 0.3s ease;
@@ -35,7 +35,14 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--black) !important;
     overflow-x: hidden;
-    max-width: 100vw;
+    /* max-width: 100vw; */
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: var(--purple);
+    color: var(--white);
 }
 
 /* =============================================================================
@@ -44,6 +51,18 @@ body {
 .px-120 {
     padding-left: 120px !important;
     padding-right: 120px !important;
+}
+
+.mt-6 {
+    margin-top: 8rem !important;
+}
+
+.pt-6 {
+    padding-top: 8rem !important;
+}
+
+.pb-6 {
+    padding-bottom: 8rem !important;
 }
 
 .fw-500 {
@@ -68,6 +87,7 @@ body {
     background-position: center right;
     background-position-x: 700px;
     background-position-y: 106px;
+    object-fit: cover;
 }
 
 /* .contact,
@@ -82,21 +102,22 @@ body {
 .scrollDownAnimation {
     height: 120px;
     width: 120px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     cursor: pointer;
-    position: absolute;
-    bottom: 0;
+
+    /* position: absolute; */
+    /* bottom: 0;
     right: 50px;
-    left: 50px;
+    left: 50px; */
 }
 
 .about-image {
     aspect-ratio: 4/3;
     position: absolute;
-    max-width: 600px;
-    width: 100%;
-    top: 2348px;
-    right: 100px;
+    /* max-width: 600px; */
+    /* width: 100%; */
+    top: 2592px;
+    right: 101px;
     z-index: 2;
 }
 
@@ -115,6 +136,8 @@ body {
    ============================================================================= */
 .navbar {
     background-color: var(--purple) !important;
+    z-index: 100;
+    box-shadow: var(--shadow-focus);
 }
 
 .nav-logo {
@@ -261,16 +284,23 @@ textarea.form-control {
    CARDS
    ============================================================================= */
 /* .services-card { */
-    /* max-width: 500px !important; */
-    /* max-height: 529px !important; */
-    /* width: 100% !important; */
-    /* height: 100% !important; */
-    /* overflow: auto; */
-    /* box-sizing: border-box; */
+/* max-width: 500px !important; */
+/* max-height: 529px !important; */
+/* width: 100% !important; */
+/* height: 100% !important; */
+/* overflow: auto; */
+/* box-sizing: border-box; */
 /* } */
 
-.services-card:hover {
-    box-shadow: 12px 12px 12px rgba(82, 23, 129, 0.2) !important;
+.services-card,
+.about-card {
+    transition: box-shadow ease-in-out 0.3s, scale ease-in-out 0.3s !important;
+}
+
+.services-card:hover,
+.about-card:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-card) !important;
 }
 
 
@@ -292,25 +322,25 @@ textarea.form-control {
     color: var(--black);
 }
 
-.about-card {
+/* .about-card {
     max-width: 312px !important;
     max-height: 460px !important;
     width: 100% !important;
     height: 100% !important;
     overflow: hidden;
     box-sizing: border-box;
-}
+} */
 
-.about-card:hover {
-    box-shadow: 12px 12px 12px rgba(82, 23, 129, 0.2) !important;
-}
+/* .about-card:hover {
+    box-shadow: var(--shadow-card) !important;
+} */
 
-.about-card-body {
+/* .about-card-body {
     max-width: 312px !important;
     max-height: 460px !important;
     width: 100% !important;
     height: 100% !important;
-}
+} */
 
 .about-card-body__title {
     font-size: 32px;

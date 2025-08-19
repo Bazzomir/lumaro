@@ -1,12 +1,9 @@
-import { useEffect, useState, useRef } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import AOS from "aos";
-import Header from "../component/Header";
-import Homepage from "./page/Homepage";
-import Services from "./page/Services";
-import About from "./page/About";
-import Contact from "./page/Contact";
-import Footer from "../component/Footer";
+import { useEffect, useState, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import AOS from 'aos';
+import Header from '../component/Header';
+import Footer from '../component/Footer';
+import LazyPage from './lazyPage';
 
 function Main() {
   const [activeLink, setActiveLink] = useState("home");
@@ -21,15 +18,13 @@ function Main() {
     setActiveLink(path.split("/").pop() || "home");
 
     const handleNavClick = (e) => {
-      const navLink = e.target.closest("a.nav-link, a.footer-nav-link");
+      const navLink = e.target.closest("a.nav-link, a.navbar-brand, a.footer-nav-link");
       if (!navLink) return;
 
       e.preventDefault();
 
       const url = new URL(navLink.href);
-      const id = url.pathname === "/lumaro" || url.pathname === "/lumaro/"
-        ? "home"
-        : url.pathname.split("/").pop() || "home";
+      const id = url.pathname === "/lumaro" || url.pathname === "/lumaro/" ? "home" : url.pathname.split("/").pop() || "home";
 
       isNavigatingRef.current = true;
 
@@ -73,15 +68,12 @@ function Main() {
       observer.disconnect();
       document.removeEventListener("click", handleNavClick, true);
     };
-  }, [location.pathname, navigate, activeLink]);
+  }, [location.pathname, navigate]);
 
   return (
     <>
       <Header activeLink={activeLink} setActiveLink={setActiveLink} />
-      <Homepage />
-      <Services />
-      <About />
-      <Contact />
+      <LazyPage />
       <Footer activeLink={activeLink} setActiveLink={setActiveLink} />
     </>
   );
