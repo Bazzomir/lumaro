@@ -1,18 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
-import Lottie from "lottie-react";
 import { Button } from '../../component/buttons';
-import scrollDownAnimation from '../../../assets/animation/scrollDown.json';
+import { ScrollDownAnimation } from '../../component/animations.jsx'
 
 export default function Homepage() {
 
-    const [isLottieVisible, setIsLottieVisible] = useState(true);
+    const [isAnimationVisible, setIsAnimationVisible] = useState(true);
     const homepageRef = useRef(null);
 
     useEffect(() => {
 
         const onScroll = () => {
             const rect = homepageRef.current?.getBoundingClientRect();
-            if (rect?.bottom < window.innerHeight / 3) setIsLottieVisible(false);
+            if (rect?.bottom < window.innerHeight / 3) setIsAnimationVisible(false);
         };
 
         window.addEventListener('scroll', onScroll);
@@ -21,7 +20,7 @@ export default function Homepage() {
 
     const scrollToServices = () => {
         document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
-        setIsLottieVisible(false);
+        setIsAnimationVisible(false);
     };
 
     return (
@@ -40,13 +39,8 @@ export default function Homepage() {
                         <Button btnName="Start Now" />
                     </div>
                 </div>
-                {isLottieVisible && (
-                    <Lottie
-                        animationData={scrollDownAnimation}
-                        loop={true}
-                        className="scrollDownAnimation fixed-bottom mx-auto cursor-pointer"
-                        onClick={scrollToServices}
-                    />
+                {isAnimationVisible && (
+                    <ScrollDownAnimation onClick={scrollToServices} />
                 )}
             </div>
         </section>
