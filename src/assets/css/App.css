@@ -111,17 +111,37 @@ body {
     left: 50px; */
 }
 
-.about-image {
+.TeamAnimation {
     aspect-ratio: 4/3;
     position: absolute;
-    /* max-width: 600px; */
-    /* width: 100%; */
+    z-index: 2;
+    top: 2525px;
+    right: 150px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.PartnersAnimation {
+    aspect-ratio: 4/3;
+    position: absolute;
+    z-index: 2;
+    top: 3770px;
+    right: 100px;
+    max-width: 700px;
+    width: 100%;
+}
+
+/* .about-image {
+    aspect-ratio: 4/3;
+    position: absolute;
+    max-width: 600px;
+    width: 100%;
     top: 2592px;
     right: 101px;
     z-index: 2;
-}
+} */
 
-.contact-video {
+/* .contact-video {
     aspect-ratio: 4/3;
     position: absolute;
     max-width: 600px;
@@ -129,7 +149,7 @@ body {
     top: 3830px;
     right: 100px;
     z-index: 2;
-}
+} */
 
 /* =============================================================================
    NAVIGATION

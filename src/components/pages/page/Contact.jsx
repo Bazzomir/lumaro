@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
+import Form from '../../component/form.jsx';
+import { PartnersAnimation } from '../../component/animations.jsx';
+import { ContactCard } from '../../component/cards.jsx';
 import avatarAveryR from '../../../assets/image/avatar/averyR.svg';
 import avatarCaseyW from '../../../assets/image/avatar/caseyW.svg';
 import avatarJordanM from '../../../assets/image/avatar/jordanM.svg';
-import { ContactCard } from '../../component/cards';
-import Form from '../../component/form';
 
 const avatarMap = {
     'averyR': avatarAveryR,
@@ -31,7 +32,7 @@ export default function Contact() {
                 console.error('Error fetching data:', err);
             });
     }, []);
- 
+
     return (
         <>
             <section className="contact container-fluid my-5 pt-5 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
@@ -45,6 +46,10 @@ export default function Contact() {
                     </div>
                     <div className="col-0 col-lg-6 d-none d-lg-block relative">
                         <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
+
+                        {/* <iframe width="800" height="600" src="https://www.youtube-nocookie.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="contact-video rounded" data-aos="fade-left" /> */}
+                        <PartnersAnimation />
+
                     </div>
                 </div>
                 <div className="row justify-content-center align-items-center pt-5">

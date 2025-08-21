@@ -13,6 +13,7 @@ export default defineConfig({
         },
       },
     },
+    drop: ['eval'],
     chunkSizeWarningLimit: 1000,
   }
 })

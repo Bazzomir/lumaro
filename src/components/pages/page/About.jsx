@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { AboutCard } from '../../component/cards';
+import { AboutCard } from '../../component/cards.jsx';
+import { TeamAnimation } from '../../component/animations.jsx';
 import GlobalExpertiseIcon from '../../../assets/image/icons/gExpertise.svg';
 import PrecisionIcon from '../../../assets/image/icons/precision.svg';
 import EfficiencyIcon from '../../../assets/image/icons/efficiency.svg';
@@ -42,7 +43,8 @@ export default function About() {
                 </div>
                 <div className="col-0 col-lg-6 d-none d-lg-block relative">
                     <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
-                    <img src="/lumaro/meeting.svg" alt="About us meeting" className="about-image mx-auto rounded" data-aos="fade-left" />
+                    {/* <img src="/lumaro/meeting.svg" alt="About us meeting" className="about-image mx-auto rounded" data-aos="fade-left" /> */}
+                    <TeamAnimation />
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
