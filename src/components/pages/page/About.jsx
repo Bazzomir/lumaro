@@ -41,7 +41,7 @@ export default function About() {
                         <span className="text-purple">We're</span> Your Strategic Ally In The <span className="text-purple">Digital</span> IT World.
                     </h2>
                 </div>
-                <div className="col-0 col-lg-6 d-none d-lg-block relative">
+                <div className="col-0 col-lg-6 relative">
                     <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
                     {/* <img src="/lumaro/meeting.svg" alt="About us meeting" className="about-image mx-auto rounded" data-aos="fade-left" /> */}
                     <TeamAnimation />
