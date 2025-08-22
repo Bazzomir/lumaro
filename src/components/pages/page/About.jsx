@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { AboutCard } from '../../component/cards.jsx';
 import { TeamAnimation } from '../../component/animations.jsx';
-import GlobalExpertiseIcon from '../../../assets/image/icons/gExpertise.svg';
-import PrecisionIcon from '../../../assets/image/icons/precision.svg';
-import EfficiencyIcon from '../../../assets/image/icons/efficiency.svg';
-import ScalabilityIcon from '../../../assets/image/icons/scalability.svg';
+import GlobalExpertiseIcon from '../../../assets/icons/gExpertise.svg';
+import PrecisionIcon from '../../../assets/icons/precision.svg';
+import EfficiencyIcon from '../../../assets/icons/efficiency.svg';
+import ScalabilityIcon from '../../../assets/icons/scalability.svg';
 
 const iconMap = {
     'gExpertise': GlobalExpertiseIcon,
