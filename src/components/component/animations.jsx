@@ -1,49 +1,51 @@
+import { useState, useEffect } from 'react';
+import { useInView } from '../../hooks/useInView.js';
 import Lottie from 'lottie-react';
-import LoadingBar from '../../assets/animation/LoadingBar.json';
-import scrollDown from '../../assets/animation/scrollDown.json';
-import CreativeTeam from '../../assets/animation/CreativeTeam..json';
-import BusinessPartners from '../../assets/animation/BusinessPartners.json'
 
-export function LoadingAnimation() {
+export function LazyLottie({ path, loop = true, ...props }) {
+    const [animationData, setAnimationData] = useState(null);
+    const [ref, inView] = useInView({ threshold: 0.3 });
+
+    useEffect(() => {
+        if (inView && !animationData) {
+            import(`../../assets/animation/${path}.json`).then((data) => {
+                setAnimationData(data.default);
+            });
+        }
+    }, [inView, path, animationData]);
+
     return (
-        <div className="m-auto w-50 h-25">
-            <Lottie
-                animationData={LoadingBar}
-                loop={true}
-            />
+        <div ref={ref}>
+            {animationData ? (
+                <Lottie animationData={animationData} loop={loop} {...props} />
+            ) : null}
         </div>
     );
-};
+}
 
-export function ScrollDownAnimation({ onClick }) {
-    return (
-        <Lottie
-            animationData={scrollDown}
-            loop={true}
-            className="scrollDownAnimation fixed-bottom mx-auto cursor-pointer"
-            onClick={onClick}
-        />
-    );
-};
+// Reusable wrappers
+export const LoadingAnimation = () => (
+    <div className="m-auto w-50 h-25">
+        <LazyLottie path="LoadingBar" />
+    </div>
+);
 
-export function TeamAnimation() {
-    return (
-        <div className="TeamAnimation" data-aos="fade-left">
-            <Lottie
-                animationData={CreativeTeam}
-                loop={true}
-            />
-        </div>
-    );
-};
+export const ScrollDownAnimation = ({ onClick }) => (
+    <LazyLottie
+        path="scrollDown"
+        className="scrollDownAnimation fixed-bottom mx-auto cursor-pointer"
+        onClick={onClick}
+    />
+);
 
-export function PartnersAnimation() {
-    return (
-        <div className="PartnersAnimation" data-aos="fade-left">
-            <Lottie
-                animationData={BusinessPartners}
-                loop={true}
-            />
-        </div>
-    );
-};
+export const TeamAnimation = () => (
+    <div className="TeamAnimation" data-aos="fade-left">
+        <LazyLottie path="CreativeTeam" />
+    </div>
+);
+
+export const PartnersAnimation = () => (
+    <div className="PartnersAnimation" data-aos="fade-left">
+        <LazyLottie path="BusinessPartners" />
+    </div>
+);

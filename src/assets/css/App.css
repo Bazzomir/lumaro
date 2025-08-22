@@ -85,7 +85,7 @@ body {
     /* box-sizing: border-box;
     overflow: hidden;
     position: relative; */
-    background-image: url(/homepage.svg);
+    background-image: url(/public/homepage.svg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center right;
