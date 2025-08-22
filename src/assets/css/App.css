@@ -73,6 +73,10 @@ body {
     color: var(--purple) !important;
 }
 
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
 /* =============================================================================
    LAYOUT SECTIONS
    ============================================================================= */
@@ -103,7 +107,7 @@ body {
     height: 120px;
     width: 120px;
     /* margin: 0 auto; */
-    cursor: pointer;
+    /* cursor: pointer; */
 
     /* position: absolute; */
     /* bottom: 0;
