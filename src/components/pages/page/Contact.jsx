@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import Form from '../../component/form.jsx';
 import { PartnersAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
-import avatarAveryR from '../../../assets/image/avatar/averyR.svg';
-import avatarCaseyW from '../../../assets/image/avatar/caseyW.svg';
-import avatarJordanM from '../../../assets/image/avatar/jordanM.svg';
+import avatarAveryR from '../../../../public/image/avatar/averyR.png';
+import avatarCaseyW from '../../../../public/image/avatar/caseyW.png';
+import avatarJordanM from '../../../../public/image/avatar/jordanM.png';
 
 const avatarMap = {
     'averyR': avatarAveryR,

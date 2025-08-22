@@ -73,6 +73,10 @@ body {
     color: var(--purple) !important;
 }
 
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
 /* =============================================================================
    LAYOUT SECTIONS
    ============================================================================= */
@@ -81,7 +85,7 @@ body {
     /* box-sizing: border-box;
     overflow: hidden;
     position: relative; */
-    background-image: url(/homepage.svg);
+    background-image: url(/public/homepage.svg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center right;
@@ -103,7 +107,7 @@ body {
     height: 120px;
     width: 120px;
     /* margin: 0 auto; */
-    cursor: pointer;
+    /* cursor: pointer; */
 
     /* position: absolute; */
     /* bottom: 0;
