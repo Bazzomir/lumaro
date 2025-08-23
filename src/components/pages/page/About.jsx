@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useData } from '../../../hooks/useData.js';
 import { AboutCard } from '../../component/cards.jsx';
-import { TeamAnimation } from '../../component/animations.jsx';
+import { TeamAnimation, LoadingAnimation } from '../../component/animations.jsx';
 import GlobalExpertiseIcon from '../../../assets/icons/gExpertise.svg';
 import PrecisionIcon from '../../../assets/icons/precision.svg';
 import EfficiencyIcon from '../../../assets/icons/efficiency.svg';
@@ -14,24 +14,13 @@ const iconMap = {
 };
 
 export default function About() {
-    const [aboutData, setAboutData] = useState([]);
 
-    useEffect(() => {
-        const url = `${import.meta.env.BASE_URL}/data.json`;
-        fetch(url)
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok!');
-                }
-                return res.json();
-            })
-            .then(data => {
-                setAboutData(data.aboutUs);
-            })
-            .catch(err => {
-                console.error('Error fetching data:', err);
-            });
-    }, []);
+    const { data, isLoading, error } = useData();
+
+    if (isLoading) return <LoadingAnimation />;
+    if (error) return <p>❌ {error.message}</p>;
+
+    const aboutData = data.aboutUs;
 
     return (
         <section className="about ontainer-fluid my-5 pt-5 px-120 h-100 box-sizing overflow-hidden relative" id="about">
@@ -43,7 +32,6 @@ export default function About() {
                 </div>
                 <div className="col-0 col-lg-6 relative">
                     <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
-                    {/* <img src="/lumaro/meeting.svg" alt="About us meeting" className="about-image mx-auto rounded" data-aos="fade-left" /> */}
                     <TeamAnimation />
                 </div>
             </div>

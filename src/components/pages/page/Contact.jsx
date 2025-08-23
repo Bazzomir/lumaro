@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useData } from '../../../hooks/useData.js';
 import Form from '../../component/form.jsx';
-import { PartnersAnimation } from '../../component/animations.jsx';
+import { PartnersAnimation, LoadingAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
 import avatarAveryR from '../../../../public/image/avatar/averyR.png';
 import avatarCaseyW from '../../../../public/image/avatar/caseyW.png';
@@ -14,27 +14,14 @@ const avatarMap = {
 
 export default function Contact() {
 
-    const [contactData, setContactData] = useState([]);
+    const { data, isLoading, error } = useData();
 
-    useEffect(() => {
-        const url = `${import.meta.env.BASE_URL}/data.json`;
-        fetch(url)
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok!');
-                }
-                return res.json();
-            })
-            .then(data => {
-                setContactData(data.contact);
-            })
-            .catch(err => {
-                console.error('Error fetching data:', err);
-            });
-    }, []);
+    if (isLoading) return <LoadingAnimation />;
+    if (error) return <p>{error.message}</p>;
+
+    const contactData = data.contact;
 
     return (
-        // <>
         <section className="contact container-fluid my-5 pt-5 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
             <div className="row justify-content-center align-items-center">
                 <div className=" col-12 col-lg-6">
@@ -46,12 +33,8 @@ export default function Contact() {
             </div>
             <div className="col-0 col-lg-6 relative">
                 <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
-
-                {/* <iframe width="800" height="600" src="https://www.youtube-nocookie.com/embed/XKe5cV1pvKw?si=f-zo2z_e2yND6hby" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className="contact-video rounded" data-aos="fade-left" /> */}
                 <PartnersAnimation />
-
             </div>
-            {/* </div> */}
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
@@ -78,6 +61,5 @@ export default function Contact() {
                 </div>
             </div>
         </section >
-        // </>
     );
 }
