@@ -1,21 +1,21 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useInView } from '../../../hooks/useInView.js';
 import { Button } from '../../component/buttons';
-import { ScrollDownAnimation } from '../../component/animations.jsx'
+import { ScrollDownAnimation } from '../../component/animations.jsx';
 
 export default function Homepage() {
-
-    const homepageRef = useRef(null);
-    const isInView = useInView(homepageRef);
+    const [ref, inView] = useInView({ threshold: 0.25 });
     const [hideAnimation, setHideAnimation] = useState(false);
+
     const scrollToServices = () => {
         document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
         setHideAnimation(true);
     };
-    const shouldShowAnimation = isInView && !hideAnimation;
+
+    const shouldShowAnimation = inView && !hideAnimation;
 
     return (
-        <section className="homepage container-fluid pt-6 px-120 h-100 box-sizing overflow-hidden relative" id="home" ref={homepageRef}>
+        <section className="homepage container-fluid pt-6 px-120 h-100 box-sizing overflow-hidden relative" id="home" ref={ref} >
             <div className="row pt-5">
                 <div className="col-12 col-lg-7 align-self-center">
                     <div className="row gap-3 gap-md-5 text-center text-md-start">

@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
 // import Form from '../../component/form.jsx';
@@ -17,8 +16,7 @@ const avatarMap = {
 
 export default function Contact() {
 
-    const ref = useRef(null);
-    const isInView = useInView(ref);
+    const [ref, isInView] = useInView({ threshold: 0.25 });
     const { data, isLoading, error } = useData();
 
     if (isLoading) return <LoadingAnimation />;

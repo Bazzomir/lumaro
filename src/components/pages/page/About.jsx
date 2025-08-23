@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
 import { AboutCard } from '../../component/cards.jsx';
@@ -17,8 +16,7 @@ const iconMap = {
 
 export default function About() {
 
-    const ref = useRef(null);
-    const isInView = useInView(ref);
+    const [ref, isInView] = useInView({ threshold: 0.25 });
     const { data, isLoading, error } = useData();
 
     if (isLoading) return <LoadingAnimation />;

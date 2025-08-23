@@ -4,7 +4,7 @@ import Lottie from 'lottie-react';
 
 export function LazyLottie({ path, loop = true, ...props }) {
     const [animationData, setAnimationData] = useState(null);
-    const [ref, inView] = useInView({ threshold: 0.3 });
+    const [ref, inView] = useInView({ threshold: 0.25 });
 
     useEffect(() => {
         if (inView && !animationData) {
