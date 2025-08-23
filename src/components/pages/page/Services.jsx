@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useData } from '../../../hooks/useData.js';
 import { ServicesCard } from '../../component/cards';
+import { LoadingAnimation } from '../../component/animations.jsx';
 import ConsultingIcon from '../../../assets/icons/consulting.svg';
 import DevelopmentIcon from '../../../assets/icons/development.svg';
 import QualityIcon from '../../../assets/icons/quality.svg';
@@ -15,24 +16,13 @@ const iconMap = {
 };
 
 export default function Services() {
-    const [servicesData, setServicesData] = useState([]);
 
-    useEffect(() => {
-        const url = `${import.meta.env.BASE_URL}/data.json`;
-        fetch(url)
-            .then(res => {
-                if (!res.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return res.json();
-            })
-            .then(data => {
-                setServicesData(data.services);
-            })
-            .catch(err => {
-                console.error('Error fetching data:', err);
-            });
-    }, []);
+    const { data, isLoading, error } = useData();
+
+    if (isLoading) return <LoadingAnimation />
+    if (error) return <p>{error.message}</p>
+
+    const servicesData = data.services;
 
     return (
         <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services">
