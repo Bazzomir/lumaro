@@ -1,27 +1,18 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
+import { useInView } from '../../../hooks/useInView.js';
 import { Button } from '../../component/buttons';
 import { ScrollDownAnimation } from '../../component/animations.jsx'
 
 export default function Homepage() {
 
-    const [isAnimationVisible, setIsAnimationVisible] = useState(true);
     const homepageRef = useRef(null);
-
-    useEffect(() => {
-
-        const onScroll = () => {
-            const rect = homepageRef.current?.getBoundingClientRect();
-            if (rect?.bottom < window.innerHeight / 3) setIsAnimationVisible(false);
-        };
-
-        window.addEventListener('scroll', onScroll);
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-
+    const isInView = useInView(homepageRef);
+    const [hideAnimation, setHideAnimation] = useState(false);
     const scrollToServices = () => {
         document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
-        setIsAnimationVisible(false);
+        setHideAnimation(true);
     };
+    const shouldShowAnimation = isInView && !hideAnimation;
 
     return (
         <section className="homepage container-fluid pt-6 px-120 h-100 box-sizing overflow-hidden relative" id="home" ref={homepageRef}>
@@ -39,9 +30,7 @@ export default function Homepage() {
                         <Button btnName="Start Now" />
                     </div>
                 </div>
-                {isAnimationVisible && (
-                    <ScrollDownAnimation onClick={scrollToServices} />
-                )}
+                {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToServices} />)}
             </div>
         </section>
     );

@@ -1,4 +1,6 @@
+import { useRef } from 'react';
 import { useData } from '../../../hooks/useData.js';
+import { useInView } from '../../../hooks/useInView.js';
 import { AboutCard } from '../../component/cards.jsx';
 import { TeamAnimation, LoadingAnimation } from '../../component/animations.jsx';
 import GlobalExpertiseIcon from '../../../assets/icons/gExpertise.svg';
@@ -15,10 +17,12 @@ const iconMap = {
 
 export default function About() {
 
+    const ref = useRef(null);
+    const isInView = useInView(ref);
     const { data, isLoading, error } = useData();
 
     if (isLoading) return <LoadingAnimation />;
-    if (error) return <p>❌ {error.message}</p>;
+    if (error) return <p>{error.message}</p>;
 
     const aboutData = data.aboutUs;
 
@@ -30,9 +34,13 @@ export default function About() {
                         <span className="text-purple">We're</span> Your Strategic Ally In The <span className="text-purple">Digital</span> IT World.
                     </h2>
                 </div>
-                <div className="col-0 col-lg-6 relative">
-                    <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
-                    <TeamAnimation />
+                <div ref={ref} className="col-12 col-lg-6 relative">
+                    {isInView && (
+                        <>
+                            <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
+                            <TeamAnimation />
+                        </>
+                    )}
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
