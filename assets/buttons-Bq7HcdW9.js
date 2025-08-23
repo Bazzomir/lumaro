@@ -1,2 +1,0 @@
-import{j as t}from"./index-CW1REbmz.js";function s({btnName:e}){return t.jsx("div",{className:"text-center text-md-start py-5","data-aos":"fade-up-right",children:t.jsx("button",{className:"btn btn-purple text-uppercase","data-bs-toggle":"modal","data-bs-target":"#exampleModal",children:t.jsx("span",{className:"btn-purple--text",children:e})})})}export{s as B};
-//# sourceMappingURL=buttons-Bq7HcdW9.js.map
