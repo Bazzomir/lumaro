@@ -23,7 +23,6 @@ export function LazyLottie({ path, loop = true, ...props }) {
     );
 }
 
-// Reusable wrappers
 export const LoadingAnimation = () => (
     <div className="m-auto w-50 h-25">
         <LazyLottie path="LoadingBar" />
@@ -38,14 +37,13 @@ export const ScrollDownAnimation = ({ onClick }) => (
     />
 );
 
-export const TeamAnimation = () => (
-    <div className="TeamAnimation" data-aos="fade-left">
-        <LazyLottie path="CreativeTeam" />
+export const AboutAnimation = () => (
+    <div data-aos="fade-left" data-aos-duration="1100">
+        <LazyLottie path="about" />
     </div>
-);
-
-export const PartnersAnimation = () => (
-    <div className="PartnersAnimation" data-aos="fade-left">
-        <LazyLottie path="BusinessPartners" />
+)
+export const ContactAnimation = () => (
+    <div data-aos="fade-left" data-aos-duration="1100">
+        <LazyLottie path="contact" />
     </div>
-);
+)

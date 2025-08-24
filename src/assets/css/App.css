@@ -115,7 +115,7 @@ body {
     left: 50px; */
 }
 
-.TeamAnimation {
+/* .TeamAnimation {
     aspect-ratio: 4/3;
     position: absolute;
     z-index: 2;
@@ -123,16 +123,26 @@ body {
     right: 150px;
     max-width: 600px;
     width: 100%;
+} */
+
+.aboutAnimation {
+    position: relative;
+    z-index: 2;
+    /* aspect-ratio: 4/3; */
+    /* top: 2525px; */
+    /* right: 150px; */
+    /* max-width: 600px; */
+    /* width: 100%; */
 }
 
-.PartnersAnimation {
-    aspect-ratio: 4/3;
-    position: absolute;
+.contactAnimation {
+    /* aspect-ratio: 4/3; */
+    position: relative;
     z-index: 2;
-    top: 3770px;
-    right: 100px;
-    max-width: 700px;
-    width: 100%;
+    /* top: 3770px; */
+    /* right: 100px; */
+    /* max-width: 700px; */
+    /* width: 100%; */
 }
 
 /* .about-image {
@@ -415,8 +425,18 @@ textarea.form-control {
    DECORATIVE ELEMENTS
    ============================================================================= */
 .bg-triangle {
-    position: relative;
-    z-index: 1;
+    background-image: url(/public/rectangle.svg);
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    object-fit: cover;
+    inset: 0;
+    z-index: 0;
+    /* background-position: center; */
+    /* background-attachment: fixed; */
+    /* background-position-x: 700px; */
+    /* background-position-y: 106px; */
 }
 
 /* =============================================================================
@@ -496,7 +516,7 @@ textarea.form-control {
         padding-right: 140px !important;
     }
 
-    .homepage-image,
+    /* .homepage-image, */
     .about-image,
     .contact-video {
         max-width: 650px;
@@ -510,7 +530,7 @@ textarea.form-control {
         padding-right: min(100px, 7vw) !important;
     }
 
-    .homepage-image,
+    /* .homepage-image, */
     .about-image,
     .contact-video {
         max-width: min(600px, calc(100vw - 14vw));
@@ -520,9 +540,9 @@ textarea.form-control {
         right: min(120px, 8vw);
     }
 
-    .contact-video {
+    /* .contact-video {
         right: min(139px, 9vw);
-    }
+    } */
 }
 
 /* Large Devices (992px - 1199px) */
