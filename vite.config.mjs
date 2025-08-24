@@ -11,10 +11,11 @@ export default defineConfig({
       output: {
         manualChunks: {
           aos: ['aos'],
+          lottie: ['lottie-react', 'lottie-web'],
         },
       },
     },
     drop: ['eval'],
-    chunkSizeWarningLimit: 1200,
+    chunkSizeWarningLimit: 1000,
   }
 })
