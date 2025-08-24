@@ -2,7 +2,7 @@ import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
 // import Form from '../../component/form.jsx';
 import { Button } from '../../component/buttons';
-import { PartnersAnimation, LoadingAnimation } from '../../component/animations.jsx';
+import { LoadingAnimation, ContactAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
 import avatarAveryR from '../../../../public/image/avatar/averyR.png';
 import avatarCaseyW from '../../../../public/image/avatar/caseyW.png';
@@ -16,7 +16,7 @@ const avatarMap = {
 
 export default function Contact() {
 
-    const [ref, isInView] = useInView({ threshold: 0.25 });
+    const [ref, inView] = useInView({ threshold: 0.25 });
     const { data, isLoading, error } = useData();
 
     if (isLoading) return <LoadingAnimation />;
@@ -25,7 +25,7 @@ export default function Contact() {
     const contactData = data.contact;
 
     return (
-        <section className="contact container-fluid my-5 pt-5 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
+        <section className="contact container-fluid my-5 pt-6 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-lg-6">
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
@@ -34,11 +34,13 @@ export default function Contact() {
                     <Button btnName="Contact Us" />
                 </div>
                 {/* <Form /> */}
-                <div ref={ref} className="col-12 col-lg-6 relative">
-                    {isInView && (
+                <div ref={ref} className="col-12 col-lg-6 position-relative">
+                    {inView && (
                         <>
-                            <img src="/lumaro/rectangle.svg" alt="Background Image" className="bg-triangle" />
-                            <PartnersAnimation />
+                            <div className="bg-triangle" aria-hidden="true"></div>
+                            <div className="contactAnimation">
+                                <ContactAnimation />
+                            </div>
                         </>
                     )}
                 </div>
