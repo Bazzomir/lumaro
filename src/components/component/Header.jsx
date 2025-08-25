@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Header({ activeLink, setActiveLink }) {
+export default function Header({ activeLink, onNavClick }) {
     return (
         <nav className="navbar navbar-expand-lg container-fluid px-120 fixed-top" >
             <Link className="navbar-brand d-grid align-items-center" to="/lumaro">
@@ -10,42 +10,26 @@ export default function Header({ activeLink, setActiveLink }) {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
-                <ul className="navbar-nav gap-3">
+                <ul className="navbar-nav justify-content-center align-items-end gap-3 p-3 p-lg-0">
                     <li className="nav-item">
-                        <Link
+                        <button
                             className={`nav-link ${activeLink === "home" ? "nav-active" : ""}`}
-                            to="/lumaro/home"
-                            onClick={() => setActiveLink("home")}
-                        >
-                            Home
-                        </Link>
+                            onClick={() => onNavClick("home")}>Home</button>
                     </li>
                     <li className="nav-item">
-                        <Link
+                        <button
                             className={`nav-link ${activeLink === "services" ? "nav-active" : ""}`}
-                            to="/lumaro/services"
-                            onClick={() => setActiveLink("services")}
-                        >
-                            Services
-                        </Link>
+                            onClick={() => onNavClick("services")}>Services</button>
                     </li>
                     <li className="nav-item">
-                        <Link
+                        <button
                             className={`nav-link ${activeLink === "about" ? "nav-active" : ""}`}
-                            to="/lumaro/about"
-                            onClick={() => setActiveLink("about")}
-                        >
-                            About
-                        </Link>
+                            onClick={() => onNavClick("about")}>About</button>
                     </li>
                     <li className="nav-item">
-                        <Link
+                        <button
                             className={`nav-link ${activeLink === "contact" ? "nav-active" : ""}`}
-                            to="/lumaro/contact"
-                            onClick={() => setActiveLink("contact")}
-                        >
-                            Contact
-                        </Link>
+                            onClick={() => onNavClick("contact")}>Contact</button>
                     </li>
                 </ul>
             </div>

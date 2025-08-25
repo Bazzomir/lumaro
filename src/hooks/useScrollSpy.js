@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 export function useScrollSpy(sectionsSelector = "section[id]") {
@@ -41,23 +41,26 @@ export function useScrollSpy(sectionsSelector = "section[id]") {
     };
   }, [navigate, sectionsSelector]);
 
-  const scrollToId = (id) => {
-    isNavigatingRef.current = true;
+  const scrollToId = useCallback(
+    (id) => {
+      isNavigatingRef.current = true;
 
-    if (id === "home") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      document
-        .getElementById(id)
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+      if (id === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        document
+          .getElementById(id)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
 
-    setActiveId(id);
-    const path = id === "home" ? "/lumaro" : `/lumaro/${id}`;
-    navigate(path, { replace: true });
+      setActiveId(id);
+      const path = id === "home" ? "/lumaro" : `/lumaro/${id}`;
+      navigate(path, { replace: true });
 
-    setTimeout(() => (isNavigatingRef.current = false), 200);
-  };
+      setTimeout(() => (isNavigatingRef.current = false), 200);
+    },
+    [navigate]
+  );
 
   return { activeId, scrollToId };
 }

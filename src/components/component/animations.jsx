@@ -1,6 +1,5 @@
 import { useState, useEffect, lazy } from 'react';
 import { useInView } from '../../hooks/useInView.js';
-// import Lottie from 'lottie-react';
 const Lottie = lazy(() => import('lottie-react'));
 
 export function LazyLottie({ path, loop = true, ...props }) {
@@ -13,7 +12,7 @@ export function LazyLottie({ path, loop = true, ...props }) {
                 setAnimationData(data.default);
             });
         }
-    }, [inView, path, animationData]) ;
+    }, [inView, path, animationData]);
 
     return (
         <div ref={ref}>
