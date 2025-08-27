@@ -22,7 +22,7 @@ export default function About() {
     if (isLoading) return <LoadingAnimation />;
     if (error) return <p>{error.message}</p>;
 
-    const aboutData = data.aboutUs;
+    const aboutData = data.about;
 
     return (
         <section className="about ontainer-fluid my-5 pt-6 px-120 h-100 box-sizing overflow-hidden" id="about">

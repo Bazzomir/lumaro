@@ -1,4 +1,10 @@
 {
+  "homepage": [
+    {
+      "title": "Shape Your Future with Global Innovation",
+      "paragraph": "Discover comprehensive talent, where every step forward is tailored to your vision."
+    }
+  ],
   "services": [
     {
       "category": "Consulting",
@@ -73,7 +79,11 @@
       "icon": "quality"
     }
   ],
-  "aboutUs": [
+  "about": [
+    {
+      "title": "We're Your Strategic Ally In The Digital IT World.",
+      "subtitle": "Why Work With Us"
+    },
     {
       "icon": "gExpertise",
       "category": "Global Expertise",
@@ -96,6 +106,10 @@
     }
   ],
   "contact": [
+    {
+      "title": "Your Success Is Our Success",
+      "subtitle": "In Their Own Words"
+    },
     {
       "fullName": "Casey W.",
       "quote": "Lumaro took our project to the next level with their extensive expertise. They not only met our expectations but exceeded them, refining our initial concept beautifully. Perfect for anyone facing complex challenges.",
