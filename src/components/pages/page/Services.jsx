@@ -1,6 +1,7 @@
 import { useData } from '../../../hooks/useData.js';
 import { ServicesCard } from '../../component/cards';
 import { LoadingAnimation } from '../../component/animations.jsx';
+import HighlightedText from '../../component/HightlightedText.jsx';
 import ConsultingIcon from '../../../assets/icons/consulting.svg';
 import DevelopmentIcon from '../../../assets/icons/development.svg';
 import QualityIcon from '../../../assets/icons/quality.svg';
@@ -30,7 +31,8 @@ export default function Services() {
                 <div className="row" data-aos="fade-up-right">
                     <h2 className="header-text--small text-center">
                         {/* Our Services */}
-                        {servicesData.header.title}
+                        {/* {servicesData.header.title} */}
+                        <HighlightedText text={servicesData.header.title} />
                     </h2>
                     <p className="services--paragraph text-center">
                         {/* We're equipped to deliver with precison and expertise. */}
