@@ -1,13 +1,13 @@
 {
   "homepage": {
     "header": {
-      "title": "Shape Your Future with Global Innovation",
+      "title": "{Shape} Your {Future} with Global {Innovation}",
       "paragraph": "Discover comprehensive talent, where every step forward is tailored to your vision."
     }
   },
   "services": {
     "header": {
-      "title": "Our Services",
+      "title": "Our {Services}",
       "paragraph": "We're equipped to deliver with precison and expertise."
     },
     "cardItems": [
@@ -87,8 +87,8 @@
   },
   "about": {
     "header": {
-      "title": "We're Your Strategic Ally In The Digital IT World.",
-      "subtitle": "Why Work With Us"
+      "title": "{We're} Your Strategic Ally In The {Digital} IT World.",
+      "subtitle": "{Why} Work With {Us}"
     },
     "cardItems": [
       {
@@ -115,8 +115,8 @@
   },
   "contact": {
     "header": {
-      "title": "Your Success Is Our Success",
-      "subtitle": "In Their Own Words"
+      "title": "{Your} Success Is Our {Success}",
+      "subtitle": "{In} Their Own {Words}"
     },
     "cardItems": [
       {
@@ -138,10 +138,11 @@
   },
   "footer": {
     "header": {
-      "title": "Lumaro",
+      "title": "{Lumaro}",
       "paragraph": "Empowering businesses with cutting-edge solutions, Lumaro specializes in connecting you with global talent and innovative strategies for sustainable growth."
     },
     "getInTouch": {
+      "title": "Get In Touch",
       "email": "contact@lumaro.com",
       "phone": "+18883218572",
       "hours": "Mon-Fri 9:00AM - 5:00PM",
