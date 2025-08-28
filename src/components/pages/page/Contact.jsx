@@ -4,6 +4,7 @@ import { useInView } from '../../../hooks/useInView.js';
 import { Button } from '../../component/buttons';
 import { LoadingAnimation, ContactAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
+import HighlightedText from '../../component/HightlightedText.jsx';
 import avatarAveryR from '../../../../public/image/avatar/averyR.png';
 import avatarCaseyW from '../../../../public/image/avatar/caseyW.png';
 import avatarJordanM from '../../../../public/image/avatar/jordanM.png';
@@ -32,7 +33,8 @@ export default function Contact() {
                         <span className="text-purple">Your</span> Success <br /> Is Our <span className="text-purple">Success</span>
                     </h2> */}
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
-                        {contactData.header.title}
+                        {/* {contactData.header.title} */}
+                        <HighlightedText text={contactData.header.title} />
                     </h2>
                     <Button btnName="Contact Us" />
                 </div>
@@ -54,7 +56,8 @@ export default function Contact() {
                         <span className="text-purple">In</span> Their Own <span className="text-purple">Words</span>
                     </h3> */}
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        {contactData.header.subtitle}
+                        {/* {contactData.header.subtitle} */}
+                        <HighlightedText text={contactData.header.subtitle} />
                     </h3>
                 </div>
                 <div className="col-12 pt-4">

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useData } from '../../hooks/useData.js';
 import { LoadingAnimation } from '../component/animations.jsx';
+import HighlightedText from '../../components/component/HightlightedText.jsx';
 
 export default function Footer({ activeLink, onNavClick }) {
 
@@ -17,7 +18,10 @@ export default function Footer({ activeLink, onNavClick }) {
                 <div className="row mt-5">
                     <div className="col-sm-12 col-lg-5">
                         {/* <h2 className="footer-logo">Lumaro</h2> */}
-                        <h2 className="footer-logo">{footetData.header.title}</h2>
+                        <h2 className="footer-logo">
+                            {/* {footetData.header.title} */}
+                            <HighlightedText text={footetData.header.title} />
+                        </h2>
                         <div className="footer-paragraph">
                             <p className="footer-paragraph__text py-4 mb-0">
                                 {/* Empowering businesses with cutting-edge solutions, Lumaro specializes in connecting you with global talent and innovative strategies for sustainable growth. */}
@@ -71,7 +75,10 @@ export default function Footer({ activeLink, onNavClick }) {
                         </ul>
                     </div>
                     <div className="col-sm-4 col-lg-3 pt-5 pt-lg-0">
-                        <span className="footer-item-names">Get In Touch</span>
+                        <span className="footer-item-names">
+                            {/* Get In Touch */}
+                            {footetData.getInTouch.title}
+                        </span>
                         <ul className="footer-getInTouch mt-3">
                             <li className="getInTocuh-item">
                                 <Link className="getInTocuh-link" to="mailto:contact@lumaro.com">

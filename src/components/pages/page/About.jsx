@@ -2,6 +2,7 @@ import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
 import { AboutCard } from '../../component/cards.jsx';
 import { AboutAnimation, LoadingAnimation } from '../../component/animations.jsx';
+import HighlightedText from '../../component/HightlightedText.jsx';
 import GlobalExpertiseIcon from '../../../assets/icons/gExpertise.svg';
 import PrecisionIcon from '../../../assets/icons/precision.svg';
 import EfficiencyIcon from '../../../assets/icons/efficiency.svg';
@@ -32,7 +33,8 @@ export default function About() {
                         <span className="text-purple">We're</span> Your Strategic Ally In The <span className="text-purple">Digital</span> IT World.
                     </h2> */}
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
-                        {aboutData.header.title}
+                        {/* {aboutData.header.title} */}
+                        <HighlightedText text={aboutData.header.title} />
                     </h2>
                 </div>
                 <div ref={ref} className="col-12 col-lg-6 position-relative">
@@ -52,7 +54,8 @@ export default function About() {
                         <span className="text-purple">Why</span> Work With <span className="text-purple">Us</span>
                     </h3> */}
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        {aboutData.header.subtitle}
+                        {/* {aboutData.header.subtitle} */}
+                        <HighlightedText text={aboutData.header.subtitle} />
                     </h3>
                 </div>
                 <div className="col-12 pt-4">
