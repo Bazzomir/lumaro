@@ -92,18 +92,21 @@ export default function Footer({ activeLink, onNavClick }) {
                         </ul>
                     </div>
                     <div className="col-sm-4 col-lg-2 pt-5 pt-lg-0">
-                        <span className="footer-item-names">Social</span>
+                        <span className="footer-item-names">
+                            {/* Social */}
+                            {footetData.socialMedia[0]}
+                        </span>
                         <ul className="footer-social mt-3">
                             <li className="social-item">
                                 <Link className="social-link" to="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                                     {/* LinkedIn */}
-                                    {footetData.socialMedia[0]}
+                                    {footetData.socialMedia[1]}
                                 </Link>
                             </li>
                             <li className="social-item">
                                 <Link className="social-link" to="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                                     {/* Instagram */}
-                                    {footetData.socialMedia[1]}
+                                    {footetData.socialMedia[2]}
                                 </Link>
                             </li>
                         </ul>
@@ -115,7 +118,7 @@ export default function Footer({ activeLink, onNavClick }) {
                     <div className="col-12 col-lg-5 px-0 footer-paragraph__text">©2025 Lumaro</div>
                     <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Terms & Conditions</div>
                     <div className="col-6 col-lg-2 pt-2 pt-lg-0 footer-paragraph__text">Privacy Policy</div>
-                    <div className="col-12 col-lg-3 footer-paragraph__text">Made with 💜 by <br className="d-none d-lg-block" /> Blagoj Jovanovski - Bazzomir</div>
+                    <div className="col-12 col-lg-3 footer-paragraph__text">Dev with 💜 by Bazzomir</div>
                 </div>
             </div>
         </div>
