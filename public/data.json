@@ -120,10 +120,6 @@
     },
     "cardItems": [
       {
-        "title": "Your Success Is Our Success",
-        "subtitle": "In Their Own Words"
-      },
-      {
         "fullName": "Casey W.",
         "quote": "Lumaro took our project to the next level with their extensive expertise. They not only met our expectations but exceeded them, refining our initial concept beautifully. Perfect for anyone facing complex challenges.",
         "avatar": "caseyW"
@@ -152,8 +148,9 @@
       "address": "1776 Constitution Ave NW, Washington DC 20006"
     },
     "socialMedia": [
-      "linkedin",
-      "instagram"
+      "Social",
+      "LinkedIn",
+      "Instagram"
     ]
   }
 }
