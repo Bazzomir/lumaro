@@ -28,11 +28,17 @@ export default function Services() {
         <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services">
             <div className="container">
                 <div className="row" data-aos="fade-up-right">
-                    <h2 className="header-text--small text-center">Our Services</h2>
-                    <p className="services--paragraph text-center">We're equipped to deliver with precison and expertise.</p>
+                    <h2 className="header-text--small text-center">
+                        {/* Our Services */}
+                        {servicesData.header.title}
+                    </h2>
+                    <p className="services--paragraph text-center">
+                        {/* We're equipped to deliver with precison and expertise. */}
+                        {servicesData.header.paragraph}
+                    </p>
                 </div>
                 <div className="row py-3">
-                    {servicesData.map((service, i) => {
+                    {servicesData.cardItems.map((service, i) => {
                         const IconPath = iconMap[service.icon];
                         return (
                             <div key={i} className="col-md-6 col-lg-4 my-4">
