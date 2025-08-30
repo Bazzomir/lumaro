@@ -1,7 +1,7 @@
 import { useData } from '../../../hooks/useData.js';
 import { ServicesCard } from '../../component/cards';
 import { LoadingAnimation } from '../../component/animations.jsx';
-import HighlightedText from '../../component/HightlightedText.jsx';
+import { HighlightedText } from '../../component/PageElements.jsx';
 import ConsultingIcon from '../../../assets/icons/consulting.svg';
 import DevelopmentIcon from '../../../assets/icons/development.svg';
 import QualityIcon from '../../../assets/icons/quality.svg';
@@ -27,34 +27,34 @@ export default function Services() {
 
     return (
         <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services">
-            <div className="container">
-                <div className="row" data-aos="fade-up-right">
-                    <h2 className="header-text--small text-center">
-                        {/* Our Services */}
-                        {/* {servicesData.header.title} */}
-                        <HighlightedText text={servicesData.header.title} />
-                    </h2>
-                    <p className="services--paragraph text-center">
-                        {/* We're equipped to deliver with precison and expertise. */}
-                        {servicesData.header.paragraph}
-                    </p>
-                </div>
-                <div className="row py-3">
-                    {servicesData.cardItems.map((service, i) => {
-                        const IconPath = iconMap[service.icon];
-                        return (
-                            <div key={i} className="col-md-6 col-lg-4 my-4">
-                                <ServicesCard
-                                    category={service.category}
-                                    description={service.description}
-                                    offerings={service.offerings}
-                                    iconPath={IconPath}
-                                />
-                            </div>
-                        );
-                    })}
-                </div>
+            {/* <div className="container"> */}
+            <div className="row" data-aos="fade-up-right">
+                <h2 className="header-text--small text-center">
+                    {/* Our Services */}
+                    {/* {servicesData.header.title} */}
+                    <HighlightedText text={servicesData.header.title} />
+                </h2>
+                <p className="services--paragraph text-center">
+                    {/* We're equipped to deliver with precison and expertise. */}
+                    {servicesData.header.paragraph}
+                </p>
             </div>
+            <div className="row py-3">
+                {servicesData.cardItems.map((service, i) => {
+                    const IconPath = iconMap[service.icon];
+                    return (
+                        <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="zoom-in" data-aos-duration="1100">
+                            <ServicesCard
+                                category={service.category}
+                                description={service.description}
+                                offerings={service.offerings}
+                                iconPath={IconPath}
+                            />
+                        </div>
+                    );
+                })}
+            </div>
+            {/* </div> */}
         </section>
     );
 }

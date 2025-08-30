@@ -2,7 +2,7 @@ import circle from '../../assets/icons/listCircle.svg';
 
 export function ServicesCard({ category, description, offerings, iconPath }) {
     return (
-        <div className="services-card gap-5 p-3 h-100 border shadow-sm rounded overflow-hidden box-sizing" data-aos="zoom-in" data-aos-duration="1100">
+        <div className="services-card gap-5 p-3 h-100 border shadow-sm rounded overflow-hidden box-sizing">
             <div className="services-card-body py-3 px-4">
                 <div className="mb-3">
                     {iconPath && <img src={iconPath} alt={category} className="img-fluid" />}

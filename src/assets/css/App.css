@@ -85,13 +85,18 @@ body {
     /* box-sizing: border-box;
     overflow: hidden;
     position: relative; */
+    /* position: absolute; */
     background-image: url(/public/homepage.svg);
+    background-size: 53%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center right;
-    background-position-x: 700px;
-    background-position-y: 106px;
-    object-fit: cover;
+    /* background-position-x: 700px; */
+    /* background-position-y: 106px; */
+    /* object-fit: cover; */
+    /* z-index: 2; */
+    inset: 0;
+
 }
 
 /* .contact,
@@ -328,7 +333,7 @@ textarea.form-control {
 
 .services-card,
 .about-card {
-    transition: box-shadow ease-in-out 0.3s, scale ease-in-out 0.3s !important;
+    transition: all 0.5s !important;
 }
 
 .services-card:hover,
