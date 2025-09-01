@@ -9,7 +9,7 @@ export const Section = ({ className = "", id, children }) => {
 };
 
 export const HighlightedText = ({ text }) => {
-    const parts = text.split(/({.*?})/g);
+    const parts = text.split(/({.*?})/g).filter(Boolean);
 
     return (
         <>
@@ -19,7 +19,7 @@ export const HighlightedText = ({ text }) => {
                         {part.slice(1, -1)}
                     </span>
                 ) : (
-                    <span key={i}>{part}</span>
+                    part
                 )
             )}
         </>

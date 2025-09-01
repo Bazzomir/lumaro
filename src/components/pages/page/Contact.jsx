@@ -29,8 +29,8 @@ export default function Contact() {
         // <section className="contact container-fluid my-5 pt-6 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
         <Section className="contact" id="contact">
             <div className="row justify-content-center align-items-center">
-                <div className="col-12 col-lg-6">
-                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
+                <div className="col-12 col-lg-6" data-aos="fade-right">
+                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
                     <Button btnName="Contact Us" />
