@@ -32,23 +32,17 @@ export default function Homepage() {
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
                             <h1 className="m-0 header-text--big" data-aos="fade-up" data-aos-easing="ease-in-all" data-aos-anchor-placement="center-center">
-                                {/* <span className="text-purple">Shape</span> Your <span className="text-purple">Future</span> with Global <span className="text-purple">Innovation</span> */}
-                                {/* {homepage.header.title} */}
                                 <HighlightedText text={homepage.header.title} />
                             </h1>
                         </div>
                         <div className="col-12">
                             <p className="m-0 homepage-smallText" data-aos="fade-right">
-                                {/* Discover comprehensive talent, where every step forward is tailored to your vision. */}
                                 {homepage.header.paragraph}
                             </p>
                         </div>
                         <Button btnName="Start Now" />
                     </div>
                 </div>
-                {/* <div className="col-12 col-lg-6 position-relative">
-                    <div className="bg-homepage"></div>
-                </div> */}
                 {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToServices} />)}
             </div>
             {/* </section> */}

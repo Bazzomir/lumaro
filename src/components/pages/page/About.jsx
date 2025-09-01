@@ -30,32 +30,20 @@ export default function About() {
         <Section className="about" id="about">
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-lg-6 ">
-                    {/* <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
-                        <span className="text-purple">We're</span> Your Strategic Ally In The <span className="text-purple">Digital</span> IT World.
-                    </h2> */}
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
-                        {/* {aboutData.header.title} */}
                         <HighlightedText text={aboutData.header.title} />
                     </h2>
                 </div>
-                <div ref={ref} className="col-12 col-lg-6 position-relative">
-                    {inView && (
-                        <>
-                            <div className="bg-triangle" aria-hidden="true"></div>
-                            <div className="aboutAnimation">
-                                <AboutAnimation />
-                            </div>
-                        </>
-                    )}
+                <div className="col-12 col-lg-6 position-relative">
+                    <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
+                    <div className="aboutAnimation" ref={ref}>
+                        {inView && (<AboutAnimation />)}
+                    </div>
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
-                    {/* <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        <span className="text-purple">Why</span> Work With <span className="text-purple">Us</span>
-                    </h3> */}
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        {/* {aboutData.header.subtitle} */}
                         <HighlightedText text={aboutData.header.subtitle} />
                     </h3>
                 </div>

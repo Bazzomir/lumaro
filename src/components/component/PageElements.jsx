@@ -1,7 +1,9 @@
 export const Section = ({ className = "", id, children }) => {
     return (
         <section className={`${className} container-fluid my-5 pt-6 px-120 h-100 box-sizing overflow-hidden`} id={id}>
-            {children}
+            <div className="container">
+                {children}
+            </div>
         </section>
     )
 };

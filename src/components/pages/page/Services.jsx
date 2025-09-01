@@ -1,7 +1,7 @@
 import { useData } from '../../../hooks/useData.js';
 import { ServicesCard } from '../../component/cards';
 import { LoadingAnimation } from '../../component/animations.jsx';
-import { HighlightedText } from '../../component/PageElements.jsx';
+import { HighlightedText, Section } from '../../component/PageElements.jsx';
 import ConsultingIcon from '../../../assets/icons/consulting.svg';
 import DevelopmentIcon from '../../../assets/icons/development.svg';
 import QualityIcon from '../../../assets/icons/quality.svg';
@@ -26,16 +26,14 @@ export default function Services() {
     const servicesData = data.services;
 
     return (
-        <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services">
+        <Section className="services" id="services">
+            {/* <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services"> */}
             {/* <div className="container"> */}
             <div className="row" data-aos="fade-up-right">
                 <h2 className="header-text--small text-center">
-                    {/* Our Services */}
-                    {/* {servicesData.header.title} */}
                     <HighlightedText text={servicesData.header.title} />
                 </h2>
                 <p className="services--paragraph text-center">
-                    {/* We're equipped to deliver with precison and expertise. */}
                     {servicesData.header.paragraph}
                 </p>
             </div>
@@ -55,6 +53,7 @@ export default function Services() {
                 })}
             </div>
             {/* </div> */}
-        </section>
+            {/* </section> */}
+        </Section>
     );
 }
