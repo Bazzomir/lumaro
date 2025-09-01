@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useData } from '../../hooks/useData.js';
 import { LoadingAnimation } from '../component/animations.jsx';
-import HighlightedText from '../../components/component/HightlightedText.jsx';
+import { HighlightedText } from '../../components/component/PageElements.jsx';
 
 export default function Footer({ activeLink, onNavClick }) {
 

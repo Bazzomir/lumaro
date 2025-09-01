@@ -2,7 +2,7 @@ import { useState, useEffect, lazy } from 'react';
 import { useInView } from '../../hooks/useInView.js';
 const Lottie = lazy(() => import('lottie-react'));
 
-export function LazyLottie({ path, loop = true, ...props }) {
+export const LazyLottie = ({ path, loop = true, ...props }) => {
     const [animationData, setAnimationData] = useState(null);
     const [ref, inView] = useInView({ threshold: 0.25 });
 

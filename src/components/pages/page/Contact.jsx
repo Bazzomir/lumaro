@@ -4,7 +4,7 @@ import { useInView } from '../../../hooks/useInView.js';
 import { Button } from '../../component/buttons';
 import { LoadingAnimation, ContactAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
-import HighlightedText from '../../component/HightlightedText.jsx';
+import { HighlightedText, Section } from '../../component/PageElements.jsx';
 import avatarAveryR from '../../../../public/image/avatar/averyR.png';
 import avatarCaseyW from '../../../../public/image/avatar/caseyW.png';
 import avatarJordanM from '../../../../public/image/avatar/jordanM.png';
@@ -26,37 +26,26 @@ export default function Contact() {
     const contactData = data.contact;
 
     return (
-        <section className="contact container-fluid my-5 pt-6 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
+        // <section className="contact container-fluid my-5 pt-6 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
+        <Section className="contact" id="contact">
             <div className="row justify-content-center align-items-center">
-                <div className="col-12 col-lg-6">
-                    {/* <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
-                        <span className="text-purple">Your</span> Success <br /> Is Our <span className="text-purple">Success</span>
-                    </h2> */}
-                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right">
-                        {/* {contactData.header.title} */}
+                <div className="col-12 col-lg-6" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
                     <Button btnName="Contact Us" />
                 </div>
                 {/* <Form /> */}
-                <div ref={ref} className="col-12 col-lg-6 position-relative">
-                    {inView && (
-                        <>
-                            <div className="bg-triangle" aria-hidden="true"></div>
-                            <div className="contactAnimation">
-                                <ContactAnimation />
-                            </div>
-                        </>
-                    )}
+                <div className="col-12 col-lg-6 position-relative">
+                    <div className="bg-triangle" aria-hidden="true"></div>
+                    <div className="contactAnimation" ref={ref}>
+                        {inView && (<ContactAnimation />)}
+                    </div>
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
-                    {/* <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        <span className="text-purple">In</span> Their Own <span className="text-purple">Words</span>
-                    </h3> */}
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        {/* {contactData.header.subtitle} */}
                         <HighlightedText text={contactData.header.subtitle} />
                     </h3>
                 </div>
@@ -79,6 +68,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        </section >
+            {/* </section > */}
+        </Section>
     );
 }
