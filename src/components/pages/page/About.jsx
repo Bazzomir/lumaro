@@ -17,7 +17,7 @@ const iconMap = {
 
 export default function About() {
 
-    const [ref, inView] = useInView({ threshold: 0.25 });
+    const [ref, inView] = useInView({ threshold: [0, 0.25, 0.5, 0.75] });
     const { data, isLoading, error } = useData();
 
     if (isLoading) return <LoadingAnimation />;
@@ -29,17 +29,18 @@ export default function About() {
         // <section className="about container-fluid my-5 pt-6 px-120 h-100 box-sizing overflow-hidden" id="about">
         <Section className="about" id="about">
             <div className="row justify-content-center align-items-center">
-                <div className="col-12 col-lg-6"> 
+                <div className="col-12 col-lg-6">
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big" data-aos="fade-right" data-aos-anchor-placement="center">
                         <HighlightedText text={aboutData.header.title} />
                     </h2>
                 </div>
                 <div className="col-12 col-lg-6 position-relative">
                     <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
-                    <div className="aboutAnimation" ref={ref}>
-                        {inView && (<AboutAnimation />)}
+                    <div ref={ref} className={`aboutAnimation ${inView ? "fade-in-visible" : "fade-in-hidden"}`}>
+                        <AboutAnimation />
                     </div>
                 </div>
+
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">

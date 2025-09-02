@@ -17,7 +17,7 @@ const avatarMap = {
 
 export default function Contact() {
 
-    const [ref, inView] = useInView({ threshold: 0.25 });
+    const [ref, inView] = useInView({ threshold: [0, 0.25, 0.5, 0.75] });
     const { data, isLoading, error } = useData();
 
     if (isLoading) return <LoadingAnimation />;
@@ -37,8 +37,8 @@ export default function Contact() {
                 </div>
                 {/* <Form /> */}
                 <div className="col-12 col-lg-6 position-relative">
-                    <div className="bg-triangle" aria-hidden="true"></div>
-                    <div className="contactAnimation" ref={ref}>
+                    <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
+                    <div ref={ref} className={`contactAnimation ${inView ? "fade-in-visible" : "fade-in-hidden"}`}>
                         {inView && (<ContactAnimation />)}
                     </div>
                 </div>
@@ -69,6 +69,6 @@ export default function Contact() {
                 </div>
             </div>
             {/* </section > */}
-        </Section>
+        </Section >
     );
 }

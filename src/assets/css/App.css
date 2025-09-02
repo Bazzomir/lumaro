@@ -108,6 +108,17 @@ body {
 /* =============================================================================
    MEDIA ELEMENTS
    ============================================================================= */
+.fade-in-hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .scrollDownAnimation {
     height: 120px;
     width: 120px;
@@ -133,6 +144,7 @@ body {
 .aboutAnimation {
     position: relative;
     z-index: 2;
+
     /* aspect-ratio: 4/3; */
     /* top: 2525px; */
     /* right: 150px; */
