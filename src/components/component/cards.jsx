@@ -1,6 +1,6 @@
 import circle from '../../assets/icons/listCircle.svg';
 
-export function ServicesCard({ category, description, offerings, iconPath }) {
+export const ServicesCard = ({ category, description, offerings, iconPath }) => {
     return (
         <div className="services-card gap-5 p-3 h-100 border shadow-sm rounded overflow-hidden box-sizing">
             <div className="services-card-body py-3 px-4">
@@ -24,7 +24,7 @@ export function ServicesCard({ category, description, offerings, iconPath }) {
     );
 };
 
-export function ContactCard({ quote, fullName, avatarCard }) {
+export const ContactCard = ({ quote, fullName, avatarCard }) => {
     return (
         <div className="contact-card-body rounded overflow-hidden box-sizing" data-aos="fade-up" data-aos-duration="1100">
             <p className="contact-card-body__text mx-auto mx-md-0 text-center text-lg-start">{quote}</p>
@@ -36,7 +36,7 @@ export function ContactCard({ quote, fullName, avatarCard }) {
     );
 };
 
-export function AboutCard({ category, description, CardIcon }) {
+export const AboutCard = ({ category, description, CardIcon }) => {
     return (
         <div className="about-card gap-5 p-3 shadow border-0 rounded h-screen overflow-hidden box-sizing" data-aos="flip-up" data-aos-duration="1500">
             <div className="about-card-body">
