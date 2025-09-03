@@ -1,7 +1,7 @@
 import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
 // import Form from '../../component/form.jsx';
-import { Button } from '../../component/buttons';
+import { Button } from '../../component/PageElements.jsx';
 import { LoadingAnimation, ContactAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
 import { HighlightedText, Section } from '../../component/PageElements.jsx';
@@ -17,7 +17,7 @@ const avatarMap = {
 
 export default function Contact() {
 
-    const [ref, inView] = useInView({ threshold: 0.25 });
+    const [ref, inView] = useInView({ threshold: [0, 0.25, 0.5, 0.75] });
     const { data, isLoading, error } = useData();
 
     if (isLoading) return <LoadingAnimation />;
@@ -29,23 +29,26 @@ export default function Contact() {
         // <section className="contact container-fluid my-5 pt-6 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
         <Section className="contact" id="contact">
             <div className="row justify-content-center align-items-center">
-                <div className="col-12 col-lg-6" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75">
+                <div className="col-12 col-lg-6">
+                    {/* <div className="col-12 col-lg-6"> */}
+                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
                     <Button btnName="Contact Us" />
                 </div>
                 {/* <Form /> */}
                 <div className="col-12 col-lg-6 position-relative">
-                    <div className="bg-triangle" aria-hidden="true"></div>
-                    <div className="contactAnimation" ref={ref}>
-                        {inView && (<ContactAnimation />)}
+                    <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
+                    {/* <div className="bg-triangle"></div> */}
+                    <div ref={ref} className={`contactAnimation ${inView ? "fade-in-visible" : "fade-in-hidden"}`}>
+                        <ContactAnimation />
                     </div>
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
+                        {/* <h3 className="text-center p-3 mb-0 header-text--small"> */}
                         <HighlightedText text={contactData.header.subtitle} />
                     </h3>
                 </div>
@@ -69,6 +72,6 @@ export default function Contact() {
                 </div>
             </div>
             {/* </section > */}
-        </Section>
+        </Section >
     );
 }

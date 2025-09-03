@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { Button, ButtonForm } from './buttons';
+import { Button } from './PageElements';
 
 function Form() {
     const [selectedChoice, setSelectedChoice] = useState("say-hi");
@@ -115,7 +115,7 @@ function Form() {
 
                         </div>
                         <div className="modal-footer justify-content-start p-3">
-                            <ButtonForm />
+                            <Button />
                         </div>
                     </div>
                 </div>
