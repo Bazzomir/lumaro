@@ -7,6 +7,7 @@ import GlobalExpertiseIcon from '../../../assets/icons/gExpertise.svg';
 import PrecisionIcon from '../../../assets/icons/precision.svg';
 import EfficiencyIcon from '../../../assets/icons/efficiency.svg';
 import ScalabilityIcon from '../../../assets/icons/scalability.svg';
+import Portfolio from '../../component/Portfolio.jsx';
 
 const iconMap = {
     'gExpertise': GlobalExpertiseIcon,
@@ -31,7 +32,7 @@ export default function About() {
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-lg-6">
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big" data-aos="fade-right" data-aos-anchor-placement="center">
-                    {/* <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big" > */}
+                        {/* <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big" > */}
                         <HighlightedText text={aboutData.header.title} />
                     </h2>
                 </div>
@@ -42,12 +43,12 @@ export default function About() {
                         <AboutAnimation />
                     </div>
                 </div>
-
             </div>
+            <Portfolio />
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                    {/* <h3 className="text-center p-3 mb-0 header-text--small"> */}
+                        {/* <h3 className="text-center p-3 mb-0 header-text--small"> */}
                         <HighlightedText text={aboutData.header.subtitle} />
                     </h3>
                 </div>
