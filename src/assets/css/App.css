@@ -144,6 +144,7 @@ body {
 .aboutAnimation {
     position: relative;
     z-index: 2;
+    min-height: 400px;
 
     /* aspect-ratio: 4/3; */
     /* top: 2525px; */
@@ -156,6 +157,7 @@ body {
     /* aspect-ratio: 4/3; */
     position: relative;
     z-index: 2;
+    min-height: 400px;
     /* top: 3770px; */
     /* right: 100px; */
     /* max-width: 700px; */

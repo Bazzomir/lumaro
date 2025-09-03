@@ -29,8 +29,9 @@ export default function Contact() {
         // <section className="contact container-fluid my-5 pt-6 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
         <Section className="contact" id="contact">
             <div className="row justify-content-center align-items-center">
-                <div className="col-12 col-lg-6" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75">
+                <div className="col-12 col-lg-6">
+                    {/* <div className="col-12 col-lg-6"> */}
+                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
                     <Button btnName="Contact Us" />
@@ -38,14 +39,16 @@ export default function Contact() {
                 {/* <Form /> */}
                 <div className="col-12 col-lg-6 position-relative">
                     <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
+                    {/* <div className="bg-triangle"></div> */}
                     <div ref={ref} className={`contactAnimation ${inView ? "fade-in-visible" : "fade-in-hidden"}`}>
-                        {inView && (<ContactAnimation />)}
+                        <ContactAnimation />
                     </div>
                 </div>
             </div>
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
+                        {/* <h3 className="text-center p-3 mb-0 header-text--small"> */}
                         <HighlightedText text={contactData.header.subtitle} />
                     </h3>
                 </div>

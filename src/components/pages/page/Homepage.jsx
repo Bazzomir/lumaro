@@ -32,11 +32,13 @@ export default function Homepage() {
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
                             <h1 className="m-0 header-text--big" data-aos="fade-up" data-aos-easing="ease-in-all" data-aos-anchor-placement="center-center">
+                            {/* <h1 className="m-0 header-text--big"> */}
                                 <HighlightedText text={homepage.header.title} />
                             </h1>
                         </div>
                         <div className="col-12">
                             <p className="m-0 homepage-smallText" data-aos="fade-right">
+                            {/* <p className="m-0 homepage-smallText"> */}
                                 {homepage.header.paragraph}
                             </p>
                         </div>

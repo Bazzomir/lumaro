@@ -12,6 +12,9 @@ function Main() {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: false });
+    window.addEventListener("load", () => {
+      AOS.refresh();
+    });
   }, []);
 
   useEffect(() => {
