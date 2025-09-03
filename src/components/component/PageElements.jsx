@@ -24,4 +24,14 @@ export const HighlightedText = ({ text }) => {
             )}
         </>
     );
+};
+
+export const Button = ({ btnName }) => {
+    return (
+        <div className="text-center text-md-start py-5" data-aos="fade-up-right">
+            <button className="btn btn-purple text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span className="btn-purple--text">{btnName}</span>
+            </button>
+        </div>
+    );
 }
