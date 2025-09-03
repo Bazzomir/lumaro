@@ -35,7 +35,7 @@ const Portfolio = () => {
     }, []);
 
     return (
-        <section className="py-5">
+        <section className="py-5" data-aos="zoom-in">
             <div className="container">
                 <div className="row">
                     <div className="col-12 text-center mb-5">
@@ -126,14 +126,6 @@ const Portfolio = () => {
                                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span className="visually-hidden">Next</span>
                             </button>
-                        </div>
-
-                        {/* Auto-play indicator */}
-                        <div className="text-center mt-4">
-                            <small className="text-muted">
-                                <span className="badge bg-success me-2">●</span>
-                                Auto-rotating every 3 seconds • Hover to pause
-                            </small>
                         </div>
                     </div>
                 </div>

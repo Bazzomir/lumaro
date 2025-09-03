@@ -15,7 +15,7 @@ export default function Homepage() {
     if (isLoading) return <LoadingAnimation />;
     if (error) return <p>{error.message}</p>;
 
-    const scrollToServices = () => {
+    const scrollToDown = () => {
         document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
         setHideAnimation(true);
     };
@@ -45,7 +45,7 @@ export default function Homepage() {
                         <Button btnName="Start Now" />
                     </div>
                 </div>
-                {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToServices} />)}
+                {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToDown} />)}
             </div>
             {/* </section> */}
         </Section>
