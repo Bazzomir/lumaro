@@ -38,16 +38,16 @@ const Portfolio = () => {
         <section className="py-5" data-aos="zoom-in">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 text-center mb-5">
-                        <h2 className="display-4 fw-bold text-primary mb-3">Portfolio</h2>
-                        <p className="lead text-muted">
+                    <div className="col-12 my-3">
+                        <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">Portfolio</h3>
+                        <p className="lead text-center text-muted">
                             Explore my latest work and creative projects built with modern technologies
                         </p>
                     </div>
                 </div>
 
                 <div className="row justify-content-center">
-                    <div className="col-12 col-lg-10">
+                    <div className="col-12">
                         {/* Bootstrap Carousel */}
                         <div
                             id="portfolioCarousel"
