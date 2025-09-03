@@ -1,115 +1,157 @@
 {
-  "services": [
-    {
-      "category": "Consulting",
-      "description": "Agile Transformation & Operational Excellence.",
-      "offerings": [
-        "Agile Integration",
-        "Product Ownership",
-        "Project Management",
-        "User Experience Consulting",
-        "Business Strategy"
-      ],
-      "icon": "consulting"
-    },
-    {
-      "category": "Web Development",
-      "description": "Crafting Cutting-Edge Web Experiences & Digital Solutions.",
-      "offerings": [
-        "Custom Software Development",
-        "Front-End Development",
-        "Back-End Development",
-        "Full Stack Development",
-        "User Experience & User Interface"
-      ],
-      "icon": "development"
-    },
-    {
-      "category": "Quality Assurance",
-      "description": "Ensuring Premier Quality & Flawless Product Delivery.",
-      "offerings": [
-        "Automated Testing",
-        "Manual Testing & Debugging",
-        "Performance & Security",
-        "User Acceptance Testing",
-        "Integration & Delivery"
-      ],
-      "icon": "quality"
-    },
-    {
-      "category": "Mobile",
-      "description": "Build Seamless Mobile & Native Applications.",
-      "offerings": [
-        "iOS App Development",
-        "Android App Development",
-        "Cross-Platform Solutions",
-        "User Experience & User Interface",
-        "Mobile Optimization"
-      ],
-      "icon": "mobile"
-    },
-    {
-      "category": "Creative",
-      "description": "Innovative Design & Strategic Marketing Solutions.",
-      "offerings": [
-        "Branding & Identity Design",
-        "Copywriting & Content Strategy",
-        "Digital Marketing",
-        "WordPress Development",
-        "Animation & Motion Design"
-      ],
-      "icon": "creative"
-    },
-    {
-      "category": "Business Analysis",
-      "description": "Analyzing Business Needs & Crafting Strategic Solutions.",
-      "offerings": [
-        "Market Research & Analysis",
-        "Business Process Modeling",
-        "Data Analysis & Interpretation",
-        "Digital Strategy",
-        "Requirements Planning"
-      ],
-      "icon": "quality"
+  "homepage": {
+    "header": {
+      "title": "{Shape} Your {Future} with Global {Innovation}",
+      "paragraph": "Discover comprehensive talent, where every step forward is tailored to your vision."
     }
-  ],
-  "aboutUs": [
-    {
-      "icon": "gExpertise",
-      "category": "Global Expertise",
-      "description": "Harness cutting-edge tech for market-leading solutions."
+  },
+  "services": {
+    "header": {
+      "title": "Our {Services}",
+      "paragraph": "We're equipped to deliver with precison and expertise."
     },
-    {
-      "icon": "precision",
-      "category": "Precision",
-      "description": "Detail-oriented approaches ensuring impeccable results."
+    "cardItems": [
+      {
+        "category": "Consulting",
+        "description": "Agile Transformation & Operational Excellence.",
+        "offerings": [
+          "Agile Integration",
+          "Product Ownership",
+          "Project Management",
+          "User Experience Consulting",
+          "Business Strategy"
+        ],
+        "icon": "consulting"
+      },
+      {
+        "category": "Web Development",
+        "description": "Crafting Cutting-Edge Web Experiences & Digital Solutions.",
+        "offerings": [
+          "Custom Software Development",
+          "Front-End Development",
+          "Back-End Development",
+          "Full Stack Development",
+          "User Experience & User Interface"
+        ],
+        "icon": "development"
+      },
+      {
+        "category": "Quality Assurance",
+        "description": "Ensuring Premier Quality & Flawless Product Delivery.",
+        "offerings": [
+          "Automated Testing",
+          "Manual Testing & Debugging",
+          "Performance & Security",
+          "User Acceptance Testing",
+          "Integration & Delivery"
+        ],
+        "icon": "quality"
+      },
+      {
+        "category": "Mobile",
+        "description": "Build Seamless Mobile & Native Applications.",
+        "offerings": [
+          "iOS App Development",
+          "Android App Development",
+          "Cross-Platform Solutions",
+          "User Experience & User Interface",
+          "Mobile Optimization"
+        ],
+        "icon": "mobile"
+      },
+      {
+        "category": "Creative",
+        "description": "Innovative Design & Strategic Marketing Solutions.",
+        "offerings": [
+          "Branding & Identity Design",
+          "Copywriting & Content Strategy",
+          "Digital Marketing",
+          "WordPress Development",
+          "Animation & Motion Design"
+        ],
+        "icon": "creative"
+      },
+      {
+        "category": "Business Analysis",
+        "description": "Analyzing Business Needs & Crafting Strategic Solutions.",
+        "offerings": [
+          "Market Research & Analysis",
+          "Business Process Modeling",
+          "Data Analysis & Interpretation",
+          "Digital Strategy",
+          "Requirements Planning"
+        ],
+        "icon": "quality"
+      }
+    ]
+  },
+  "about": {
+    "header": {
+      "title": "{We're} Your Strategic Ally In The {Digital} IT World.",
+      "subtitle": "{Why} Work With {Us}"
     },
-    {
-      "icon": "efficiency",
-      "category": "Efficiency",
-      "description": "Maximized ROI with smart, budget-friendly solutions."
+    "cardItems": [
+      {
+        "icon": "gExpertise",
+        "category": "Global Expertise",
+        "description": "Harness cutting-edge tech for market-leading solutions."
+      },
+      {
+        "icon": "precision",
+        "category": "Precision",
+        "description": "Detail-oriented approaches ensuring impeccable results."
+      },
+      {
+        "icon": "efficiency",
+        "category": "Efficiency",
+        "description": "Maximized ROI with smart, budget-friendly solutions."
+      },
+      {
+        "icon": "scalability",
+        "category": "Scalability",
+        "description": "Adaptable strategies poised for growth and expansion."
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "{Your} Success Is Our {Success}",
+      "subtitle": "{In} Their Own {Words}"
     },
-    {
-      "icon": "scalability",
-      "category": "Scalability",
-      "description": "Adaptable strategies poised for growth and expansion."
-    }
-  ],
-  "contact": [
-    {
-      "fullName": "Casey W.",
-      "quote": "Lumaro took our project to the next level with their extensive expertise. They not only met our expectations but exceeded them, refining our initial concept beautifully. Perfect for anyone facing complex challenges.",
-      "avatar": "caseyW"
+    "cardItems": [
+      {
+        "fullName": "Casey W.",
+        "quote": "Lumaro took our project to the next level with their extensive expertise. They not only met our expectations but exceeded them, refining our initial concept beautifully. Perfect for anyone facing complex challenges.",
+        "avatar": "caseyW"
+      },
+      {
+        "fullName": "Jordan M.",
+        "quote": "Lumaro helped us to turn complex projects into simple user-friendly solutions. Their communication and creative insight were exceptional, elevating our project beyond. Highly recommend Lumaro.",
+        "avatar": "jordanM"
+      },
+      {
+        "fullName": "Avery R.",
+        "quote": "Lumaro truly transformed our approach to business strategy and product development. Their insights were spot on with their collaboration. Working with Lumaro felt like a partnership geared toward excellence.",
+        "avatar": "averyR"
+      }
+    ]
+  },
+  "footer": {
+    "header": {
+      "title": "{Lumaro}",
+      "paragraph": "Empowering businesses with cutting-edge solutions, Lumaro specializes in connecting you with global talent and innovative strategies for sustainable growth."
     },
-    {
-      "fullName": "Jordan M.",
-      "quote": "Lumaro helped us to turn complex projects into simple user-friendly solutions. Their communication and creative insight were exceptional, elevating our project beyond. Highly recommend Lumaro.",
-      "avatar": "jordanM"
+    "getInTouch": {
+      "title": "Get In Touch",
+      "email": "contact@lumaro.com",
+      "phone": "+18883218572",
+      "hours": "Mon-Fri 9:00AM - 5:00PM",
+      "address": "1776 Constitution Ave NW, Washington DC 20006"
     },
-    {
-      "fullName": "Avery R.",
-      "quote": "Lumaro truly transformed our approach to business strategy and product development. Their insights were spot on with their collaboration. Working with Lumaro felt like a partnership geared toward excellence.",
-      "avatar": "averyR"
-    }
-  ]
+    "socialMedia": [
+      "Social",
+      "LinkedIn",
+      "Instagram"
+    ]
+  }
 }
