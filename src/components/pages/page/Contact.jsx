@@ -1,7 +1,7 @@
 import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
 // import Form from '../../component/form.jsx';
-import { Button } from '../../component/buttons';
+import { Button } from '../../component/PageElements.jsx';
 import { LoadingAnimation, ContactAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
 import { HighlightedText, Section } from '../../component/PageElements.jsx';
