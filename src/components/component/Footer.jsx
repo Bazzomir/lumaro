@@ -3,7 +3,7 @@ import { useData } from '../../hooks/useData.js';
 import { LoadingAnimation } from '../component/animations.jsx';
 import { HighlightedText } from '../../components/component/PageElements.jsx';
 
-export default function Footer({ activeLink, onNavClick }) {
+export const Footer = ({ activeLink, onNavClick }) => {
 
     const { data, isLoading, error } = useData();
 

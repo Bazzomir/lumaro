@@ -1,5 +1,7 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { LoadingAnimation } from '../component/animations.jsx';
+import AOS from "aos";
+
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const Homepage = lazy(() =>
@@ -10,7 +12,14 @@ const Services = lazy(() => import("./page/Services"));
 const About = lazy(() => import("./page/About"));
 const Contact = lazy(() => import("./page/Contact"));
 
-export default function LazyPage() {
+export const LazyPage = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+    window.addEventListener("load", () => {
+      AOS.refresh();
+    });
+  }, []);
 
   return (
     <>
