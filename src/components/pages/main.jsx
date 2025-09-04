@@ -4,6 +4,7 @@ import { useScrollSpy } from "../../hooks/useScrollSpy";
 import { LazyPage } from "./lazyPage";
 import { Header } from "../component/Header";
 import { Footer } from "../component/Footer";
+// import { ContactForm } from "./page/ContactForm";
 
 function Main() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function Main() {
   return (
     <>
       <Header activeLink={activeId} onNavClick={scrollToId} />
+      {/* {location.pathname.includes("/form") ? <ContactForm /> : <LazyPage />} */}
       <LazyPage />
       <Footer activeLink={activeId} onNavClick={scrollToId} />
     </>

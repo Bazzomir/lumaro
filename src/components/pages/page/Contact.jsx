@@ -34,7 +34,7 @@ export default function Contact() {
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
-                    <Button btnName="Contact Us" />
+                    <Button btnName="Contact Us" onClick={() => window.location.href = "/lumaro/form"} />
                 </div>
                 {/* <Form /> */}
                 <div className="col-12 col-lg-6 position-relative">
@@ -57,7 +57,7 @@ export default function Contact() {
                         {contactData.cardItems.map((contact, i) => {
                             const AvatarPath = avatarMap[contact.avatar];
                             return (
-                                <div key={i} className="col-md-6 col-lg-4 my-4">
+                                <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1500">
                                     {AvatarPath && (
                                         <ContactCard
                                             avatarCard={AvatarPath}
