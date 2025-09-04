@@ -26,10 +26,10 @@ export const HighlightedText = ({ text }) => {
     );
 };
 
-export const Button = ({ btnName }) => {
+export const Button = ({ btnName, onClick }) => {
     return (
         <div className="text-center text-md-start py-5" data-aos="fade-up-right">
-            <button className="btn btn-purple text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button className="btn btn-purple text-uppercase" onClick={onClick}>
                 <span className="btn-purple--text">{btnName}</span>
             </button>
         </div>

@@ -1,21 +1,14 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
-import AOS from "aos";
-import LazyPage from "./lazyPage";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
+import { LazyPage } from "./lazyPage";
+import { Header } from "../component/Header";
+import { Footer } from "../component/Footer";
+// import { ContactForm } from "./page/ContactForm";
 
 function Main() {
   const location = useLocation();
   const { activeId, scrollToId } = useScrollSpy();
-
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
-    window.addEventListener("load", () => {
-      AOS.refresh();
-    });
-  }, []);
 
   useEffect(() => {
     const path = location.pathname.replace(/^\/+|\/+$/g, "");
@@ -33,6 +26,7 @@ function Main() {
   return (
     <>
       <Header activeLink={activeId} onNavClick={scrollToId} />
+      {/* {location.pathname.includes("/form") ? <ContactForm /> : <LazyPage />} */}
       <LazyPage />
       <Footer activeLink={activeId} onNavClick={scrollToId} />
     </>

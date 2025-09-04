@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Header({ activeLink, onNavClick }) {
+export const Header = ({ activeLink, onNavClick }) => {
     return (
         <nav className="navbar navbar-expand-lg container-fluid px-120 fixed-top" >
             <Link className="navbar-brand d-grid align-items-center" to="/lumaro">
