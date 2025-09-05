@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const ContactForm = () => {
+export default function ContactForm() {
     const [formData, setFormData] = useState({
         // Personal Information
         name: '',
