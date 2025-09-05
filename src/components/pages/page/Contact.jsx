@@ -34,7 +34,7 @@ export default function Contact() {
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
-                    <Button btnName="Contact Us" onClick={() => window.location.href = "/lumaro/form"} />
+                    <Button btnName="Contact Us" onClick={() => window.location.href = `${import.meta.env.BASE_URL}/form`} />
                 </div>
                 {/* <Form /> */}
                 <div className="col-12 col-lg-6 position-relative">

@@ -42,7 +42,7 @@ export default function Homepage() {
                                 {homepage.header.paragraph}
                             </p>
                         </div>
-                        <Button btnName="Start Now" onClick={() => window.location.href = "/lumaro/form"} />
+                        <Button btnName="Start Now" onClick={() => window.location.href = `${import.meta.env.BASE_URL}/form`} />
                     </div>
                 </div>
                 {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToDown} />)}
