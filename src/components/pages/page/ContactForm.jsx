@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import '../../../assets/css/form.css';
 
 export default function ContactForm() {
     const [activeTab, setActiveTab] = useState('contact');

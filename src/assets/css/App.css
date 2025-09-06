@@ -341,7 +341,280 @@ textarea.form-control {
     transition: var(--transition-smooth) !important;
 } */
 
-.form-container {
+/* .btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    color: hsl(var(--primary-foreground));
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+}
+
+/* Form Container */
+/* .form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--gradient-subtle);
+} */
+
+/* Form Card */
+/* .form-card {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-elegant);
+    transition: var(--transition-smooth);
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+} */
+
+/* Form Header */
+/* .form-header {
+    padding: 2rem;
+    text-align: center;
+    color: hsl(var(--primary-foreground));
+    background: var(--gradient-primary);
+}
+
+.form-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+} */
+
+/* Tab Navigation */
+/* .tab-nav {
+    display: flex;
+    border-bottom: 1px solid hsl(var(--border));
+    background-color: hsl(var(--muted) / 0.3);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: hsl(var(--muted-foreground));
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    border-bottom-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+    background-color: hsl(var(--background));
+}
+
+.tab-button:not(.active):hover {
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--muted) / 0.5);
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: hsl(var(--primary));
+    margin-bottom: 1.5rem;
+}
+
+.section-number {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    font-size: 0.875rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Floating Input Styles */
+.floating-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.floating-input,
+.floating-select,
+.floating-textarea {
+    width: 100%;
+    padding: 1rem 0 0.5rem 0;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid hsl(var(--input));
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease;
+    color: hsl(var(--foreground));
+}
+
+.floating-input:focus,
+.floating-select:focus,
+.floating-textarea:focus {
+    border-bottom-color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.02);
+}
+
+.floating-label {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    font-size: 1rem;
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: left;
+}
+
+.floating-input:focus+.floating-label,
+.floating-input:valid+.floating-label,
+.floating-input:not([value=""])+.floating-label,
+.floating-select:focus+.floating-label,
+.floating-select:not([value=""])+.floating-label,
+.floating-textarea:focus+.floating-label,
+.floating-textarea:valid+.floating-label,
+.floating-textarea:not([value=""])+.floating-label {
+    transform: translateY(-1.2rem) scale(0.85);
+    color: hsl(var(--primary));
+    font-weight: 500;
+}
+
+*/
+/* Select specific styles */
+/* .floating-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0 center;
+    background-repeat: no-repeat;
+    background-size: 16px 12px;
+    padding-right: 1.5rem;
+} */
+
+/* Textarea specific styles */
+/* .floating-textarea {
+    resize: vertical;
+    min-height: 5rem;
+    font-family: inherit;
+} */
+
+/* Button Styles */
+/* .btn-primary-gradient {
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    color: hsl(var(--primary-foreground));
+    border: none;
+    background: var(--gradient-primary);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px hsl(var(--primary) / 0.3);
+    background: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+}
+
+.btn-outline-elegant {
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    border: 2px solid hsl(var(--muted-foreground));
+    color: hsl(var(--muted-foreground));
+    background: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-outline-elegant:hover {
+    background-color: hsl(var(--muted-foreground));
+    color: hsl(var(--primary-foreground));
+    transform: translateY(-2px);
+} */
+
+/* Animations */
+/* .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* Scroll to Top Button */
+/* .scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    color: hsl(var(--primary-foreground));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1050;
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px hsl(var(--primary) / 0.4);
+    background: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+}  */
+
+
+/* .form-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 15px;
@@ -650,6 +923,7 @@ textarea.form-control {
     }
 }
 
+*/
 /* =============================================================================
    CARDS
    ============================================================================= */
