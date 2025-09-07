@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // import { useInView } from '../../../hooks/useInView.js';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useData } from '../../../hooks/useData.js';
 import { Button } from '../../component/PageElements.jsx';
 import { ScrollDownAnimation, LoadingAnimation } from '../../component/animations.jsx';
@@ -8,6 +8,7 @@ import { HighlightedText, Section } from '../../component/PageElements.jsx';
 
 export default function Homepage() {
     // const [ref, inView] = useInView({ threshold: 0.25 });
+    const navigate = useNavigate();
     const { data, isLoading, error } = useData();
     const [hideAnimation, setHideAnimation] = useState(false);
     const location = useLocation();
@@ -42,7 +43,7 @@ export default function Homepage() {
                                 {homepage.header.paragraph}
                             </p>
                         </div>
-                        <Button btnName="Start Now" onClick={() => window.location.href = `${import.meta.env.BASE_URL}/form`} />
+                        <Button btnName="Start Now" onClick={() => navigate("/form")} />
                     </div>
                 </div>
                 {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToDown} />)}

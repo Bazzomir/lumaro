@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
 // import Form from '../../component/form.jsx';
@@ -17,6 +18,7 @@ const avatarMap = {
 
 export default function Contact() {
 
+    const navigate = useNavigate();
     const [ref, inView] = useInView({ threshold: [0, 0.25, 0.5, 0.75] });
     const { data, isLoading, error } = useData();
 
@@ -34,7 +36,7 @@ export default function Contact() {
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
-                    <Button btnName="Contact Us" onClick={() => window.location.href = `${import.meta.env.BASE_URL}/form`} />
+                    <Button btnName="Contact Us" onClick={() => navigate("/form")} />
                 </div>
                 {/* <Form /> */}
                 <div className="col-12 col-lg-6 position-relative">
