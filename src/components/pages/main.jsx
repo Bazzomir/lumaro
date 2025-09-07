@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
 import { LazyPage } from "./lazyPage";
 import { Header } from "../component/Header";
 import { Footer } from "../component/Footer";
+import ContactForm from "./page/ContactForm";
 // import { ContactForm } from "./page/ContactForm";
 
 function Main() {
@@ -12,22 +13,27 @@ function Main() {
 
   useEffect(() => {
     const path = location.pathname.replace(/^\/+|\/+$/g, "");
-    const id = path.split("/").pop() || "home";
+    const id = path || "home";
 
-    if (id !== "home") {
-      setTimeout(() => {
+    if (id !== "home" && id !== "form") {
+      requestAnimationFrame(() => {
         document
           .getElementById(id)
           ?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
+      });
     }
   }, [location.pathname]);
+
 
   return (
     <>
       <Header activeLink={activeId} onNavClick={scrollToId} />
       {/* {location.pathname.includes("/form") ? <ContactForm /> : <LazyPage />} */}
-      <LazyPage />
+      {/* <LazyPage /> */}
+      <Routes>
+        <Route path="*" element={<LazyPage />} />
+        <Route path="/form" element={<ContactForm />} />
+      </Routes>
       <Footer activeLink={activeId} onNavClick={scrollToId} />
     </>
   );

@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export const Section = ({ className = "", id, children }) => {
     return (
         <section className={`${className} container-fluid my-5 pt-6 px-120 h-100 d-flex align-items-center`} id={id}>
