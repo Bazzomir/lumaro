@@ -43,7 +43,7 @@ export default function Homepage() {
                                 {homepage.header.paragraph}
                             </p>
                         </div>
-                        <Button btnName="Start Now" onClick={() => navigate("/form")} />
+                        <Button btnName="Start Now" onClick={() => navigate("/lumaro/form")} />
                     </div>
                 </div>
                 {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToDown} />)}

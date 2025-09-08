@@ -32,7 +32,7 @@ function Main() {
       {/* <LazyPage /> */}
       <Routes>
         <Route path="*" element={<LazyPage />} />
-        <Route path="/form" element={<ContactForm />} />
+        <Route path="/lumaro/form" element={<ContactForm />} />
       </Routes>
       <Footer activeLink={activeId} onNavClick={scrollToId} />
     </>
