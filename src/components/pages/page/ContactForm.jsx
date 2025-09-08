@@ -1,45 +1,31 @@
-import { useState, useEffect } from 'react';
 import '../../../assets/css/form.css';
+import { useState, useEffect } from 'react';
+import { useData } from '../../../hooks/useData.js';
+import { LoadingAnimation } from '../../component/animations.jsx';
+import { Input, Select, Textarea, FileInput, Section } from '../../component/PageElements.jsx';
 
 export default function ContactForm() {
-    const [activeTab, setActiveTab] = useState('contact');
-    const [formData, setFormData] = useState({
-        // Personal Information (Contact)
-        name: '',
-        surname: '',
-        email: '',
-        phone: '',
-        company: '',
-        position: '',
-        // Services
-        service: '',
-        customService: '',
-        // Project Details
-        projectDescription: '',
-        projectBudget: '',
-        // Job Application Fields
-        jobPosition: '',
-        experience: '',
-        skills: '',
-        education: '',
-        availability: '',
-        salary: '',
-        portfolio: '',
-        coverLetter: '',
-        resumeFile: null
-    });
 
+    const { data: queryData, isLoading, error } = useData();
+    const [formData, setFormData] = useState({});
+    const [activeTab, setActiveTab] = useState('contact');
     const [showScrollTop, setShowScrollTop] = useState(false);
+
+    useEffect(() => {
+        if (queryData?.form?.defaultValues) {
+            setFormData(queryData.form.defaultValues);
+        }
+    }, [queryData]);
 
     // Handle scroll to show/hide scroll-to-top button
     useEffect(() => {
-        const handleScroll = () => {
-            setShowScrollTop(window.scrollY > 300);
-        };
-
+        const handleScroll = () => setShowScrollTop(window.scrollY > 300);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    if (isLoading) return <LoadingAnimation />;
+    if (error) return <p>{error.message}</p>;
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -48,65 +34,36 @@ export default function ContactForm() {
         });
     };
 
-    const services = [
-        'Web Development',
-        'Mobile App Development',
-        'UI/UX Design',
-        'E-commerce Solutions',
-        'Digital Marketing',
-        'SEO Optimization',
-        'Cloud Solutions',
-        'Consulting Services',
-        'Other'
-    ];
-
-    const budgetRanges = [
-        'Under $5,000',
-        '$5,000 - $15,000',
-        '$15,000 - $50,000',
-        '$50,000 - $100,000',
-        'Over $100,000',
-        'To be discussed'
-    ];
-
-    const jobPositions = [
-        'Frontend Developer',
-        'Backend Developer',
-        'Full Stack Developer',
-        'UI/UX Designer',
-        'DevOps Engineer',
-        'Project Manager',
-        'Quality Assurance',
-        'Marketing Specialist',
-        'Sales Representative',
-        'Other'
-    ];
-
-    const experienceLevels = [
-        'Entry Level (0-1 years)',
-        'Junior (1-3 years)',
-        'Mid-level (3-5 years)',
-        'Senior (5-8 years)',
-        'Lead (8+ years)',
-        'Executive (10+ years)'
-    ];
-
-    const salaryRanges = [
-        'Under $30,000',
-        '$30,000 - $50,000',
-        '$50,000 - $70,000',
-        '$70,000 - $100,000',
-        '$100,000 - $150,000',
-        'Over $150,000',
-        'To be discussed'
-    ];
-
     const handleInputChange = (e) => {
         const { name, value, type, files } = e.target;
         setFormData(prev => ({
             ...prev,
             [name]: type === 'file' ? files[0] : value
         }));
+    };
+
+    const resetFormData = () => {
+        setFormData({
+            name: '',
+            surname: '',
+            email: '',
+            phone: '',
+            company: '',
+            position: '',
+            service: '',
+            customService: '',
+            projectDescription: '',
+            projectBudget: '',
+            jobPosition: '',
+            experience: '',
+            skills: '',
+            education: '',
+            availability: '',
+            salary: '',
+            portfolio: '',
+            coverLetter: '',
+            resumeFile: null,
+        });
     };
 
     const handleSubmit = (e) => {
@@ -118,60 +75,18 @@ export default function ContactForm() {
             : "Thank you for your application! We'll review it and get back to you soon.";
 
         alert(message);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        resetFormData();
 
         // Scroll to top
         scrollToTop();
-
-        // Reset form
-        setFormData({
-            name: '',
-            surname: '',
-            email: '',
-            phone: '',
-            company: '',
-            position: '',
-            service: '',
-            customService: '',
-            projectDescription: '',
-            projectBudget: '',
-            jobPosition: '',
-            experience: '',
-            skills: '',
-            education: '',
-            availability: '',
-            salary: '',
-            portfolio: '',
-            coverLetter: '',
-            resumeFile: null
-        });
     };
 
-    const handleReset = () => {
-        setFormData({
-            name: '',
-            surname: '',
-            email: '',
-            phone: '',
-            company: '',
-            position: '',
-            service: '',
-            customService: '',
-            projectDescription: '',
-            projectBudget: '',
-            jobPosition: '',
-            experience: '',
-            skills: '',
-            education: '',
-            availability: '',
-            salary: '',
-            portfolio: '',
-            coverLetter: '',
-            resumeFile: null
-        });
-    };
 
     return (
-        <div className="form-container fade-in">
+
+        <Section className="justify-content-center pt-0 py-5 fade-in">
+            {/* <div className="container-fluid fade-in"> */}
             <div className="card form-card">
                 <div className="form-header">
                     <h2>{activeTab === 'contact' ? "Let's Start a Conversation" : "Join Our Team"}</h2>
@@ -212,112 +127,28 @@ export default function ContactForm() {
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="name"
-                                                    name="name"
-                                                    value={formData.name}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="name" className="floating-label">
-                                                    First Name *
-                                                </label>
-                                            </div>
+                                            <Input id="name" type="text" label="First Name" value={formData.name || ""} onChange={handleInputChange} required />
                                         </div>
-
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="surname"
-                                                    name="surname"
-                                                    value={formData.surname}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="surname" className="floating-label">
-                                                    Last Name *
-                                                </label>
-                                            </div>
+                                            <Input id="surname" type="text" label="Last Name" value={formData.surname || ""} onChange={handleInputChange} required />
                                         </div>
                                     </div>
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="email"
-                                                    className="floating-input"
-                                                    id="email"
-                                                    name="email"
-                                                    value={formData.email}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="email" className="floating-label">
-                                                    Email Address *
-                                                </label>
-                                            </div>
+                                            <Input id="email" type="email" label="Email" value={formData.email || ""} onChange={handleInputChange} required />
                                         </div>
-
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="tel"
-                                                    className="floating-input"
-                                                    id="phone"
-                                                    name="phone"
-                                                    value={formData.phone}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                />
-                                                <label htmlFor="phone" className="floating-label">
-                                                    Phone Number
-                                                </label>
-                                            </div>
+                                            <Input id="phone" type="tel" label="Phone" value={formData.phone || ""} onChange={handleInputChange} required />
                                         </div>
                                     </div>
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="company"
-                                                    name="company"
-                                                    value={formData.company}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                />
-                                                <label htmlFor="company" className="floating-label">
-                                                    Company
-                                                </label>
-                                            </div>
+                                            <Input id="company" type="text" label="Company" value={formData.company || ""} onChange={handleInputChange} required />
                                         </div>
-
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="position"
-                                                    name="position"
-                                                    value={formData.position}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                />
-                                                <label htmlFor="position" className="floating-label">
-                                                    Position
-                                                </label>
-                                            </div>
+                                            <Input id="position" type="text" label="Position" value={formData.position || ""} onChange={handleInputChange} required />
                                         </div>
                                     </div>
                                 </div>
@@ -329,43 +160,10 @@ export default function ContactForm() {
                                         What Can We Help You With?
                                     </h4>
 
-                                    <div className="floating-group">
-                                        <select
-                                            className="floating-select"
-                                            id="service"
-                                            name="service"
-                                            value={formData.service}
-                                            onChange={handleInputChange}
-                                            required
-                                        >
-                                            <option value="">Choose a service...</option>
-                                            {services.map((service, index) => (
-                                                <option key={index} value={service}>
-                                                    {service}
-                                                </option>
-                                            ))}
-                                        </select>
-                                        <label htmlFor="service" className="floating-label">
-                                            Select a Service *
-                                        </label>
-                                    </div>
+                                    <Select id="service" value={formData.service || ""} onChange={handleInputChange} label="Select a Service" options={queryData.form.options.services} required />
 
                                     {formData.service === 'Other' && (
-                                        <div className="floating-group">
-                                            <input
-                                                type="text"
-                                                className="floating-input"
-                                                id="customService"
-                                                name="customService"
-                                                value={formData.customService}
-                                                onChange={handleInputChange}
-                                                placeholder=" "
-                                                required
-                                            />
-                                            <label htmlFor="customService" className="floating-label">
-                                                Please specify your needs *
-                                            </label>
-                                        </div>
+                                        <Input id="customService" type="text" label="Please specify your needs" value={formData.customService || ""} onChange={handleInputChange} required />
                                     )}
                                 </div>
 
@@ -376,41 +174,9 @@ export default function ContactForm() {
                                         Tell Us About Your Project
                                     </h4>
 
-                                    <div className="floating-group">
-                                        <textarea
-                                            className="floating-textarea"
-                                            id="projectDescription"
-                                            name="projectDescription"
-                                            value={formData.projectDescription}
-                                            onChange={handleInputChange}
-                                            placeholder=" "
-                                            rows={5}
-                                            required
-                                        ></textarea>
-                                        <label htmlFor="projectDescription" className="floating-label">
-                                            Project Description *
-                                        </label>
-                                    </div>
+                                    <Textarea id="projectDescription" label="Project Description" value={formData.projectDescription || ""} onChange={handleInputChange} required />
 
-                                    <div className="floating-group">
-                                        <select
-                                            className="floating-select"
-                                            id="projectBudget"
-                                            name="projectBudget"
-                                            value={formData.projectBudget}
-                                            onChange={handleInputChange}
-                                        >
-                                            <option value="">Select budget range...</option>
-                                            {budgetRanges.map((budget, index) => (
-                                                <option key={index} value={budget}>
-                                                    {budget}
-                                                </option>
-                                            ))}
-                                        </select>
-                                        <label htmlFor="projectBudget" className="floating-label">
-                                            Project Budget
-                                        </label>
-                                    </div>
+                                    <Select id="projectBudget" label="Project Budget" value={formData.projectBudget || ""} onChange={handleInputChange} options={queryData.form.options.budgetRanges} required />
                                 </div>
                             </>
                         ) : (
@@ -424,77 +190,21 @@ export default function ContactForm() {
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="job-name"
-                                                    name="name"
-                                                    value={formData.name}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="job-name" className="floating-label">
-                                                    First Name *
-                                                </label>
-                                            </div>
+                                            <Input id="job-name" type="text" label="First Name" value={formData.name || ""} onChange={handleInputChange} required />
                                         </div>
 
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="job-surname"
-                                                    name="surname"
-                                                    value={formData.surname}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="job-surname" className="floating-label">
-                                                    Last Name *
-                                                </label>
-                                            </div>
+                                            <Input id="job-surname" type="text" label="Last Name" value={formData.surname || ""} onChange={handleInputChange} required />
                                         </div>
                                     </div>
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="email"
-                                                    className="floating-input"
-                                                    id="job-email"
-                                                    name="email"
-                                                    value={formData.email}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="job-email" className="floating-label">
-                                                    Email Address *
-                                                </label>
-                                            </div>
+                                            <Input id="job-email" type="email" label="Email" value={formData.email || ""} onChange={handleInputChange} required />
                                         </div>
 
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="tel"
-                                                    className="floating-input"
-                                                    id="job-phone"
-                                                    name="phone"
-                                                    value={formData.phone}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="job-phone" className="floating-label">
-                                                    Phone Number *
-                                                </label>
-                                            </div>
+                                            <Input id="job-phone" type="tel" label="Phone" value={formData.phone || ""} onChange={handleInputChange} required />
                                         </div>
                                     </div>
                                 </div>
@@ -508,67 +218,15 @@ export default function ContactForm() {
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <select
-                                                    className="floating-select"
-                                                    id="jobPosition"
-                                                    name="jobPosition"
-                                                    value={formData.jobPosition}
-                                                    onChange={handleInputChange}
-                                                    required
-                                                >
-                                                    <option value="">Select position...</option>
-                                                    {jobPositions.map((position, index) => (
-                                                        <option key={index} value={position}>
-                                                            {position}
-                                                        </option>
-                                                    ))}
-                                                </select>
-                                                <label htmlFor="jobPosition" className="floating-label">
-                                                    Position Applied For *
-                                                </label>
-                                            </div>
+                                            <Select id="jobPosition" label="Position Applied For" value={formData.jobPosition || ""} onChange={handleInputChange} options={queryData.form.options.jobPositions} required />
                                         </div>
 
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <select
-                                                    className="floating-select"
-                                                    id="experience"
-                                                    name="experience"
-                                                    value={formData.experience}
-                                                    onChange={handleInputChange}
-                                                    required
-                                                >
-                                                    <option value="">Select experience level...</option>
-                                                    {experienceLevels.map((level, index) => (
-                                                        <option key={index} value={level}>
-                                                            {level}
-                                                        </option>
-                                                    ))}
-                                                </select>
-                                                <label htmlFor="experience" className="floating-label">
-                                                    Experience Level *
-                                                </label>
-                                            </div>
+                                            <Select id="experience" label="Experience Level" value={formData.experience || ""} onChange={handleInputChange} options={queryData.form.options.experienceLevels} required />
                                         </div>
                                     </div>
 
-                                    <div className="floating-group">
-                                        <textarea
-                                            className="floating-textarea"
-                                            id="skills"
-                                            name="skills"
-                                            value={formData.skills}
-                                            onChange={handleInputChange}
-                                            placeholder=" "
-                                            rows={3}
-                                            required
-                                        ></textarea>
-                                        <label htmlFor="skills" className="floating-label">
-                                            Key Skills & Technologies *
-                                        </label>
-                                    </div>
+                                    <Textarea id="skills" label="Skills" value={formData.skills || ""} onChange={handleInputChange} required />
                                 </div>
 
                                 {/* Section 3: Education & Availability */}
@@ -580,80 +238,21 @@ export default function ContactForm() {
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="education"
-                                                    name="education"
-                                                    value={formData.education}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="education" className="floating-label">
-                                                    Highest Education *
-                                                </label>
-                                            </div>
+                                            <Input id="education" type="text" label="Highest Education" value={formData.education || ""} onChange={handleInputChange} required />
                                         </div>
 
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="text"
-                                                    className="floating-input"
-                                                    id="availability"
-                                                    name="availability"
-                                                    value={formData.availability}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                    required
-                                                />
-                                                <label htmlFor="availability" className="floating-label">
-                                                    Available Start Date *
-                                                </label>
-                                            </div>
+                                            <Input id="availability" type="text" label="Available Start Date" value={formData.availability || ""} onChange={handleInputChange} required />
                                         </div>
                                     </div>
 
                                     <div className="row">
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <select
-                                                    className="floating-select"
-                                                    id="salary"
-                                                    name="salary"
-                                                    value={formData.salary}
-                                                    onChange={handleInputChange}
-                                                >
-                                                    <option value="">Select salary range...</option>
-                                                    {salaryRanges.map((range, index) => (
-                                                        <option key={index} value={range}>
-                                                            {range}
-                                                        </option>
-                                                    ))}
-                                                </select>
-                                                <label htmlFor="salary" className="floating-label">
-                                                    Expected Salary
-                                                </label>
-                                            </div>
+                                            <Select id="salary" label="Expected Salary" value={formData.salary || ""} onChange={handleInputChange} options={queryData.form.options.salaryRanges} required />
                                         </div>
 
                                         <div className="col-md-6">
-                                            <div className="floating-group">
-                                                <input
-                                                    type="url"
-                                                    className="floating-input"
-                                                    id="portfolio"
-                                                    name="portfolio"
-                                                    value={formData.portfolio}
-                                                    onChange={handleInputChange}
-                                                    placeholder=" "
-                                                />
-                                                <label htmlFor="portfolio" className="floating-label">
-                                                    Portfolio/LinkedIn URL
-                                                </label>
-                                            </div>
+                                            <Input id="portfolio" type="text" label="Portfolio/LinkedIn URL/GitHub Profile" value={formData.portfolio || ""} onChange={handleInputChange} required />
                                         </div>
                                     </div>
                                 </div>
@@ -665,35 +264,11 @@ export default function ContactForm() {
                                         Additional Information
                                     </h4>
 
-                                    <div className="floating-group">
-                                        <textarea
-                                            className="floating-textarea"
-                                            id="coverLetter"
-                                            name="coverLetter"
-                                            value={formData.coverLetter}
-                                            onChange={handleInputChange}
-                                            placeholder=" "
-                                            rows={5}
-                                            required
-                                        ></textarea>
-                                        <label htmlFor="coverLetter" className="floating-label">
-                                            Cover Letter / Why should we hire you? *
-                                        </label>
-                                    </div>
+                                    <Textarea id="coverLetter" label="Cover Letter" value={formData.coverLetter || ""} onChange={handleInputChange} required />
 
-                                    <div className="floating-group">
-                                        <input
-                                            type="file"
-                                            className="form-control"
-                                            id="resumeFile"
-                                            name="resumeFile"
-                                            onChange={handleInputChange}
-                                            accept=".pdf,.doc,.docx"
-                                        />
-                                        <label htmlFor="resumeFile" className="form-label">
-                                            Upload Resume (PDF, DOC, DOCX)
-                                        </label>
-                                    </div>
+
+                                    <FileInput id="resumeFile" label="Upload Resume" value={formData.resumeFile || ""} onChange={handleInputChange} required />
+
                                 </div>
                             </>
                         )}
@@ -703,7 +278,7 @@ export default function ContactForm() {
                             <button
                                 type="button"
                                 className="btn btn-outline-elegant"
-                                onClick={handleReset}
+                                onClick={resetFormData}
                             >
                                 Reset Form
                             </button>
@@ -719,15 +294,18 @@ export default function ContactForm() {
             </div>
 
             {/* Scroll to Top Button */}
-            {showScrollTop && (
-                <button
-                    className="scroll-to-top"
-                    onClick={scrollToTop}
-                    aria-label="Scroll to top"
-                >
-                    ⩓
-                </button>
-            )}
-        </div>
+            {
+                showScrollTop && (
+                    <button
+                        className="scroll-to-top"
+                        onClick={scrollToTop}
+                        aria-label="Scroll to top"
+                    >
+                        ⩓
+                    </button>
+                )
+            }
+            {/* </div> */}
+        </Section>
     );
 }

@@ -9,7 +9,7 @@ const Homepage = lazy(() => delay(1000).then(() => import("./page/Homepage")));
 const Services = lazy(() => import("./page/Services"));
 const About = lazy(() => import("./page/About"));
 const Contact = lazy(() => import("./page/Contact"));
-const ContactForm = lazy(() => delay(750).then(() => import("./page/ContactForm.jsx")))
+// const ContactForm = lazy(() => delay(750).then(() => import("./page/ContactForm.jsx")))
 // const ContactForm = lazy(() => import("./page/ContactForm.jsx"));
 
 export const LazyPage = () => {

@@ -73,17 +73,17 @@ body {
 }
 
 /* Form Container */
-.form-container {
+/* .form-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
     background: var(--gradient-subtle);
-}
+} */
 
 /* Form Card */
-.form-card {
+/* .form-card {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -94,12 +94,12 @@ body {
     background: rgba(255, 255, 255, 0.98);
     box-shadow: var(--shadow-elegant);
     transition: var(--transition-smooth);
-}
+} */
 
-.form-card:hover {
+/* .form-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-glow);
-}
+} */
 
 /* Form Header */
 .form-header {
