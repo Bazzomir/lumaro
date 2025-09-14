@@ -69,8 +69,6 @@ export default function ContactForm() {
     return (
 
         <Section className="justify-content-center pt-0 py-5 fade-in">
-            {/* <div className="container-fluid fade-in"> */}
-            {/* <div className="card form-card"> */}
             <div className="form-header">
                 <h2>{activeTab === 'contact' ? "Let's Start a Conversation" : "Join Our Team"}</h2>
                 <p>{activeTab === 'contact'
@@ -229,10 +227,8 @@ export default function ContactForm() {
                     </div>
                 </form>
             </div>
-            {/* </div> */}
 
             <ScrollToTopBtn />
-            {/* </div> */}
         </Section>
     );
 }
