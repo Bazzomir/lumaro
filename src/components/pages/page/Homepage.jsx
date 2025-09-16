@@ -43,7 +43,9 @@ export default function Homepage() {
                                 {homepage.header.paragraph}
                             </p>
                         </div>
-                        <Button btnName="Start Now" onClick={() => navigate("/lumaro/form")} />
+                        <div className="text-center text-md-start py-5" data-aos="fade-up-right">
+                            <Button btnName="Start Now" classNameBtn="btn-purple text-uppercase" classNameSpan="btn-purple--text" onClick={() => navigate("/lumaro/form")} />
+                        </div>
                     </div>
                 </div>
                 {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToDown} />)}

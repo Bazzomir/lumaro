@@ -2,7 +2,7 @@ import '../../../assets/css/form.css';
 import { useState, useEffect } from 'react';
 import { useData } from '../../../hooks/useData.js';
 import { LoadingAnimation } from '../../component/animations.jsx';
-import { Input, Select, Textarea, FileInput, Section, TabNavBtn, ScrollToTopBtn, FormSectionTitle } from '../../component/PageElements.jsx';
+import { Input, Select, Textarea, FileInput, Section, TabNavBtn, ScrollToTopBtn, FormSectionTitle, Button } from '../../component/PageElements.jsx';
 
 export default function ContactForm() {
 
@@ -92,19 +92,19 @@ export default function ContactForm() {
                                 <FormSectionTitle number={1}>Tell Us About Yourself</FormSectionTitle>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <Input id="name" type="text" label="First Name" value={formData.name || ""} onChange={handleInputChange} required />
+                                        <Input id="name" type="text" label="First Name" value={formData.name || ""} onChange={handleInputChange} required autoComplete="given-name" />
                                     </div>
                                     <div className="col-md-6">
-                                        <Input id="surname" type="text" label="Last Name" value={formData.surname || ""} onChange={handleInputChange} required />
+                                        <Input id="surname" type="text" label="Last Name" value={formData.surname || ""} onChange={handleInputChange} required autoComplete="family-name" />
                                     </div>
                                 </div>
 
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <Input id="email" type="email" label="Email" value={formData.email || ""} onChange={handleInputChange} required />
+                                        <Input id="email" type="email" label="Email" value={formData.email || ""} onChange={handleInputChange} required autoComplete="email" />
                                     </div>
                                     <div className="col-md-6">
-                                        <Input id="phone" type="tel" label="Phone" value={formData.phone || ""} onChange={handleInputChange} required />
+                                        <Input id="phone" type="tel" label="Phone" value={formData.phone || ""} onChange={handleInputChange} required autoComplete="tel" />
                                     </div>
                                 </div>
 
@@ -141,21 +141,21 @@ export default function ContactForm() {
                                 <FormSectionTitle number={1}>Personal Information</FormSectionTitle>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <Input id="job-name" type="text" label="First Name" value={formData.name || ""} onChange={handleInputChange} required />
+                                        <Input id="job-name" type="text" label="First Name" value={formData.name || ""} onChange={handleInputChange} required autoComplete="given-name" />
                                     </div>
 
                                     <div className="col-md-6">
-                                        <Input id="job-surname" type="text" label="Last Name" value={formData.surname || ""} onChange={handleInputChange} required />
+                                        <Input id="job-surname" type="text" label="Last Name" value={formData.surname || ""} onChange={handleInputChange} required autoComplete="family-name" />
                                     </div>
                                 </div>
 
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <Input id="job-email" type="email" label="Email" value={formData.email || ""} onChange={handleInputChange} required />
+                                        <Input id="job-email" type="email" label="Email" value={formData.email || ""} onChange={handleInputChange} required autoComplete="email" />
                                     </div>
 
                                     <div className="col-md-6">
-                                        <Input id="job-phone" type="tel" label="Phone" value={formData.phone || ""} onChange={handleInputChange} required />
+                                        <Input id="job-phone" type="tel" label="Phone" value={formData.phone || ""} onChange={handleInputChange} required autoComplete="tel" />
                                     </div>
                                 </div>
                             </div>
@@ -211,19 +211,8 @@ export default function ContactForm() {
 
                     {/* Form Actions */}
                     <div className="d-flex gap-3 justify-content-end">
-                        <button
-                            type="button"
-                            className="btn btn-outline-elegant"
-                            onClick={resetFormData}
-                        >
-                            Reset Form
-                        </button>
-                        <button
-                            type="submit"
-                            className="btn btn-primary-gradient"
-                        >
-                            {activeTab === 'contact' ? 'Send Inquiry' : 'Submit Application'}
-                        </button>
+                        <Button btnName="Reset Form" classNameBtn="btn-outline-elegant" onClick={resetFormData} />
+                        <Button type="sumbit" btnName={activeTab === 'contact' ? 'Send Inquiry' : 'Submit Application'} classNameBtn="btn-primary-gradient" />
                     </div>
                 </form>
             </div>

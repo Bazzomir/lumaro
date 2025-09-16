@@ -25,13 +25,13 @@ export const HighlightedText = ({ text }) => {
     );
 };
 
-export const Button = ({ btnName, onClick }) => {
+export const Button = ({ btnName, type = "button", onClick, classNameBtn, classNameSpan }) => {
     return (
-        <div className="text-center text-md-start py-5" data-aos="fade-up-right">
-            <button type="button" className="btn btn-purple text-uppercase" onClick={onClick}>
-                <span className="btn-purple--text">{btnName}</span>
-            </button>
-        </div>
+        // <div className="text-center text-md-start py-5" data-aos="fade-up-right">
+        <button type={type} className={`btn ${classNameBtn}`} onClick={onClick}>
+            <span className={classNameSpan}>{btnName}</span>
+        </button>
+        // </div>
     );
 };
 
@@ -44,11 +44,11 @@ export const TabNavBtn = ({ btnName, tabKey, activeTab, setActiveTab }) => {
     );
 };
 
-export const Input = ({ id, type, value, onChange, label, required = false, placeholder = "", classNameDiv = "", classNameInput = "" }) => {
+export const Input = ({ id, type, value, onChange, label, required = false, placeholder = "", classNameDiv = "", classNameInput = "", autoComplete = "off" }) => {
     return (
         // <div className="col-md-6">
         <div className={`floating-group ${classNameDiv}`}>
-            <input id={id} name={id} type={type} className={`floating-input ${classNameInput}`} value={value} onChange={onChange} required={required} placeholder={placeholder || " "} />
+            <input id={id} name={id} type={type} className={`floating-input ${classNameInput}`} value={value} onChange={onChange} required={required} placeholder={placeholder || " "} autoComplete={autoComplete} />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
