@@ -78,7 +78,7 @@ export default function ContactForm() {
             </div>
 
             {/* Tab Navigation */}
-            <div className="tab-nav" data-aos="fade-down">
+            <div className="tab-nav">
                 <TabNavBtn btnName="Contact Us" tabKey="contact" activeTab={activeTab} setActiveTab={setActiveTab} />
                 <TabNavBtn btnName="Job Application" tabKey="job" activeTab={activeTab} setActiveTab={setActiveTab} />
             </div>

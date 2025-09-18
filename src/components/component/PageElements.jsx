@@ -74,10 +74,10 @@ export const FileInput = ({ id, label, onChange, required = false, classNameDiv 
     );
 };
 
-export const Select = ({ id, name, value, onChange, options = [], label, required = false, placeholder = "Select an option", classNameDiv = "", classNameSelect = "" }) => {
+export const Select = ({ id, value = "", onChange, options = [], label, required = false, placeholder = "Select an option", classNameDiv = "", classNameSelect = "" }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
-            <select id={id} name={name} value={value} className={`floating-select ${classNameSelect}`} onChange={onChange} required={required}>
+            <select id={id} name={id} value={value} className={`floating-select ${classNameSelect}`} onChange={onChange} required={required}>
                 <option value="">{placeholder}</option>
                 {options.map((opt, i) => (
                     <option key={i} value={opt}>
