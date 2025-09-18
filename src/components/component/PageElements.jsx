@@ -74,11 +74,11 @@ export const FileInput = ({ id, label, onChange, required = false, classNameDiv 
     );
 };
 
-export const Select = ({ id, value = "", onChange, options = [], label, required = false, placeholder = "Select an option", classNameDiv = "", classNameSelect = "" }) => {
+export const Select = ({ id, value = "", onChange, options = [], label, required = false, placeholder = "", classNameDiv = "", classNameSelect = "" }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
             <select id={id} name={id} value={value} className={`floating-select ${classNameSelect}`} onChange={onChange} required={required}>
-                <option value="">{placeholder}</option>
+                <option value="" disabled hidden>{placeholder}</option>
                 {options.map((opt, i) => (
                     <option key={i} value={opt}>
                         {opt}
@@ -92,7 +92,7 @@ export const Select = ({ id, value = "", onChange, options = [], label, required
     );
 };
 
-export const Textarea = ({ id, label, value, onChange, rows = 4, required = false, placeholder = "", classNameDiv = "", classNameArea = "" }) => {
+export const Textarea = ({ id, label, value = "", onChange, rows = 4, required = false, placeholder = " ", classNameDiv = "", classNameArea = "" }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
             <textarea id={id} name={id} value={value} className={`floating-textarea ${classNameArea}`} onChange={onChange} rows={rows} required={required} placeholder={placeholder || " "} />
@@ -140,7 +140,6 @@ export const ScrollToTopBtn = () => {
             onClick={scrollToTop}
             aria-label="Scroll to top"
         >
-            {/* ⩓ */}
             <FaArrowUp />
         </button>
     );

@@ -29,6 +29,20 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    scrollbar-color: var(--purple) !important;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* body::-webkit-scrollbar-track {
+    background: transparent;
+} */
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 20px;
 }
 
 ::selection {

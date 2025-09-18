@@ -199,13 +199,12 @@ body {
 }
 
 .floating-input:focus+.floating-label,
-.floating-input:valid+.floating-label,
-.floating-input:not([value=""])+.floating-label,
-.floating-select:focus+.floating-label,
-.floating-select:not([value=""])+.floating-label,
+.floating-input:not(:placeholder-shown)+.floating-label,
 .floating-textarea:focus+.floating-label,
-.floating-textarea:valid+.floating-label,
-.floating-textarea:not([value=""])+.floating-label {
+.floating-textarea:not(:placeholder-shown)+.floating-label,
+.floating-select:focus+.floating-label,
+.floating-select:valid+.floating-label,
+.floating-group.has-value .floating-label {
     transform: translateY(-1.2rem) scale(0.85);
     color: hsl(var(--primary));
     font-weight: 500;
@@ -219,6 +218,10 @@ body {
     background-repeat: no-repeat;
     background-size: 16px 12px;
     padding-right: 1.5rem;
+}
+
+.floating-select option:hover {
+    background-color: #522081 !important;
 }
 
 /* Textarea specific styles */
