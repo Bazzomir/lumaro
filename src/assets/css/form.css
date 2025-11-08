@@ -1,87 +1,16 @@
-/* Bootstrap 5.3.5 + Custom Design System */
-
-/* Design System Variables - HSL Colors */
 :root {
-    --bs-primary: 260, 84%, 35%;
-    --bs-primary-rgb: 89, 28, 135;
-    --bs-secondary: 210, 40%, 96.1%;
-    --bs-secondary-rgb: 241, 245, 249;
-    --bs-success: 142, 76%, 36%;
-    --bs-success-rgb: 34, 197, 94;
-    --bs-danger: 0, 84.2%, 60.2%;
-    --bs-danger-rgb: 239, 68, 68;
-    --bs-warning: 38, 92%, 50%;
-    --bs-warning-rgb: 245, 158, 11;
-    --bs-info: 199, 89%, 48%;
-    --bs-info-rgb: 14, 165, 233;
-    --bs-light: 210, 40%, 96.1%;
-    --bs-light-rgb: 241, 245, 249;
-    --bs-dark: 222.2, 84%, 4.9%;
-    --bs-dark-rgb: 15, 23, 42;
-
-    /* Custom Design Tokens */
-    --primary: 260, 84%, 35%;
-    --primary-light: 260, 60%, 50%;
-    --primary-dark: 260, 90%, 25%;
-    --primary-foreground: 210, 40%, 98%;
-    --background: 0, 0%, 100%;
-    --foreground: 222.2, 84%, 4.9%;
     --muted: 210, 40%, 96.1%;
     --muted-foreground: 215.4, 16.3%, 46.9%;
     --border: 214.3, 31.8%, 91.4%;
-    --input: 214.3, 31.8%, 91.4%;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-light) / 0.4);
-
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dark {
-    --background: 222.2, 84%, 4.9%;
-    --foreground: 210, 40%, 98%;
-    --primary: 210, 40%, 98%;
-    --primary-foreground: 222.2, 47.4%, 11.2%;
-    --muted: 217.2, 32.6%, 17.5%;
-    --muted-foreground: 215, 20.2%, 65.1%;
-    --border: 217.2, 32.6%, 17.5%;
-    --input: 217.2, 32.6%, 17.5%;
-}
-
-/* Bootstrap Overrides */
-body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-}
-
-.btn-primary {
-    background: var(--gradient-primary);
-    border: none;
-    color: hsl(var(--primary-foreground));
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-elegant);
-}
-
-.btn-primary:active {
-    transform: translateY(0);
-}
 
 /* Form Header */
 .form-header {
     padding: 2rem;
     text-align: center;
-    color: hsl(var(--primary-foreground));
-    background: var(--gradient-primary);
+    color: #fff;
+    background: #522081;
 }
 
 .form-header h2 {
@@ -116,13 +45,12 @@ body {
 }
 
 .tab-button.active {
-    border-bottom-color: hsl(var(--primary));
-    color: hsl(var(--primary));
-    background-color: hsl(var(--background));
+    border-bottom-color: #522081;
+    color: #522081;
 }
 
 .tab-button:not(.active):hover {
-    color: hsl(var(--foreground));
+    color: #522081;
     background-color: hsl(var(--muted) / 0.5);
 }
 
@@ -143,7 +71,7 @@ body {
     gap: 0.75rem;
     font-size: 1.25rem;
     font-weight: 600;
-    color: hsl(var(--primary));
+    color: #522081;
     margin-bottom: 1.5rem;
 }
 
@@ -151,8 +79,8 @@ body {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background-color: #522081;
+    color: #fff;
     font-size: 0.875rem;
     font-weight: bold;
     display: flex;
@@ -173,18 +101,18 @@ body {
     padding: 1rem 0 0.5rem 0;
     font-size: 1rem;
     border: none;
-    border-bottom: 2px solid hsl(var(--input));
+    border-bottom: 2px solid hsl(var(--border));
     background: transparent;
     outline: none;
     transition: all 0.3s ease;
-    color: hsl(var(--foreground));
+    color: #27103d;
 }
 
 .floating-input:focus,
 .floating-select:focus,
 .floating-textarea:focus {
-    border-bottom-color: hsl(var(--primary));
-    background: hsl(var(--primary) / 0.02);
+    border-bottom-color: #522081;
+    background: #520EBE05;
 }
 
 .floating-label {
@@ -206,7 +134,7 @@ body {
 .floating-select:valid+.floating-label,
 .floating-group.has-value .floating-label {
     transform: translateY(-1.2rem) scale(0.85);
-    color: hsl(var(--primary));
+    color: #522081;
     font-weight: 500;
 }
 
@@ -236,17 +164,17 @@ body {
     padding: 0.75rem 2rem;
     border-radius: 2rem;
     font-weight: 500;
-    color: hsl(var(--primary-foreground));
+    color: #fff;
     border: none;
-    background: var(--gradient-primary);
+    background: #522081;
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
 .btn-primary-gradient:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px hsl(var(--primary) / 0.3);
-    background: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    color: #522081;
+    background-color: #fff;
+    border: 1px solid #522081;
 }
 
 .btn-outline-elegant {
@@ -262,7 +190,7 @@ body {
 
 .btn-outline-elegant:hover {
     background-color: hsl(var(--muted-foreground));
-    color: hsl(var(--primary-foreground));
+    color: #fff;
     transform: translateY(-2px);
 }
 
