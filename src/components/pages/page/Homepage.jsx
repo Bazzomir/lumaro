@@ -2,7 +2,7 @@ import { useState } from 'react';
 // import { useInView } from '../../../hooks/useInView.js';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useData } from '../../../hooks/useData.js';
-import { Button } from '../../component/PageElements.jsx';
+import { Button, ScrollToTopBtn } from '../../component/PageElements.jsx';
 import { ScrollDownAnimation, LoadingAnimation } from '../../component/animations.jsx';
 import { HighlightedText, Section } from '../../component/PageElements.jsx';
 
@@ -43,12 +43,16 @@ export default function Homepage() {
                                 {homepage.header.paragraph}
                             </p>
                         </div>
-                        <Button btnName="Start Now" onClick={() => navigate("/form")} />
+                        <div className="text-center text-md-start py-5" data-aos="fade-up-right">
+                            <Button btnName="Start Now" classNameBtn="btn-purple text-uppercase" classNameSpan="btn-purple--text" onClick={() => navigate("/lumaro/form")} />
+                        </div>
                     </div>
                 </div>
                 {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToDown} />)}
             </div>
             {/* </section> */}
+
+            <ScrollToTopBtn />
         </Section>
     );
 }

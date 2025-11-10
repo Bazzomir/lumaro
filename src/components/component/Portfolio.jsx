@@ -23,11 +23,10 @@ const portfolioProjects = [
 
 const Portfolio = () => {
     useEffect(() => {
-        // Initialize Bootstrap carousel with 3-second auto-rotation
         const carouselElement = document.querySelector('#portfolioCarousel');
         if (carouselElement && window.bootstrap) {
             new window.bootstrap.Carousel(carouselElement, {
-                interval: 3000, // 3 seconds
+                interval: 3000,
                 ride: 'carousel',
                 pause: 'hover'
             });
