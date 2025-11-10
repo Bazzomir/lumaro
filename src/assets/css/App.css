@@ -3,9 +3,12 @@
     --purple: #522081;
     --white: #ffffff;
     --black: #010512;
+    --gray: #64748B;
+    --gray-light: #e4eaf1;
 
     /* Shadow System */
-    --shadow-primary: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
+    --shadow-purple: -7px 7px 5px 0px rgba(82, 32, 129, 0.75);
+    --shadow-gray: -7px 7px 5px 0px rgba(100, 116, 139, 0.75);
     --shadow-focus: 0px 0px 9px 0px rgba(82, 32, 129, 0.9);
     --shadow-card: 12px 12px 12px rgba(82, 23, 129, 0.5);
 
@@ -230,7 +233,44 @@ body::-webkit-scrollbar-thumb {
     color: var(--purple) !important;
     border: 2px solid var(--purple) !important;
     transform: scale(1.1) !important;
-    box-shadow: var(--shadow-primary);
+    box-shadow: var(--shadow-purple);
+}
+
+.btn-purle-small {
+    border-radius: var(--border-radius-pill);
+    font-weight: 500;
+    color: var(--white);
+    border: none;
+    background: #522081;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-purle-small:hover {
+    background-color: var(--white);
+    color: var(--purple);
+    border: 2px solid #522081;
+    transform: scale(1.1);
+    box-shadow: var(--shadow-purple);
+}
+
+.btn-gray-small {
+    border-radius: var(--border-radius-pill);
+    font-weight: 500;
+    /* border: 2px solid hsl(var(--muted-foreground)); */
+    border: 2px solid var(--gray);
+    /* color: hsl(var(--muted-foreground)); */
+    color: var(--gray);
+    background: transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-gray-small:hover {
+    background-color: var(--gray);
+    color: var(--white);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-gray);
 }
 
 /* Scroll to Top Button */
