@@ -68,7 +68,7 @@ export default function ContactForm() {
 
     return (
 
-        <Section className="justify-content-center pt-0 py-5 fade-in">
+        <Section className="justify-content-center pt-0 py-5">
             <div className="form-header">
                 <h2>{activeTab === 'contact' ? "Let's Start a Conversation" : "Join Our Team"}</h2>
                 <p>{activeTab === 'contact'
@@ -86,7 +86,7 @@ export default function ContactForm() {
             <div className="p-4">
                 <form onSubmit={handleSubmit}>
                     {activeTab === 'contact' ? (
-                        <>
+                        <div className="fade-in">
                             {/* Section 1: Personal Information */}
                             <div className="form-section">
                                 <FormSectionTitle number={1}>Tell Us About Yourself</FormSectionTitle>
@@ -133,11 +133,11 @@ export default function ContactForm() {
                                 <Textarea id="projectDescription" label="Project Description" value={formData.projectDescription || ""} onChange={handleInputChange} required />
                                 <Select id="projectBudget" label="Project Budget" value={formData.projectBudget || ""} onChange={handleInputChange} options={queryData.form.options.budgetRanges} required />
                             </div>
-                        </>
+                        </div>
                     ) : (
-                        <>
+                        <div className="fade-in">
                             {/* Job Application Sections */}
-                            <div className="form-section">
+                            < div className="form-section">
                                 <FormSectionTitle number={1}>Personal Information</FormSectionTitle>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -202,22 +202,23 @@ export default function ContactForm() {
 
                             {/* Section 4: Additional Information */}
                             <div className="form-section">
-                                <FormSectionTitle number={4}>Education & Availability</FormSectionTitle>
+                                <FormSectionTitle number={4}>Resume & Cover Letter</FormSectionTitle>
                                 <Textarea id="coverLetter" label="Cover Letter" value={formData.coverLetter || ""} onChange={handleInputChange} required />
                                 <FileInput id="resumeFile" label="Upload Resume" value={formData.resumeFile || ""} onChange={handleInputChange} required />
                             </div>
-                        </>
-                    )}
+                        </div>
+                    )
+                    }
 
                     {/* Form Actions */}
                     <div className="d-flex gap-3 justify-content-end">
-                        <Button btnName="Reset Form" classNameBtn="btn-outline-elegant" onClick={resetFormData} />
-                        <Button type="sumbit" btnName={activeTab === 'contact' ? 'Send Inquiry' : 'Submit Application'} classNameBtn="btn-primary-gradient" />
+                        <Button btnName="Reset Form" classNameBtn="btn-gray-small px-4 py-2" onClick={resetFormData} />
+                        <Button type="sumbit" btnName={activeTab === 'contact' ? 'Send Inquiry' : 'Submit Application'} classNameBtn="btn-purle-small px-4 py-2" />
                     </div>
-                </form>
-            </div>
+                </form >
+            </div >
 
             <ScrollToTopBtn />
-        </Section>
+        </Section >
     );
 }

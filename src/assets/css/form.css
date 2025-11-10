@@ -1,16 +1,10 @@
-:root {
-    --muted: 210, 40%, 96.1%;
-    --muted-foreground: 215.4, 16.3%, 46.9%;
-    --border: 214.3, 31.8%, 91.4%;
-}
-
-
 /* Form Header */
 .form-header {
     padding: 2rem;
     text-align: center;
-    color: #fff;
-    background: #522081;
+    color: var(--white);
+    background: var(--purple);
+    border-radius: var(--border-radius-pill);
 }
 
 .form-header h2 {
@@ -27,8 +21,7 @@
 /* Tab Navigation */
 .tab-nav {
     display: flex;
-    border-bottom: 1px solid hsl(var(--border));
-    background-color: hsl(var(--muted) / 0.3);
+    border-bottom: 1px solid var(--gray-light);
 }
 
 .tab-button {
@@ -39,26 +32,27 @@
     border: none;
     border-bottom: 2px solid transparent;
     background: transparent;
-    color: hsl(var(--muted-foreground));
+    color: var(--gray);
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
 .tab-button.active {
-    border-bottom-color: #522081;
-    color: #522081;
+    border-bottom-color: var(--purple);
+    color: var(--purple);
+    background-color: #510ebe03;
 }
 
 .tab-button:not(.active):hover {
-    color: #522081;
-    background-color: hsl(var(--muted) / 0.5);
+    color: var(--purple);
+    background-color: #520EBE03;
 }
 
 /* Form Sections */
 .form-section {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid hsl(var(--border));
+    /* border-bottom: 1px solid var(--gray-light); */
 }
 
 .form-section:last-child {
@@ -71,7 +65,7 @@
     gap: 0.75rem;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #522081;
+    color: var(--purple);
     margin-bottom: 1.5rem;
 }
 
@@ -79,8 +73,8 @@
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color: #522081;
-    color: #fff;
+    background-color: var(--purple);
+    color: var(--white);
     font-size: 0.875rem;
     font-weight: bold;
     display: flex;
@@ -94,6 +88,10 @@
     margin-bottom: 1.5rem;
 }
 
+.floating-group input[type="file"]::file-selector-button {
+    display: none;
+}
+
 .floating-input,
 .floating-select,
 .floating-textarea {
@@ -101,7 +99,7 @@
     padding: 1rem 0 0.5rem 0;
     font-size: 1rem;
     border: none;
-    border-bottom: 2px solid hsl(var(--border));
+    border-bottom: 2px solid var(--gray-light);
     background: transparent;
     outline: none;
     transition: all 0.3s ease;
@@ -111,8 +109,7 @@
 .floating-input:focus,
 .floating-select:focus,
 .floating-textarea:focus {
-    border-bottom-color: #522081;
-    background: #520EBE05;
+    border-bottom-color: var(--purple);
 }
 
 .floating-label {
@@ -120,7 +117,7 @@
     left: 0;
     top: 1rem;
     font-size: 1rem;
-    color: hsl(var(--muted-foreground));
+    color: var(--gray);
     pointer-events: none;
     transition: all 0.3s ease;
     transform-origin: left;
@@ -134,9 +131,11 @@
 .floating-select:valid+.floating-label,
 .floating-group.has-value .floating-label {
     transform: translateY(-1.2rem) scale(0.85);
-    color: #522081;
+    color: var(--purple);
     font-weight: 500;
 }
+
+
 
 /* Select specific styles */
 .floating-select {
@@ -149,7 +148,7 @@
 }
 
 .floating-select option:hover {
-    background-color: #522081 !important;
+    background-color: var(--purple) !important;
 }
 
 /* Textarea specific styles */
@@ -157,41 +156,6 @@
     resize: vertical;
     min-height: 5rem;
     font-family: inherit;
-}
-
-/* Button Styles */
-.btn-primary-gradient {
-    padding: 0.75rem 2rem;
-    border-radius: 2rem;
-    font-weight: 500;
-    color: #fff;
-    border: none;
-    background: #522081;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.btn-primary-gradient:hover {
-    color: #522081;
-    background-color: #fff;
-    border: 1px solid #522081;
-}
-
-.btn-outline-elegant {
-    padding: 0.75rem 2rem;
-    border-radius: 2rem;
-    font-weight: 500;
-    border: 2px solid hsl(var(--muted-foreground));
-    color: hsl(var(--muted-foreground));
-    background: transparent;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.btn-outline-elegant:hover {
-    background-color: hsl(var(--muted-foreground));
-    color: #fff;
-    transform: translateY(-2px);
 }
 
 /* Animations */
