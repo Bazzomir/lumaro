@@ -154,6 +154,39 @@
       "Instagram"
     ]
   },
+  "portfolio": {
+    "header": {
+      "title": "{Port}folio",
+      "paragraph": "Explore our latest work and creative projects built with modern technologies and modern design."
+    },
+    "projects": [
+      {
+        "title": "E-Commerce Platform - ShopVerse",
+        "description": "A modern and scalable e-commerce solution built for speed, security, and effortless management, featuring payment integrations, order tracking, and real-time sales insights.",
+        "image": "eCommerce"
+      },
+      {
+        "title": "Task Management App - FlowTrack",
+        "description": "An intuitive task management app designed to enhance team productivity with visual boards, real-time notifications, and smart progress tracking.",
+        "image": "taskManagement"
+      },
+      {
+        "title": "Business Analytics Dashboard - InsightIQ",
+        "description": "A web-based platform that empowers businesses to visualize and analyze data in real time through advanced charts, filters, and automated reporting.",
+        "image": "insightIQ"
+      },
+      {
+        "title": "Financial Management System - FinSync",
+        "description": "A complete financial management and budgeting solution with automated expense tracking, detailed reports, and seamless banking integration.",
+        "image": "finSync"
+      },
+      {
+        "title": "IoT Home Control App - SmartHub",
+        "description": "A sleek mobile app for smart homes that lets users control devices, lighting, and security systems through a simple and intuitive interface.",
+        "image": "smartHub"
+      }
+    ]
+  },
   "form": {
     "options": {
       "services": [
