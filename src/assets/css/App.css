@@ -634,6 +634,11 @@ body::-webkit-scrollbar-thumb {
 
 /* Extra Small Devices (Less than 576px) */
 @media (max-width: 575.98px) {
+
+    .homepage {
+        background-image: none;
+    }
+
     .header-text--big {
         font-size: 3.425rem;
         line-height: 3.5rem;
@@ -743,6 +748,11 @@ body::-webkit-scrollbar-thumb {
 
 /* Micro Devices (Less than 360px) */
 @media (max-width: 359.98px) {
+
+    .homepage {
+        background-image: none;
+    }
+
     .header-text--big {
         font-size: 2.8rem;
         line-height: 3rem;
@@ -781,6 +791,11 @@ body::-webkit-scrollbar-thumb {
 
 /* Landscape Orientation Adjustments */
 @media (orientation: landscape) and (max-height: 500px) {
+
+    /* .homepage {
+        background-image: none;
+    } */
+
     .header-text--big {
         font-size: 2.5rem;
         line-height: 2.8rem;
