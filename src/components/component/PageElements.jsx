@@ -35,6 +35,23 @@ export const Button = ({ btnName, type = "button", onClick, classNameBtn, classN
     );
 };
 
+export const CarouselControl = ({ direction = "prev", target }) => {
+    return (
+        <button
+            className={`carousel-control-${direction}`}
+            type="button"
+            data-bs-target={target}
+            data-bs-slide={direction}
+        >
+            <span className={`carousel-control-${direction}-icon`} aria-hidden="true"></span>
+            <span className="visually-hidden">
+                {direction === "prev" ? "Previous" : "Next"}
+            </span>
+        </button>
+    );
+}
+
+
 export const TabNavBtn = ({ btnName, tabKey, activeTab, setActiveTab }) => {
     return (
         <button type="button" className={`tab-button ${activeTab === tabKey ? 'active' : ''}`} onClick={() => setActiveTab(tabKey)}
