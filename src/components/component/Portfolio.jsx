@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import { useData } from '../../hooks/useData.js';
-import { LoadingAnimation } from './animations';
-import { Section, HighlightedText } from '../component/PageElements.jsx';
-
-// Импортите за слики
+import { useInView } from '../../hooks/useInView.js';
+import { LoadingAnimation } from './animations.jsx';
+import { HighlightedText, CarouselControl } from '../component/PageElements.jsx';
 import eCommerceImg from '../../../public/image/portfolio/eCommerce.jpg';
 import taskManagementImg from '../../../public/image/portfolio/taskManagement.jpg';
 import insightIQImg from '../../../public/image/portfolio/insightIQ.jpg';
@@ -11,27 +10,32 @@ import finSyncImg from '../../../public/image/portfolio/finSync.jpg';
 import smartHubImg from '../../../public/image/portfolio/smartHub.jpg';
 
 const portfolioImage = {
-    "eCommerce": eCommerceImg,
-    "taskManagement": taskManagementImg,
-    "insightIQ": insightIQImg,
-    "finSync": finSyncImg,
-    "smartHub": smartHubImg,
+    eCommerce: eCommerceImg,
+    taskManagement: taskManagementImg,
+    insightIQ: insightIQImg,
+    finSync: finSyncImg,
+    smartHub: smartHubImg,
 };
 
 export default function Portfolio() {
 
     const { data, isLoading, error } = useData();
+    const [ref, inView] = useInView({ threshold: 0.3 });
 
     useEffect(() => {
-        const carouselElement = document.querySelector("#portfolioCarousel");
-        if (carouselElement && window.bootstrap) {
-            new window.bootstrap.Carousel(carouselElement, {
-                interval: 3000,
-                ride: "carousel",
-                pause: "hover",
-            });
-        }
-    }, []);
+        const element = document.querySelector("#portfolioCarousel");
+        if (!element || !window.bootstrap) return;
+
+        const carousel = new window.bootstrap.Carousel(element, {
+            interval: 3000,
+            ride: false,
+            pause: false
+        });
+
+        inView ? carousel.cycle() : carousel.pause();
+
+        return () => { try { carousel.pause() } catch { } };
+    }, [inView]);
 
     if (isLoading) return <LoadingAnimation />;
     if (error) return <p>{error.message}</p>;
@@ -40,12 +44,10 @@ export default function Portfolio() {
     const projects = portfolioData.projects;
 
     return (
-        // <Section id="portfolio" className="portfolio py-5" data-aos="zoom-in">
-        // <div className="container">
-        <>
+        <section>
             <div className="row">
-                <div className="col-12 my-3">
-                    <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
+                <div className="col-12 my-3" data-aos="fade-down">
+                    <h3 className="text-center p-3 mb-0 header-text--small">
                         <HighlightedText text={portfolioData.header.title} />
                     </h3>
                     <p className="lead text-center text-muted">
@@ -54,25 +56,13 @@ export default function Portfolio() {
                 </div>
             </div>
 
-            <div className="row justify-content-center">
+            <div className="row justify-content-center" data-aos="zoom-in">
                 <div className="col-12">
 
-                    <div
-                        id="portfolioCarousel"
-                        className="carousel slide shadow-lg rounded"
-                        data-bs-ride="carousel"
-                    >
+                    <div id="portfolioCarousel" ref={ref} className="carousel slide shadow-lg rounded" data-bs-ride="carousel">
                         <div className="carousel-indicators">
                             {projects.map((_, index) => (
-                                <button
-                                    key={index}
-                                    type="button"
-                                    data-bs-target="#portfolioCarousel"
-                                    data-bs-slide-to={index}
-                                    className={index === 0 ? "active" : ""}
-                                    aria-current={index === 0 ? "true" : "false"}
-                                    aria-label={`Slide ${index + 1}`}
-                                ></button>
+                                <button key={index} type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to={index} className={index === 0 ? "active" : ""}></button>
                             ))}
                         </div>
 
@@ -81,12 +71,8 @@ export default function Portfolio() {
                                 const Img = portfolioImage[project.image];
 
                                 return (
-                                    <div
-                                        key={index}
-                                        className={`carousel-item ${index === 0 ? "active" : ""}`}
-                                    >
+                                    <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                                         <div className="row g-0 bg-white">
-                                            {/* Image */}
                                             <div className="col-md-6">
                                                 <img
                                                     src={Img}
@@ -96,7 +82,6 @@ export default function Portfolio() {
                                                 />
                                             </div>
 
-                                            {/* Text */}
                                             <div className="col-md-6 d-flex align-items-center">
                                                 <div className="p-4 p-lg-5">
                                                     <h3 className="h2 fw-bold text-dark mb-3">
@@ -113,33 +98,11 @@ export default function Portfolio() {
                                 );
                             })}
                         </div>
-
-                        <button
-                            className="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#portfolioCarousel"
-                            data-bs-slide="prev"
-                        >
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-
-                        <button
-                            className="carousel-control-next"
-                            type="button"
-                            data-bs-target="#portfolioCarousel"
-                            data-bs-slide="next"
-                        >
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
+                        <CarouselControl direction="prev" target="#portfolioCarousel" />
+                        <CarouselControl direction="next" target="#portfolioCarousel" />
                     </div>
-
                 </div>
             </div>
-        </>
-
-        // </div>
-        // </Section >
+        </section>
     );
 }
