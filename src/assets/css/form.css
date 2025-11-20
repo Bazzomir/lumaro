@@ -1,26 +1,5 @@
-/* Form Header */
-.form-header {
-    padding: 2rem;
-    text-align: center;
-    color: var(--white);
-    background: var(--purple);
-    border-radius: var(--border-radius-pill);
-}
-
-.form-header h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.form-header p {
-    font-size: 1.125rem;
-    opacity: 0.9;
-}
-
 /* Tab Navigation */
 .tab-nav {
-    display: flex;
     border-bottom: 1px solid var(--gray-light);
 }
 
@@ -48,25 +27,10 @@
     background-color: #520EBE03;
 }
 
-/* Form Sections */
-.form-section {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    /* border-bottom: 1px solid var(--gray-light); */
-}
-
-.form-section:last-child {
-    border-bottom: none;
-}
-
 .section-title {
-    display: flex;
-    align-items: center;
     gap: 0.75rem;
     font-size: 1.25rem;
-    font-weight: 600;
     color: var(--purple);
-    margin-bottom: 1.5rem;
 }
 
 .section-number {
@@ -76,10 +40,6 @@
     background-color: var(--purple);
     color: var(--white);
     font-size: 0.875rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Floating Input Styles */
@@ -134,8 +94,6 @@
     color: var(--purple);
     font-weight: 500;
 }
-
-
 
 /* Select specific styles */
 .floating-select {

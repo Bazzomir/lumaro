@@ -2,7 +2,7 @@ import '../../../assets/css/form.css';
 import { useState, useEffect } from 'react';
 import { useData } from '../../../hooks/useData.js';
 import { LoadingAnimation } from '../../component/animations.jsx';
-import { Input, Select, Textarea, FileInput, Section, TabNavBtn, ScrollToTopBtn, FormSectionTitle, Button } from '../../component/PageElements.jsx';
+import { HighlightedText, Input, Select, Textarea, FileInput, Section, TabNavBtn, ScrollToTopBtn, FormSectionTitle, Button } from '../../component/PageElements.jsx';
 
 export default function ContactForm() {
 
@@ -56,8 +56,10 @@ export default function ContactForm() {
         console.log('Form submitted:', formData);
 
         const message = activeTab === 'contact'
-            ? "Thank you for your inquiry! We'll get back to you within 24 hours."
-            : "Thank you for your application! We'll review it and get back to you soon.";
+            // ? "Thank you for your inquiry! We'll get back to you within 24 hours."
+            ? queryData.form.text.messageContact
+            // : "Thank you for your application! We'll review it and get back to you soon.";
+            : queryData.form.text.messageJobApp;
 
         alert(message);
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -65,20 +67,23 @@ export default function ContactForm() {
 
     };
 
-
     return (
 
         <Section className="justify-content-center pt-0 py-5">
-            <div className="form-header">
-                <h2>{activeTab === 'contact' ? "Let's Start a Conversation" : "Join Our Team"}</h2>
-                <p>{activeTab === 'contact'
-                    ? "Tell us about your needs and we'll create something amazing together"
-                    : "Apply for a position and start your career journey with us"
+            <div className="form-header pb-5">
+                {/* <h2>{activeTab === 'contact' ? "Let's Start a Conversation" : "Join Our Team"}</h2> */}
+                <h2 className="mb-0 mx-0 mx-sm-auto text-center w-100 w-lg-75 fw-bold">
+                    <HighlightedText text={activeTab === 'contact' ? queryData.form.text.titleContact : queryData.form.text.titleJobApp} /></h2>
+                <p className="services--paragraph text-center">{activeTab === 'contact'
+                    // ? "Tell us about your needs and we'll create something amazing together"
+                    ? queryData.form.text.paragraphContact
+                    // : "Apply for a position and start your career journey with us"
+                    : queryData.form.text.paragraphJobApp
                 }</p>
             </div>
 
             {/* Tab Navigation */}
-            <div className="tab-nav">
+            <div className="tab-nav d-flex">
                 <TabNavBtn btnName="Contact Us" tabKey="contact" activeTab={activeTab} setActiveTab={setActiveTab} />
                 <TabNavBtn btnName="Job Application" tabKey="job" activeTab={activeTab} setActiveTab={setActiveTab} />
             </div>
@@ -88,7 +93,7 @@ export default function ContactForm() {
                     {activeTab === 'contact' ? (
                         <div className="fade-in">
                             {/* Section 1: Personal Information */}
-                            <div className="form-section">
+                            <div className="mb-4 pb-4">
                                 <FormSectionTitle number={1}>Tell Us About Yourself</FormSectionTitle>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -119,7 +124,7 @@ export default function ContactForm() {
                             </div>
 
                             {/* Section 2: Services */}
-                            <div className="form-section">
+                            <div className="mb-4 pb-4">
                                 <FormSectionTitle number={2}>What Can We Help You With?</FormSectionTitle>
                                 <Select id="service" value={formData.service || ""} onChange={handleInputChange} label="Select a service" options={queryData.form.options.services} required />
                                 {formData.service === 'Other' && (
@@ -128,7 +133,7 @@ export default function ContactForm() {
                             </div>
 
                             {/* Section 3: Project Details */}
-                            <div className="form-section">
+                            <div className="mb-4 pb-4">
                                 <FormSectionTitle number={3}>Tell Us About Your Project</FormSectionTitle>
                                 <Textarea id="projectDescription" label="Project Description" value={formData.projectDescription || ""} onChange={handleInputChange} required />
                                 <Select id="projectBudget" label="Project Budget" value={formData.projectBudget || ""} onChange={handleInputChange} options={queryData.form.options.budgetRanges} required />
@@ -137,7 +142,7 @@ export default function ContactForm() {
                     ) : (
                         <div className="fade-in">
                             {/* Job Application Sections */}
-                            < div className="form-section">
+                            < div className="mb-4 pb-4">
                                 <FormSectionTitle number={1}>Personal Information</FormSectionTitle>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -161,7 +166,7 @@ export default function ContactForm() {
                             </div>
 
                             {/* Section 2: Position & Experience */}
-                            <div className="form-section">
+                            <div className="mb-4 pb-4">
                                 <FormSectionTitle number={2}>Position & Experience</FormSectionTitle>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -177,7 +182,7 @@ export default function ContactForm() {
                             </div>
 
                             {/* Section 3: Education & Availability */}
-                            <div className="form-section">
+                            <div className="mb-4 pb-4">
                                 <FormSectionTitle number={3}>Education & Availability</FormSectionTitle>
                                 <div className="row">
                                     <div className="col-md-6">
@@ -201,7 +206,7 @@ export default function ContactForm() {
                             </div>
 
                             {/* Section 4: Additional Information */}
-                            <div className="form-section">
+                            <div className="mb-4 pb-4">
                                 <FormSectionTitle number={4}>Resume & Cover Letter</FormSectionTitle>
                                 <Textarea id="coverLetter" label="Cover Letter" value={formData.coverLetter || ""} onChange={handleInputChange} required />
                                 <FileInput id="resumeFile" label="Upload Resume" value={formData.resumeFile || ""} onChange={handleInputChange} required />

@@ -27,13 +27,28 @@ export const HighlightedText = ({ text }) => {
 
 export const Button = ({ btnName, type = "button", onClick, classNameBtn, classNameSpan }) => {
     return (
-        // <div className="text-center text-md-start py-5" data-aos="fade-up-right">
         <button type={type} className={`btn ${classNameBtn}`} onClick={onClick}>
             <span className={classNameSpan}>{btnName}</span>
         </button>
-        // </div>
     );
 };
+
+export const CarouselControl = ({ direction = "prev", target }) => {
+    return (
+        <button
+            className={`carousel-control-${direction}`}
+            type="button"
+            data-bs-target={target}
+            data-bs-slide={direction}
+        >
+            <span className={`carousel-control-${direction}-icon`} aria-hidden="true"></span>
+            <span className="visually-hidden">
+                {direction === "prev" ? "Previous" : "Next"}
+            </span>
+        </button>
+    );
+}
+
 
 export const TabNavBtn = ({ btnName, tabKey, activeTab, setActiveTab }) => {
     return (
@@ -46,14 +61,12 @@ export const TabNavBtn = ({ btnName, tabKey, activeTab, setActiveTab }) => {
 
 export const Input = ({ id, type, value, onChange, label, required = false, placeholder = "", classNameDiv = "", classNameInput = "", autoComplete = "off" }) => {
     return (
-        // <div className="col-md-6">
         <div className={`floating-group ${classNameDiv}`}>
             <input id={id} name={id} type={type} className={`floating-input ${classNameInput}`} value={value} onChange={onChange} required={required} placeholder={placeholder || " "} autoComplete={autoComplete} />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
         </div>
-        // </div>
     );
 };
 
@@ -64,12 +77,6 @@ export const FileInput = ({ id, label, onChange, required = false, classNameDiv 
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
-
-            {/* {value && (
-                <p className="file-name">
-                    Selected file: <strong>{value.name}</strong>
-                </p>
-            )} */}
         </div>
     );
 };
@@ -105,8 +112,8 @@ export const Textarea = ({ id, label, value = "", onChange, rows = 4, required =
 
 export const FormSectionTitle = ({ number, children }) => {
     return (
-        <h4 className="section-title">
-            <span className="section-number">
+        <h4 className="section-title d-flex align-items-center fw-semibold mb-4">
+            <span className="section-number d-flex align-items-center justify-content-center fw-bold">
                 {number.toString().padStart(2, "0")}
             </span>
             {children}

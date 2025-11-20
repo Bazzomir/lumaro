@@ -39,9 +39,6 @@ body::-webkit-scrollbar {
     width: 12px;
 }
 
-/* body::-webkit-scrollbar-track {
-    background: transparent;
-} */
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--purple);
@@ -71,10 +68,6 @@ body::-webkit-scrollbar-thumb {
 
 .pb-6 {
     padding-bottom: 8rem !important;
-}
-
-.fw-500 {
-    font-weight: 500 !important;
 }
 
 .text-purple {
@@ -206,7 +199,7 @@ body::-webkit-scrollbar-thumb {
 
 .services--paragraph {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 /* =============================================================================
@@ -634,6 +627,13 @@ body::-webkit-scrollbar-thumb {
 
 /* Extra Small Devices (Less than 576px) */
 @media (max-width: 575.98px) {
+
+    .homepage {
+        /* background-image: none; */
+        background-position: top;
+        background-size: 80%;
+    }
+
     .header-text--big {
         font-size: 3.425rem;
         line-height: 3.5rem;
@@ -743,6 +743,13 @@ body::-webkit-scrollbar-thumb {
 
 /* Micro Devices (Less than 360px) */
 @media (max-width: 359.98px) {
+
+    .homepage {
+        /* background-image: none; */
+        background-position: top;
+        background-size: 75%;
+    }
+
     .header-text--big {
         font-size: 2.8rem;
         line-height: 3rem;
@@ -781,6 +788,13 @@ body::-webkit-scrollbar-thumb {
 
 /* Landscape Orientation Adjustments */
 @media (orientation: landscape) and (max-height: 500px) {
+
+    .homepage {
+        /* background-image: none; */
+        background-position: right;
+        background-size: 50%;
+    }
+
     .header-text--big {
         font-size: 2.5rem;
         line-height: 2.8rem;
