@@ -39,9 +39,6 @@ body::-webkit-scrollbar {
     width: 12px;
 }
 
-/* body::-webkit-scrollbar-track {
-    background: transparent;
-} */
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--purple);
@@ -71,10 +68,6 @@ body::-webkit-scrollbar-thumb {
 
 .pb-6 {
     padding-bottom: 8rem !important;
-}
-
-.fw-500 {
-    font-weight: 500 !important;
 }
 
 .text-purple {
@@ -636,7 +629,9 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 575.98px) {
 
     .homepage {
-        background-image: none;
+        /* background-image: none; */
+        background-position: top;
+        background-size: 80%;
     }
 
     .header-text--big {
@@ -750,7 +745,9 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 359.98px) {
 
     .homepage {
-        background-image: none;
+        /* background-image: none; */
+        background-position: top;
+        background-size: 75%;
     }
 
     .header-text--big {
@@ -792,9 +789,11 @@ body::-webkit-scrollbar-thumb {
 /* Landscape Orientation Adjustments */
 @media (orientation: landscape) and (max-height: 500px) {
 
-    /* .homepage {
-        background-image: none;
-    } */
+    .homepage {
+        /* background-image: none; */
+        background-position: right;
+        background-size: 50%;
+    }
 
     .header-text--big {
         font-size: 2.5rem;
