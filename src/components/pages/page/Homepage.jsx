@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { useInView } from '../../../hooks/useInView.js';
+import { useInView } from '../../../hooks/useInView.js';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useData } from '../../../hooks/useData.js';
 import { Button, ScrollToTopBtn } from '../../component/PageElements.jsx';
@@ -7,7 +7,7 @@ import { ScrollDownAnimation, LoadingAnimation } from '../../component/animation
 import { HighlightedText, Section } from '../../component/PageElements.jsx';
 
 export default function Homepage() {
-    // const [ref, inView] = useInView({ threshold: 0.25 });
+    const [ref, inView] = useInView({ threshold: 0.25 });
     const navigate = useNavigate();
     const { data, isLoading, error } = useData();
     const [hideAnimation, setHideAnimation] = useState(false);
@@ -23,12 +23,12 @@ export default function Homepage() {
 
     const homepage = data.homepage;
     const isHome = location.pathname === "/lumaro" || location.pathname === "/lumaro/";
-    const shouldShowAnimation = isHome && !hideAnimation;
+    const shouldShowAnimation = isHome && !hideAnimation && inView;
 
     return (
         // <section className="homepage container-fluid pt-6 px-120 h-100 box-sizing overflow-hidden relative" id="home" >
         <Section className="homepage" id="home">
-            <div className="row">
+            <div className="row" ref={ref}>
                 <div className="col-12 col-lg-7">
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
