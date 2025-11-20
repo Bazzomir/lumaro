@@ -112,8 +112,8 @@ export const Textarea = ({ id, label, value = "", onChange, rows = 4, required =
 
 export const FormSectionTitle = ({ number, children }) => {
     return (
-        <h4 className="section-title">
-            <span className="section-number">
+        <h4 className="section-title d-flex align-items-center fw-semibold mb-4">
+            <span className="section-number d-flex align-items-center justify-content-center fw-bold">
                 {number.toString().padStart(2, "0")}
             </span>
             {children}
