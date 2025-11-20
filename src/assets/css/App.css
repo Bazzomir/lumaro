@@ -109,7 +109,6 @@ body::-webkit-scrollbar-thumb {
     width: 120px;
 }
 
-
 .aboutAnimation {
     position: relative;
     z-index: 2;
@@ -359,14 +358,6 @@ body::-webkit-scrollbar-thumb {
 .contact-card-body__avatar {
     height: 98px;
     width: 98px;
-}
-
-/* =============================================================================
-   MODAL
-   ============================================================================= */
-.modal {
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
 }
 
 /* =============================================================================
