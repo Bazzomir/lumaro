@@ -59,10 +59,10 @@ export const TabNavBtn = ({ btnName, tabKey, activeTab, setActiveTab }) => {
     );
 };
 
-export const Input = ({ id, type, value, onChange, label, required = false, placeholder = "", classNameDiv = "", classNameInput = "", autoComplete = "off" }) => {
+export const Input = ({ id, name, type, value, onChange, label, required = false, placeholder = "", classNameDiv = "", classNameInput = "", autoComplete = "off" }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
-            <input id={id} name={id} type={type} className={`floating-input ${classNameInput}`} value={value} onChange={onChange} required={required} placeholder={placeholder || " "} autoComplete={autoComplete} />
+            <input id={id} name={name} type={type} className={`floating-input ${classNameInput}`} value={value} onChange={onChange} required={required} placeholder={placeholder || " "} autoComplete={autoComplete} />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
@@ -70,10 +70,10 @@ export const Input = ({ id, type, value, onChange, label, required = false, plac
     );
 };
 
-export const FileInput = ({ id, label, onChange, required = false, classNameDiv = "" }) => {
+export const FileInput = ({ id, name, label, onChange, required = false, classNameDiv = "" }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
-            <input id={id} name={id} type="file" className="floating-input" onChange={onChange} required={required} accept=".pdf,.doc,.docx" />
+            <input id={id} name={name} type="file" className="floating-input" onChange={onChange} required={required} accept=".pdf,.doc,.docx" />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
@@ -81,10 +81,10 @@ export const FileInput = ({ id, label, onChange, required = false, classNameDiv 
     );
 };
 
-export const Select = ({ id, value = "", onChange, options = [], label, required = false, placeholder = "", classNameDiv = "", classNameSelect = "" }) => {
+export const Select = ({ id, name, value = "", onChange, options = [], label, required = false, placeholder = "", classNameDiv = "", classNameSelect = "" }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
-            <select id={id} name={id} value={value} className={`floating-select ${classNameSelect}`} onChange={onChange} required={required}>
+            <select id={id} name={name} value={value} className={`floating-select ${classNameSelect}`} onChange={onChange} required={required}>
                 <option value="" disabled hidden>{placeholder}</option>
                 {options.map((opt, i) => (
                     <option key={i} value={opt}>
@@ -99,10 +99,10 @@ export const Select = ({ id, value = "", onChange, options = [], label, required
     );
 };
 
-export const Textarea = ({ id, label, value = "", onChange, rows = 4, required = false, placeholder = " ", classNameDiv = "", classNameArea = "" }) => {
+export const Textarea = ({ id, name, label, value = "", onChange, rows = 4, required = false, placeholder = " ", classNameDiv = "", classNameArea = "" }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
-            <textarea id={id} name={id} value={value} className={`floating-textarea ${classNameArea}`} onChange={onChange} rows={rows} required={required} placeholder={placeholder || " "} />
+            <textarea id={id} name={name} value={value} className={`floating-textarea ${classNameArea}`} onChange={onChange} rows={rows} required={required} placeholder={placeholder || " "} />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
