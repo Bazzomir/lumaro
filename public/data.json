@@ -246,7 +246,7 @@
         "To be discussed"
       ]
     },
-    "defaultValues": {
+    "defaultValuesContact": {
       "name": "",
       "surname": "",
       "email": "",
@@ -256,7 +256,13 @@
       "service": "",
       "customService": "",
       "projectDescription": "",
-      "projectBudget": "",
+      "projectBudget": ""
+    },
+    "defaultValuesJob": {
+      "name": "",
+      "surname": "",
+      "email": "",
+      "phone": "",
       "jobPosition": "",
       "experience": "",
       "skills": "",
