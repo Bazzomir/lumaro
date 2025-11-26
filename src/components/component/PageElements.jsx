@@ -59,29 +59,35 @@ export const TabNavBtn = ({ btnName, tabKey, activeTab, setActiveTab }) => {
     );
 };
 
-export const Input = ({ id, name, type, value, onChange, label, required = false, placeholder = "", classNameDiv = "", classNameInput = "", autoComplete = "off" }) => {
+export const Input = ({ id, name, type, value, onChange, label, required = false, placeholder = "", classNameDiv = "", classNameInput = "", autoComplete = "off", errorMsg = "Please fill out this field." }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
             <input id={id} name={name} type={type} className={`floating-input ${classNameInput}`} value={value} onChange={onChange} required={required} placeholder={placeholder || " "} autoComplete={autoComplete} />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
+            <div className="invalid-feedback">
+                {errorMsg}
+            </div>
         </div>
     );
 };
 
-export const FileInput = ({ id, name, label, onChange, required = false, classNameDiv = "" }) => {
+export const FileInput = ({ id, name, label, onChange, required = false, classNameDiv = "", errorMsg = "Please upload a valid file (PDF, DOC, DOCX)." }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
             <input id={id} name={name} type="file" className="floating-input" onChange={onChange} required={required} accept=".pdf,.doc,.docx" />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
+            <div className="invalid-feedback">
+                {errorMsg}
+            </div>
         </div>
     );
 };
 
-export const Select = ({ id, name, value = "", onChange, options = [], label, required = false, placeholder = "", classNameDiv = "", classNameSelect = "" }) => {
+export const Select = ({ id, name, value = "", onChange, options = [], label, required = false, placeholder = "", classNameDiv = "", classNameSelect = "", errorMsg = "Please choose an option." }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
             <select id={id} name={name} value={value} className={`floating-select ${classNameSelect}`} onChange={onChange} required={required}>
@@ -95,17 +101,23 @@ export const Select = ({ id, name, value = "", onChange, options = [], label, re
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
+            <div className="invalid-feedback">
+                {errorMsg}
+            </div>
         </div>
     );
 };
 
-export const Textarea = ({ id, name, label, value = "", onChange, rows = 4, required = false, placeholder = " ", classNameDiv = "", classNameArea = "" }) => {
+export const Textarea = ({ id, name, label, value = "", onChange, rows = 4, required = false, placeholder = " ", classNameDiv = "", classNameArea = "", errorMsg = "This field is required." }) => {
     return (
         <div className={`floating-group ${classNameDiv}`}>
             <textarea id={id} name={name} value={value} className={`floating-textarea ${classNameArea}`} onChange={onChange} rows={rows} required={required} placeholder={placeholder || " "} />
             <label htmlFor={id} className="floating-label">
                 {label} {required && <span className="required">*</span>}
             </label>
+            <div className="invalid-feedback">
+                {errorMsg}
+            </div>
         </div>
     );
 };
