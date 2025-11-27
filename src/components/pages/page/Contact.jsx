@@ -1,14 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import { useData } from '../../../hooks/useData.js';
 import { useInView } from '../../../hooks/useInView.js';
-// import Form from '../../component/form.jsx';
 import { Button } from '../../component/PageElements.jsx';
 import { LoadingAnimation, ContactAnimation } from '../../component/animations.jsx';
 import { ContactCard } from '../../component/cards.jsx';
 import { HighlightedText, Section } from '../../component/PageElements.jsx';
-import avatarAveryR from '../../../../public/image/avatar/averyR.png';
-import avatarCaseyW from '../../../../public/image/avatar/caseyW.png';
-import avatarJordanM from '../../../../public/image/avatar/jordanM.png';
+import avatarAveryR from '../../../assets/avatar/averyR.png';
+import avatarCaseyW from '../../../assets/avatar/caseyW.png';
+import avatarJordanM from '../../../assets/avatar/jordanM.png';
 
 const avatarMap = {
     'averyR': avatarAveryR,
@@ -28,11 +27,9 @@ export default function Contact() {
     const contactData = data.contact;
 
     return (
-        // <section className="contact container-fluid my-5 pt-6 pb-6 px-120 h-100 box-sizing overflow-hidden relative" id="contact">
         <Section className="contact" id="contact">
             <div className="row justify-content-center align-items-center">
                 <div className="col-12 col-lg-6">
-                    {/* <div className="col-12 col-lg-6"> */}
                     <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                         <HighlightedText text={contactData.header.title} />
                     </h2>
@@ -40,10 +37,8 @@ export default function Contact() {
                         <Button btnName="Contact Us" classNameBtn="btn-purple text-uppercase" classNameSpan="btn-purple--text" onClick={() => navigate("/lumaro/form")} />
                     </div>
                 </div>
-                {/* <Form /> */}
                 <div className="col-12 col-lg-6 position-relative">
                     <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
-                    {/* <div className="bg-triangle"></div> */}
                     <div ref={ref} className={`contactAnimation ${inView ? "fade-in-visible" : "fade-in-hidden"}`}>
                         <ContactAnimation />
                     </div>
@@ -52,7 +47,6 @@ export default function Contact() {
             <div className="row justify-content-center align-items-center pt-5">
                 <div className="col-12 mt-3">
                     <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        {/* <h3 className="text-center p-3 mb-0 header-text--small"> */}
                         <HighlightedText text={contactData.header.subtitle} />
                     </h3>
                 </div>
@@ -75,7 +69,6 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            {/* </section > */}
         </Section >
     );
 }
