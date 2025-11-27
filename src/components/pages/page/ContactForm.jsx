@@ -62,11 +62,13 @@ export default function ContactForm() {
     if (isLoading) return <LoadingAnimation />;
     if (error) return <p>{error.message}</p>;
 
-    const handleInputChange = (e, formType = 'contact') => {
+    const handleInputChange = (e) => {
         const { name, value, type, files } = e.target;
-        const actualValue = type === 'file' ? (files && files[0] ? files[0] : null) : value;
+        const actualValue = type === "file" ? files[0] : value;
 
-        formType === 'contact' ? setContactForm(prev => ({ ...prev, [name]: actualValue })) : setJobForm(prev => ({ ...prev, [name]: actualValue }));
+        (activeTab === "contact" ? setContactForm : setJobForm)(
+            prev => ({ ...prev, [name]: actualValue })
+        );
     };
 
     const resetContactForm = () => {
@@ -242,7 +244,6 @@ export default function ContactForm() {
                     </div>
                 </form>
             </div>
-
             <ScrollToTopBtn />
         </Section>
     );
