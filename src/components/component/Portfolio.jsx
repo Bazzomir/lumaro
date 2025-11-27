@@ -4,10 +4,10 @@ import { useInView } from '../../hooks/useInView.js';
 import { LoadingAnimation } from './animations.jsx';
 import { HighlightedText, CarouselControl } from '../component/PageElements.jsx';
 import eCommerceImg from '../../assets/portfolio/eCommerce.jpg';
-import taskManagementImg from '../../assets/portfolio/portfolio/taskManagement.jpg';
-import insightIQImg from '../../assets/portfolio/portfolio/insightIQ.jpg';
-import finSyncImg from '../../assets/portfolio/portfolio/finSync.jpg';
-import smartHubImg from '../../assets/portfolio/portfolio/smartHub.jpg';
+import taskManagementImg from '../../assets/portfolio/taskManagement.jpg';
+import insightIQImg from '../../assets/portfolio/insightIQ.jpg';
+import finSyncImg from '../../assets/portfolio/finSync.jpg';
+import smartHubImg from '../../assets/portfolio/smartHub.jpg';
 
 const portfolioImage = {
     eCommerce: eCommerceImg,
