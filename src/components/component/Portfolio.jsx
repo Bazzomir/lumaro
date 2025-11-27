@@ -3,11 +3,11 @@ import { useData } from '../../hooks/useData.js';
 import { useInView } from '../../hooks/useInView.js';
 import { LoadingAnimation } from './animations.jsx';
 import { HighlightedText, CarouselControl } from '../component/PageElements.jsx';
-import eCommerceImg from '../../../public/image/portfolio/eCommerce.jpg';
-import taskManagementImg from '../../../public/image/portfolio/taskManagement.jpg';
-import insightIQImg from '../../../public/image/portfolio/insightIQ.jpg';
-import finSyncImg from '../../../public/image/portfolio/finSync.jpg';
-import smartHubImg from '../../../public/image/portfolio/smartHub.jpg';
+import eCommerceImg from '../../assets/portfolio/eCommerce.jpg';
+import taskManagementImg from '../../assets/portfolio/portfolio/taskManagement.jpg';
+import insightIQImg from '../../assets/portfolio/portfolio/insightIQ.jpg';
+import finSyncImg from '../../assets/portfolio/portfolio/finSync.jpg';
+import smartHubImg from '../../assets/portfolio/portfolio/smartHub.jpg';
 
 const portfolioImage = {
     eCommerce: eCommerceImg,
