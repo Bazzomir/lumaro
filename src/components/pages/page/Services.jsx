@@ -27,10 +27,7 @@ export default function Services() {
 
     return (
         <Section className="services" id="services">
-            {/* <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services"> */}
-            {/* <div className="container"> */}
             <div className="row" data-aos="fade-up-right">
-            {/* <div className="row"> */}
                 <h2 className="header-text--small text-center">
                     <HighlightedText text={servicesData.header.title} />
                 </h2>
@@ -43,7 +40,6 @@ export default function Services() {
                     const IconPath = iconMap[service.icon];
                     return (
                         <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="zoom-in" data-aos-duration="1100">
-                        {/* <div key={i} className="col-md-6 col-lg-4 my-4">Ф */}
                             <ServicesCard
                                 category={service.category}
                                 description={service.description}
@@ -54,8 +50,6 @@ export default function Services() {
                     );
                 })}
             </div>
-            {/* </div> */}
-            {/* </section> */}
         </Section>
     );
 }
