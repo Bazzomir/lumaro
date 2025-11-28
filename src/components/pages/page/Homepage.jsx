@@ -27,7 +27,7 @@ export default function Homepage() {
 
     return (
         <Section className="homepage" id="home">
-            <div className="row" ref={ref}>
+            <div className="row pt-5 pt-lg-3" ref={ref}>
                 <div className="col-12 col-lg-7">
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">

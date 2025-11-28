@@ -28,44 +28,46 @@ export default function Contact() {
 
     return (
         <Section className="contact" id="contact">
-            <div className="row justify-content-center align-items-center">
-                <div className="col-12 col-lg-6">
-                    <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                        <HighlightedText text={contactData.header.title} />
-                    </h2>
-                    <div className="text-center text-md-start py-5" data-aos="fade-up-right">
-                        <Button btnName="Contact Us" classNameBtn="btn-purple text-uppercase" classNameSpan="btn-purple--text" onClick={() => navigate("/lumaro/form")} />
+            <div className="pt-5 pt-lg-3">
+                <div className="row justify-content-center align-items-center">
+                    <div className="col-12 col-lg-6">
+                        <h2 className="mb-0 mx-0 mx-sm-auto text-center text-md-start header-text--big w-100 w-lg-75" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                            <HighlightedText text={contactData.header.title} />
+                        </h2>
+                        <div className="text-center text-md-start py-5" data-aos="fade-up-right">
+                            <Button btnName="Contact Us" classNameBtn="btn-purple text-uppercase" classNameSpan="btn-purple--text" onClick={() => navigate("/lumaro/form")} />
+                        </div>
+                    </div>
+                    <div className="col-12 col-lg-6 position-relative">
+                        <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
+                        <div ref={ref} className={`contactAnimation ${inView ? "fade-in-visible" : "fade-in-hidden"}`}>
+                            <ContactAnimation />
+                        </div>
                     </div>
                 </div>
-                <div className="col-12 col-lg-6 position-relative">
-                    <div className="bg-triangle" data-aos="fade-top" aria-hidden="true"></div>
-                    <div ref={ref} className={`contactAnimation ${inView ? "fade-in-visible" : "fade-in-hidden"}`}>
-                        <ContactAnimation />
+                <div className="row justify-content-center align-items-center pt-5">
+                    <div className="col-12 mt-3">
+                        <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
+                            <HighlightedText text={contactData.header.subtitle} />
+                        </h3>
                     </div>
-                </div>
-            </div>
-            <div className="row justify-content-center align-items-center pt-5">
-                <div className="col-12 mt-3">
-                    <h3 className="text-center p-3 mb-0 header-text--small" data-aos="fade-down">
-                        <HighlightedText text={contactData.header.subtitle} />
-                    </h3>
-                </div>
-                <div className="col-12 pt-4">
-                    <div className="row p-0 m-0 gap-5 gap-md-4 gap-lg-0">
-                        {contactData.cardItems.map((contact, i) => {
-                            const AvatarPath = avatarMap[contact.avatar];
-                            return (
-                                <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1500">
-                                    {AvatarPath && (
-                                        <ContactCard
-                                            avatarCard={AvatarPath}
-                                            fullName={contact.fullName}
-                                            quote={contact.quote}
-                                        />
-                                    )}
-                                </div>
-                            );
-                        })}
+                    <div className="col-12 pt-4">
+                        <div className="row p-0 m-0 gap-5 gap-md-4 gap-lg-0">
+                            {contactData.cardItems.map((contact, i) => {
+                                const AvatarPath = avatarMap[contact.avatar];
+                                return (
+                                    <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1500">
+                                        {AvatarPath && (
+                                            <ContactCard
+                                                avatarCard={AvatarPath}
+                                                fullName={contact.fullName}
+                                                quote={contact.quote}
+                                            />
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

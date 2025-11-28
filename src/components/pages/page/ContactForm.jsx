@@ -1,4 +1,3 @@
-import '../../../assets/css/form.css';
 import { useState, useEffect, useRef } from 'react';
 import { useData } from '../../../hooks/useData.js';
 import { LoadingAnimation } from '../../component/animations.jsx';

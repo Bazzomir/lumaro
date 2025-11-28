@@ -27,28 +27,30 @@ export default function Services() {
 
     return (
         <Section className="services" id="services">
-            <div className="row" data-aos="fade-up-right">
-                <h2 className="header-text--small text-center">
-                    <HighlightedText text={servicesData.header.title} />
-                </h2>
-                <p className="services--paragraph text-center">
-                    {servicesData.header.paragraph}
-                </p>
-            </div>
-            <div className="row py-3">
-                {servicesData.cardItems.map((service, i) => {
-                    const IconPath = iconMap[service.icon];
-                    return (
-                        <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="zoom-in" data-aos-duration="1100">
-                            <ServicesCard
-                                category={service.category}
-                                description={service.description}
-                                offerings={service.offerings}
-                                iconPath={IconPath}
-                            />
-                        </div>
-                    );
-                })}
+            <div className="pt-5 pt-lg-3">
+                <div className="row" data-aos="fade-up-right">
+                    <h2 className="header-text--big text-center">
+                        <HighlightedText text={servicesData.header.title} />
+                    </h2>
+                    <p className="services--paragraph text-center">
+                        {servicesData.header.paragraph}
+                    </p>
+                </div>
+                <div className="row py-3">
+                    {servicesData.cardItems.map((service, i) => {
+                        const IconPath = iconMap[service.icon];
+                        return (
+                            <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="zoom-in" data-aos-duration="1100">
+                                <ServicesCard
+                                    category={service.category}
+                                    description={service.description}
+                                    offerings={service.offerings}
+                                    iconPath={IconPath}
+                                />
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </Section>
     );
