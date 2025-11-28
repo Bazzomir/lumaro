@@ -110,10 +110,10 @@ export default function ContactForm() {
     return (
         <Section className="justify-content-center pt-0 py-5">
             <div className="form-header pb-5">
-                <h2 className="mb-0 mx-0 mx-sm-auto text-center w-100 w-lg-75 fw-bold">
+                <h2 className="header-text--small mb-0 mx-0 mx-sm-auto text-center">
                     <HighlightedText text={headerTitle} />
                 </h2>
-                <p className="services--paragraph text-center">{headerParagraph}</p>
+                <p className="main-paragraph-text text-center text-muted">{headerParagraph}</p>
             </div>
 
             <div className="tab-nav d-flex">

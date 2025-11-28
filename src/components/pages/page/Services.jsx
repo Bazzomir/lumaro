@@ -32,7 +32,8 @@ export default function Services() {
                     <h2 className="header-text--big text-center">
                         <HighlightedText text={servicesData.header.title} />
                     </h2>
-                    <p className="services--paragraph text-center">
+                    <p className="main-paragraph-text text-center text-muted">
+                    {/* <p className="homepage-smallText text-center"> */}
                         {servicesData.header.paragraph}
                     </p>
                 </div>

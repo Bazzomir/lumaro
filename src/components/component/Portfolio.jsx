@@ -50,7 +50,7 @@ export default function Portfolio() {
                     <h3 className="text-center p-3 mb-0 header-text--small">
                         <HighlightedText text={portfolioData.header.title} />
                     </h3>
-                    <p className="lead text-center text-muted">
+                    <p className="lead text-center main-paragraph-text text-muted">
                         {portfolioData.header.paragraph}
                     </p>
                 </div>

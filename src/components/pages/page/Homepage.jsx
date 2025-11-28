@@ -36,7 +36,8 @@ export default function Homepage() {
                             </h1>
                         </div>
                         <div className="col-12">
-                            <p className="m-0 homepage-smallText" data-aos="fade-right">
+                            {/* <p className="m-0 homepage-smallText" data-aos="fade-right"> */}
+                            <p className="m-0 main-paragraph-text text-muted" data-aos="fade-right">
                                 {homepage.header.paragraph}
                             </p>
                         </div>
