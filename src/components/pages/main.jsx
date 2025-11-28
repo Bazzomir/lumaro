@@ -5,7 +5,6 @@ import { LazyPage } from "./lazyPage";
 import { Header } from "../component/Header";
 import { Footer } from "../component/Footer";
 import ContactForm from "./page/ContactForm";
-// import { ContactForm } from "./page/ContactForm";
 
 function Main() {
   const location = useLocation();
@@ -28,8 +27,6 @@ function Main() {
   return (
     <>
       <Header activeLink={activeId} onNavClick={scrollToId} />
-      {/* {location.pathname.includes("/form") ? <ContactForm /> : <LazyPage />} */}
-      {/* <LazyPage /> */}
       <Routes>
         <Route path="*" element={<LazyPage />} />
         <Route path="/lumaro/form" element={<ContactForm />} />

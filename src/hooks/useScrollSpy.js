@@ -15,9 +15,7 @@ export function useScrollSpy(sectionsSelector = "section[id]") {
           .filter((entry) => entry.isIntersecting)
           .reduce(
             (best, curr) =>
-              curr.intersectionRatio > (best?.intersectionRatio || 0)
-                ? curr
-                : best,
+              curr.intersectionRatio > (best?.intersectionRatio || 0) ? curr : best,
             null
           );
 
@@ -29,7 +27,7 @@ export function useScrollSpy(sectionsSelector = "section[id]") {
           navigate(path, { replace: true });
         }
       },
-      { rootMargin: "-45% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+      { rootMargin: "-45% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1], trackVisibility: true, delay: 100 }
     );
 
     document.querySelectorAll(sectionsSelector).forEach((section) => {
@@ -57,7 +55,7 @@ export function useScrollSpy(sectionsSelector = "section[id]") {
       const path = id === "home" ? "/lumaro" : `/lumaro/${id}`;
       navigate(path, { replace: true });
 
-      setTimeout(() => (isNavigatingRef.current = false), 200);
+      setTimeout(() => (isNavigatingRef.current = false), 500);
     },
     [navigate]
   );

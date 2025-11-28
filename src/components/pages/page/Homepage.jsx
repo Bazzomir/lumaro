@@ -26,20 +26,18 @@ export default function Homepage() {
     const shouldShowAnimation = isHome && !hideAnimation && inView;
 
     return (
-        // <section className="homepage container-fluid pt-6 px-120 h-100 box-sizing overflow-hidden relative" id="home" >
         <Section className="homepage" id="home">
-            <div className="row" ref={ref}>
+            <div className="row pt-5 pt-lg-3" ref={ref}>
                 <div className="col-12 col-lg-7">
                     <div className="row gap-3 gap-md-5 text-center text-md-start">
                         <div className="col-12">
                             <h1 className="m-0 header-text--big" data-aos="fade-up" data-aos-easing="ease-in-all" data-aos-anchor-placement="center-center">
-                                {/* <h1 className="m-0 header-text--big"> */}
                                 <HighlightedText text={homepage.header.title} />
                             </h1>
                         </div>
                         <div className="col-12">
-                            <p className="m-0 homepage-smallText" data-aos="fade-right">
-                                {/* <p className="m-0 homepage-smallText"> */}
+                            {/* <p className="m-0 homepage-smallText" data-aos="fade-right"> */}
+                            <p className="m-0 main-paragraph-text text-muted" data-aos="fade-right">
                                 {homepage.header.paragraph}
                             </p>
                         </div>
@@ -50,8 +48,6 @@ export default function Homepage() {
                 </div>
                 {shouldShowAnimation && (<ScrollDownAnimation onClick={scrollToDown} />)}
             </div>
-            {/* </section> */}
-
             <ScrollToTopBtn />
         </Section>
     );

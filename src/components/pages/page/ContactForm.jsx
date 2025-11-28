@@ -1,4 +1,3 @@
-import '../../../assets/css/form.css';
 import { useState, useEffect, useRef } from 'react';
 import { useData } from '../../../hooks/useData.js';
 import { LoadingAnimation } from '../../component/animations.jsx';
@@ -62,11 +61,13 @@ export default function ContactForm() {
     if (isLoading) return <LoadingAnimation />;
     if (error) return <p>{error.message}</p>;
 
-    const handleInputChange = (e, formType = 'contact') => {
+    const handleInputChange = (e) => {
         const { name, value, type, files } = e.target;
-        const actualValue = type === 'file' ? (files && files[0] ? files[0] : null) : value;
+        const actualValue = type === "file" ? files[0] : value;
 
-        formType === 'contact' ? setContactForm(prev => ({ ...prev, [name]: actualValue })) : setJobForm(prev => ({ ...prev, [name]: actualValue }));
+        (activeTab === "contact" ? setContactForm : setJobForm)(
+            prev => ({ ...prev, [name]: actualValue })
+        );
     };
 
     const resetContactForm = () => {
@@ -109,10 +110,10 @@ export default function ContactForm() {
     return (
         <Section className="justify-content-center pt-0 py-5">
             <div className="form-header pb-5">
-                <h2 className="mb-0 mx-0 mx-sm-auto text-center w-100 w-lg-75 fw-bold">
+                <h2 className="header-text--small mb-0 mx-0 mx-sm-auto text-center">
                     <HighlightedText text={headerTitle} />
                 </h2>
-                <p className="services--paragraph text-center">{headerParagraph}</p>
+                <p className="main-paragraph-text text-center text-muted">{headerParagraph}</p>
             </div>
 
             <div className="tab-nav d-flex">
@@ -242,7 +243,6 @@ export default function ContactForm() {
                     </div>
                 </form>
             </div>
-
             <ScrollToTopBtn />
         </Section>
     );

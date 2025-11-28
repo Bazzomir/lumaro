@@ -3,11 +3,11 @@ import { useData } from '../../hooks/useData.js';
 import { useInView } from '../../hooks/useInView.js';
 import { LoadingAnimation } from './animations.jsx';
 import { HighlightedText, CarouselControl } from '../component/PageElements.jsx';
-import eCommerceImg from '../../../public/image/portfolio/eCommerce.jpg';
-import taskManagementImg from '../../../public/image/portfolio/taskManagement.jpg';
-import insightIQImg from '../../../public/image/portfolio/insightIQ.jpg';
-import finSyncImg from '../../../public/image/portfolio/finSync.jpg';
-import smartHubImg from '../../../public/image/portfolio/smartHub.jpg';
+import eCommerceImg from '../../assets/portfolio/eCommerce.jpg';
+import taskManagementImg from '../../assets/portfolio/taskManagement.jpg';
+import insightIQImg from '../../assets/portfolio/insightIQ.jpg';
+import finSyncImg from '../../assets/portfolio/finSync.jpg';
+import smartHubImg from '../../assets/portfolio/smartHub.jpg';
 
 const portfolioImage = {
     eCommerce: eCommerceImg,
@@ -50,7 +50,7 @@ export default function Portfolio() {
                     <h3 className="text-center p-3 mb-0 header-text--small">
                         <HighlightedText text={portfolioData.header.title} />
                     </h3>
-                    <p className="lead text-center text-muted">
+                    <p className="lead text-center main-paragraph-text text-muted">
                         {portfolioData.header.paragraph}
                     </p>
                 </div>

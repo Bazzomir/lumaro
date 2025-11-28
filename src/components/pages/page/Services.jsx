@@ -27,35 +27,32 @@ export default function Services() {
 
     return (
         <Section className="services" id="services">
-            {/* <section className="services container-fluid mt-6 pt-6 px-120 h-100 box-sizing overflow-hidden" id="services"> */}
-            {/* <div className="container"> */}
-            <div className="row" data-aos="fade-up-right">
-            {/* <div className="row"> */}
-                <h2 className="header-text--small text-center">
-                    <HighlightedText text={servicesData.header.title} />
-                </h2>
-                <p className="services--paragraph text-center">
-                    {servicesData.header.paragraph}
-                </p>
+            <div className="pt-5 pt-lg-3">
+                <div className="row" data-aos="fade-up-right">
+                    <h2 className="header-text--big text-center">
+                        <HighlightedText text={servicesData.header.title} />
+                    </h2>
+                    <p className="main-paragraph-text text-center text-muted">
+                    {/* <p className="homepage-smallText text-center"> */}
+                        {servicesData.header.paragraph}
+                    </p>
+                </div>
+                <div className="row py-3">
+                    {servicesData.cardItems.map((service, i) => {
+                        const IconPath = iconMap[service.icon];
+                        return (
+                            <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="zoom-in" data-aos-duration="1100">
+                                <ServicesCard
+                                    category={service.category}
+                                    description={service.description}
+                                    offerings={service.offerings}
+                                    iconPath={IconPath}
+                                />
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
-            <div className="row py-3">
-                {servicesData.cardItems.map((service, i) => {
-                    const IconPath = iconMap[service.icon];
-                    return (
-                        <div key={i} className="col-md-6 col-lg-4 my-4" data-aos="zoom-in" data-aos-duration="1100">
-                        {/* <div key={i} className="col-md-6 col-lg-4 my-4">Ф */}
-                            <ServicesCard
-                                category={service.category}
-                                description={service.description}
-                                offerings={service.offerings}
-                                iconPath={IconPath}
-                            />
-                        </div>
-                    );
-                })}
-            </div>
-            {/* </div> */}
-            {/* </section> */}
         </Section>
     );
 }
