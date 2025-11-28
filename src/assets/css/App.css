@@ -19,9 +19,6 @@
     --border-radius-pill: 40px;
 }
 
-/* =============================================================================
-   BASE STYLES
-   ============================================================================= */
 html {
     scroll-behavior: smooth;
 }
@@ -243,27 +240,9 @@ body::-webkit-scrollbar-thumb {
     line-height: 4.888rem;
 }
 
-.about-text,
-.contact-text {
-    font-size: 5.75rem;
-    font-weight: 700;
-    line-height: 7.188rem;
-}
-
-.homepage-smallText {
+.main-paragraph-text {
     font-size: 1.375rem;
     font-weight: 300;
-    line-height: 1.625rem;
-}
-
-.services--header {
-    font-weight: 700;
-    font-size: 3.875rem;
-}
-
-.services--paragraph {
-    font-weight: 300;
-    font-size: 1.375rem;
 }
 
 /* =============================================================================
@@ -298,7 +277,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: 500;
     color: var(--white);
     border: none;
-    background: #522081;
+    background: var(--purple);
     transition: all 0.2s ease;
     cursor: pointer;
 }
@@ -306,7 +285,7 @@ body::-webkit-scrollbar-thumb {
 .btn-purle-small:hover {
     background-color: var(--white);
     color: var(--purple);
-    border: 2px solid #522081;
+    border: 2px solid var(--purple);
     transform: scale(1.1);
     box-shadow: var(--shadow-purple);
 }
@@ -627,16 +606,6 @@ body::-webkit-scrollbar-thumb {
         line-height: 4.588rem;
     }
 
-    .about-text,
-    .contact-text {
-        font-size: 4.5rem;
-        line-height: 5.5rem;
-    }
-
-    .services--header {
-        font-size: 3.2rem;
-    }
-
     .btn-purple {
         border-radius: var(--border-radius-pill) !important;
         padding-left: 5rem !important;
@@ -674,22 +643,7 @@ body::-webkit-scrollbar-thumb {
         line-height: 3.8rem;
     }
 
-    .about-text,
-    .contact-text {
-        font-size: 3.2rem;
-        line-height: 4rem;
-    }
-
-    .services--header {
-        font-size: 2.8rem;
-    }
-
-    .homepage-smallText {
-        font-size: 1.125rem;
-        line-height: 1.375rem;
-    }
-
-    .services--paragraph {
+    .main-paragraph-text {
         font-size: 18px;
     }
 
@@ -755,22 +709,7 @@ body::-webkit-scrollbar-thumb {
         line-height: 3.3rem;
     }
 
-    .about-text,
-    .contact-text {
-        font-size: 2.8rem;
-        line-height: 3.5rem;
-    }
-
-    .services--header {
-        font-size: 2.2rem;
-    }
-
-    .homepage-smallText {
-        font-size: 1rem;
-        line-height: 1.25rem;
-    }
-
-    .services--paragraph {
+    .main-paragraph-text {
         font-size: 16px;
     }
 
@@ -871,16 +810,6 @@ body::-webkit-scrollbar-thumb {
         line-height: 2.8rem;
     }
 
-    .about-text,
-    .contact-text {
-        font-size: 2.2rem;
-        line-height: 2.8rem;
-    }
-
-    .services--header {
-        font-size: 1.8rem;
-    }
-
     .px-120 {
         padding-left: 5px !important;
         padding-right: 5px !important;
@@ -911,47 +840,12 @@ body::-webkit-scrollbar-thumb {
         line-height: 2.8rem;
     }
 
-    .about-text,
-    .contact-text {
-        font-size: 2.5rem;
-        line-height: 3rem;
-    }
-
     .homepage,
     .contact,
     .about,
     .services {
         height: auto !important;
         min-height: 100vh;
-    }
-}
-
-/* Print Styles */
-@media print {
-
-    .navbar,
-    .btn-purple,
-    .btn-form,
-    .contact-video {
-        display: none !important;
-    }
-
-    body {
-        font-size: 12pt;
-        line-height: 1.4;
-        color: black !important;
-    }
-
-    .header-text--big,
-    .about-text,
-    .contact-text {
-        font-size: 24pt;
-        line-height: 28pt;
-    }
-
-    .px-120 {
-        padding-left: 1in !important;
-        padding-right: 1in !important;
     }
 }
 
