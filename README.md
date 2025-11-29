@@ -1,12 +1,12 @@
 # Lumaro – Company Portfolio Website
 
-Lumaro is a modern and interactive website created as a portfolio for a company offering various IT services such as web development, mobile applications, QA, business analysis, consulting, and creative design.
+Lumaro is a modern and interactive website created as a portfolio for a company offering various IT services such as web development, mobile applications, QA, business analysis, consulting, and creative design, as well as opportunities for collaboration and employment.
 The website is built with Vite + React 18, featuring reusable components, animations, smooth interactions, and an optimized architecture to provide a polished user experience.
 
 🌐 [Live Demo](https://bazzomir.github.io/lumaro)
 
 
-### Features
+## Features
 
 * Portfolio slideshow with project previews and descriptions
 * Client request form (personal details, company info, project description, budget)
