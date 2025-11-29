@@ -27,6 +27,7 @@ The website is built with Vite + React 18, featuring reusable components, animat
 | ------------------------ | ------------------------------------------------- |
 | **Vite**                 | Fast development environment and build system     |
 | **React 18**             | Modern UI built with functional components        |
+| **JavaScript (ES6)**     | Core programming language following modern ECMAScript standards |
 | **Bootstrap 5.3**        | Layout, grid system, responsive styling           |
 | **React-Router-Dom**     | Client-side navigation                            |
 | **React Query**          | Data fetching and caching                         |
@@ -40,7 +41,8 @@ The website is built with Vite + React 18, featuring reusable components, animat
 
 All textual and UI-related content is centralized in:
 ```/public/data.json```
-This includes:
+
+#### This includes:
 - section text 
 - service descriptions
 - portfolio items
