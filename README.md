@@ -1,18 +1,44 @@
-# Lumaro
+# Lumaro – Company Portfolio Website
 
-Project Instructions
+Lumaro is a modern and interactive website created as a portfolio for a company offering various IT services such as web development, mobile applications, QA, business analysis, consulting, and creative design.
+The website is built with Vite + React 18, featuring reusable components, animations, smooth interactions, and an optimized architecture to provide a polished user experience.
 
-Clone the Repository: Clone the repository to your local machine. For detailed instructions or troubleshooting, please refer to this https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository.
+🌐 [Live Demo](https://bazzomir.github.io/lumaro)
 
-Navigate to the Project Directory: After cloning, navigate to the "lumaro" folder on your computer.
+### Features
 
-Install npm:
+* Portfolio slideshow with project previews and descriptions
+* Client request form (personal details, company info, project description, budget)
+* Job application form with tab navigation
+* Smooth scrolling to sections
+* Scroll spy (auto-highlights active section in the navbar)
+* ScrollToTop button
+* Lottie animations (loading bar, scroll indicator, decorative elements)
+* AOS scroll animations
+* Reusable and modular components
+* Responsive layout built with Bootstrap 5.3
+* Footer with company contact information (phone, e-mail, address, social links)
 
-Open a terminal in the "lumaro" directory. Install npm by executing the command: npm install.
+## Technologies
+- Technology	            Purpose
+- Vite	                    Fast development environment and build system
+- React.JS 18	            Modern UI built with functional components
+- Bootstrap 5.3	            Layout, grid system, responsive styling
+- React-Router-Dom	        Client-side navigation
+- React Query	            Data fetching and caching
+- Custom React Hooks	    Logic for data handling, observers, and scrolling
+- AOS	                    Scroll-triggered animations
+- Lottie	                SVG/JSON-based animations
+- IntersectionObserver	    Trigger animations and scroll spy functionality
 
-Start the Project:
-Run the command: npm start. If you encounter any errors, execute: npm update and then try npm start again.
+## Data (JSON)
 
-Please ensure all steps are completed correctly.
-
-https://medium.com/@hammadrao891/how-to-clone-a-react-application-from-github-and-run-4f9b742e568a
+All textual and UI-related content is centralized in:
+```/public/data.json```
+This includes:
+- section text 
+- service descriptions
+- portfolio items
+- select options & default values for forms 
+- UI labels, titles, paragraph, cards items, footer items, iamges, avatar and icons...
+The data is fetched through the custom hook (useData.js) and used across the layout.
