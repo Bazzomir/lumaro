@@ -41,7 +41,8 @@ The website is built with Vite + React 18, featuring reusable components, animat
 
 All textual and UI-related content is centralized in:
 ```/public/data.json```
-This includes:
+
+#### This includes:
 - section text 
 - service descriptions
 - portfolio items
