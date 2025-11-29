@@ -5,6 +5,7 @@ The website is built with Vite + React 18, featuring reusable components, animat
 
 🌐 [Live Demo](https://bazzomir.github.io/lumaro)
 
+
 ### Features
 
 * Portfolio slideshow with project previews and descriptions
@@ -19,17 +20,21 @@ The website is built with Vite + React 18, featuring reusable components, animat
 * Responsive layout built with Bootstrap 5.3
 * Footer with company contact information (phone, e-mail, address, social links)
 
+
 ## Technologies
-- Technology	            Purpose
-- Vite	                    Fast development environment and build system
-- React.JS 18	            Modern UI built with functional components
-- Bootstrap 5.3	            Layout, grid system, responsive styling
-- React-Router-Dom	        Client-side navigation
-- React Query	            Data fetching and caching
-- Custom React Hooks	    Logic for data handling, observers, and scrolling
-- AOS	                    Scroll-triggered animations
-- Lottie	                SVG/JSON-based animations
-- IntersectionObserver	    Trigger animations and scroll spy functionality
+
+| Technology               | Purpose                                           |
+| ------------------------ | ------------------------------------------------- |
+| **Vite**                 | Fast development environment and build system     |
+| **React 18**             | Modern UI built with functional components        |
+| **Bootstrap 5.3**        | Layout, grid system, responsive styling           |
+| **React-Router-Dom**     | Client-side navigation                            |
+| **React Query**          | Data fetching and caching                         |
+| **Custom React Hooks**   | Logic for data handling, observers, and scrolling |
+| **AOS**                  | Scroll-triggered animations                       |
+| **Lottie**               | SVG/JSON-based animations                         |
+| **IntersectionObserver** | Trigger animations and scroll spy functionality   |
+
 
 ## Data (JSON)
 
